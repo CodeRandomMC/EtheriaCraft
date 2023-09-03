@@ -1,12 +1,30 @@
 {
+  "item.etheria_craft.raw_silver": "Raw Silver",
+  "item.etheria_craft.silver_ingot": "Silver Ingot",
+  "item.etheria_craft.silver_nugget": "Silver Nugget",
   "item.etheria_craft.sapphire": "Sapphire",
   "item.etheria_craft.ruby": "Ruby",
   "item.etheria_craft.topaz": "Topaz",
   "item.etheria_craft.diving_rod": "Diving Rod",
 
+  "block.etheria_craft.end_gold_ore": "End Gold Ore",
+  "block.etheria_craft.silver_ore": "Silver Ore",
+  "block.etheria_craft.deepslate_silver_ore": "Deepslate Silver Ore",
+  "block.etheria_craft.nether_silver_ore": "Nether Silver Ore",
+  "block.etheria_craft.end_silver_ore": "End Silver Ore",
+  "block.etheria_craft.silver_block": "Silver Block",
+  "block.etheria_craft.raw_silver_block": "Raw Silver Block",
+  "block.etheria_craft.sapphire_block": "Sapphire Block",
+  "block.etheria_craft.sapphire_ore": "Sapphire Ore",
+  "block.etheria_craft.ruby_block": "Ruby Block",
+  "block.etheria_craft.ruby_ore": "Ruby Ore",
+  "block.etheria_craft.topaz_block": "Topaz Block",
+  "block.etheria_craft.topaz_ore": "Topaz Ore",
+
   "tab.mod_ingredients_tab": "Etheria Ingredients",
   "tab.mod_tools_and_utilities_tab": "Etheria Tools & Utilities",
   "tab.mod_combat_tab": "Etheria Combat",
   "tab.mod_misc_tab": "Etheria Misc",
-  "tab.mod_artifacts_tab": "Etheria Artifacts"
+  "tab.mod_artifacts_tab": "Etheria Artifacts",
+  "tab.mod_blocks_tab": "Etheria Blocks"
 }

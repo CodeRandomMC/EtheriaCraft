@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "etheria_craft:silver_ingot"
+    }
+  ],
+  "result": {
+    "item": "etheria_craft:silver_nugget",
+    "count": 9
+  }
+}

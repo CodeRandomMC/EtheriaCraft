@@ -1,6 +1,7 @@
 package net.coderandom.etheriacraft;
 
 import com.mojang.logging.LogUtils;
+import net.coderandom.etheriacraft.blocks.ModBlocks;
 import net.coderandom.etheriacraft.items.ModCreativeModeTabs;
 import net.coderandom.etheriacraft.items.ModItems;
 import net.minecraft.client.Minecraft;
@@ -33,6 +34,7 @@ public class EtheriaCraft {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
