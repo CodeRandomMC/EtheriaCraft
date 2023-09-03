@@ -5,7 +5,12 @@
   "item.etheria_craft.sapphire": "Sapphire",
   "item.etheria_craft.ruby": "Ruby",
   "item.etheria_craft.topaz": "Topaz",
-  "item.etheria_craft.diving_rod": "Diving Rod",
+  "item.etheria_craft.metal_dowsing_rod": "Metal Dowsing Rod",
+  "item.etheria_craft.gem_dowsing_rod": "Gem Dowsing Rod",
+  "item.etheria_craft.portable_crafting_table": "Portable Crafting Table",
+
+  "item.etheria_craft.chilli": "Chilli",
+  "item.etheria_craft.tomato": "Tomato",
 
   "block.etheria_craft.end_gold_ore": "End Gold Ore",
   "block.etheria_craft.silver_ore": "Silver Ore",
@@ -20,6 +25,7 @@
   "block.etheria_craft.ruby_ore": "Ruby Ore",
   "block.etheria_craft.topaz_block": "Topaz Block",
   "block.etheria_craft.topaz_ore": "Topaz Ore",
+  "block.etheria_craft.quick_sand": "Quick Sand",
 
   "tab.mod_ingredients_tab": "Etheria Ingredients",
   "tab.mod_tools_and_utilities_tab": "Etheria Tools & Utilities",

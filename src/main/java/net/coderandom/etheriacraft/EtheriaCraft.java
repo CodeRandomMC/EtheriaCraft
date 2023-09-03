@@ -3,7 +3,7 @@ package net.coderandom.etheriacraft;
 import com.mojang.logging.LogUtils;
 import net.coderandom.etheriacraft.blocks.ModBlocks;
 import net.coderandom.etheriacraft.items.ModCreativeModeTabs;
-import net.coderandom.etheriacraft.items.ModItems;
+import net.coderandom.etheriacraft.items.custom.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;

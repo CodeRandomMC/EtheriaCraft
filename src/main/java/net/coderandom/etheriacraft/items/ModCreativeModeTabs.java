@@ -2,10 +2,12 @@ package net.coderandom.etheriacraft.items;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
 import net.coderandom.etheriacraft.blocks.ModBlocks;
+import net.coderandom.etheriacraft.items.custom.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -31,10 +33,11 @@ public class ModCreativeModeTabs {
 
     public static final RegistryObject<CreativeModeTab> MOD_TOOLSANDUTILITIES = CREATIVE_MODE_TABS.register("mod_tools_and_utilities_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.DIVING_ROD.get()))
+                    .icon(() -> new ItemStack(ModItems.GEM_DOWSING_ROD.get()))
                     .title(Component.translatable("tab.mod_tools_and_utilities_tab"))
                     .displayItems((parameters, output) -> {
-                        output.accept(ModItems.DIVING_ROD.get());
+                        output.accept(ModItems.METAL_DOWSING_ROD.get());
+                        output.accept(ModItems.GEM_DOWSING_ROD.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> MOD_BLOCKS = CREATIVE_MODE_TABS.register("mod_blocks_tab",
@@ -60,20 +63,21 @@ public class ModCreativeModeTabs {
                     .build());
     public static final RegistryObject<CreativeModeTab> MOD_COMBAT = CREATIVE_MODE_TABS.register("mod_combat_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.DIVING_ROD.get()))
+                    .icon(() -> new ItemStack(Items.NETHERITE_SWORD))
                     .title(Component.translatable("tab.mod_combat_tab"))
                     .displayItems((parameters, output) -> {
-                        output.accept(ModItems.DIVING_ROD.get());
+                        output.accept(ModItems.GEM_DOWSING_ROD.get());
                     })
                     .build());
-//    public static final RegistryObject<CreativeModeTab> MOD_MISC = CREATIVE_MODE_TABS.register("mod_misc_tab",
-//            () -> CreativeModeTab.builder()
-//                    .icon(() -> new ItemStack(ModItems.DIVING_ROD.get()))
-//                    .title(Component.translatable("tab.mod_misc_tab"))
-//                    .displayItems((parameters, output) -> {
-//                        output.accept(ModItems.DIVING_ROD.get());
-//                    })
-//                    .build());
+    public static final RegistryObject<CreativeModeTab> MOD_MISC = CREATIVE_MODE_TABS.register("mod_misc_tab",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.TOMATO.get()))
+                    .title(Component.translatable("tab.mod_misc_tab"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.TOMATO.get());
+                        output.accept(ModItems.CHILLI.get());
+                    })
+                    .build());
 //    public static final RegistryObject<CreativeModeTab> MOD_ARTIFACTS = CREATIVE_MODE_TABS.register("mod_artifacts_tab",
 //            () -> CreativeModeTab.builder()
 //                    .icon(() -> new ItemStack(ModItems.DIVING_ROD.get()))

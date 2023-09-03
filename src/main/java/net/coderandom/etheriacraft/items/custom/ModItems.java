@@ -1,4 +1,4 @@
-package net.coderandom.etheriacraft.items;
+package net.coderandom.etheriacraft.items.custom;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
 import net.minecraft.world.item.Item;
@@ -23,8 +23,25 @@ public class ModItems {
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> TOPAZ = ITEMS.register("topaz",
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> DIVING_ROD = ITEMS.register("diving_rod",
-            DivingRod::new);
+    public static final RegistryObject<Item> METAL_DOWSING_ROD = ITEMS.register("metal_dowsing_rod",
+            MetalDowsingRodItem::new);
+    public static final RegistryObject<Item> GEM_DOWSING_ROD = ITEMS.register("gem_dowsing_rod",
+            GemDowsingRodItem::new);
+
+    // Food
+    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
+            () -> new Item(new Item.Properties().food(ModFoods.TOMATO)));
+    public static final RegistryObject<Item> CHILLI = ITEMS.register("chilli",
+            () -> new Item(new Item.Properties().food(ModFoods.CHILLI)));
+
+
+
+
+
+
+    //TODO Fix portable crafting table
+//    public static final RegistryObject<Item> PORTABLE_CRAFTING_TABLE = ITEMS.register("portable_crafting_table",
+//            PortableCraftingTableItem::new);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

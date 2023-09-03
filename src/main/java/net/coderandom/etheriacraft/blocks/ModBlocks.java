@@ -1,7 +1,8 @@
 package net.coderandom.etheriacraft.blocks;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
-import net.coderandom.etheriacraft.items.ModItems;
+import net.coderandom.etheriacraft.blocks.custom.QuickSandBlock;
+import net.coderandom.etheriacraft.items.custom.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -45,6 +46,9 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.EMERALD_ORE).requiresCorrectToolForDrops(), UniformInt.of(3, 8)));
     public static final RegistryObject<Block> TOPAZ_BLOCK = registerBlock("topaz_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK)));
+
+    public static final RegistryObject<Block> QUICK_SAND = registerBlock("quick_sand",
+            () -> new QuickSandBlock(1, BlockBehaviour.Properties.copy(Blocks.SAND).requiresCorrectToolForDrops()));
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
