@@ -32,6 +32,30 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.DIVING_ROD.get());
                     })
                     .build());
+    public static final RegistryObject<CreativeModeTab> MOD_COMBAT = CREATIVE_MODE_TABS.register("mod_combat_tab",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.DIVING_ROD.get()))
+                    .title(Component.translatable("tab.mod_combat_tab"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.DIVING_ROD.get());
+                    })
+                    .build());
+    public static final RegistryObject<CreativeModeTab> MOD_MISC = CREATIVE_MODE_TABS.register("mod_misc_tab",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.DIVING_ROD.get()))
+                    .title(Component.translatable("tab.mod_misc_tab"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.DIVING_ROD.get());
+                    })
+                    .build());
+    public static final RegistryObject<CreativeModeTab> MOD_ARTIFACTS = CREATIVE_MODE_TABS.register("mod_artifacts_tab",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.DIVING_ROD.get()))
+                    .title(Component.translatable("tab.mod_artifacts_tab"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.DIVING_ROD.get());
+                    })
+                    .build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
