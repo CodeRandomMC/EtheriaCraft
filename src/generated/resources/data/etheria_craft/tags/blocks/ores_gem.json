@@ -1,0 +1,16 @@
+{
+    "values": [
+      "etheria_craft:sapphire_ore",
+      "etheria_craft:ruby_ore",
+      "etheria_craft:topaz_ore",
+      "minecraft:coal_ore",
+      "minecraft:deepslate_coal_ore",
+      "minecraft:lapis_ore",
+      "minecraft:deepslate_lapis_ore",
+      "minecraft:redstone_ore",
+      "minecraft:deepslate_redstone_ore",
+      "minecraft:diamond_ore",
+      "minecraft:deepslate_diamond_ore",
+      "minecraft:nether_quartz_ore"
+    ]
+}

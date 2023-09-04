@@ -78,14 +78,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHILLI.get());
                     })
                     .build());
-//    public static final RegistryObject<CreativeModeTab> MOD_ARTIFACTS = CREATIVE_MODE_TABS.register("mod_artifacts_tab",
-//            () -> CreativeModeTab.builder()
-//                    .icon(() -> new ItemStack(ModItems.DIVING_ROD.get()))
-//                    .title(Component.translatable("tab.mod_artifacts_tab"))
-//                    .displayItems((parameters, output) -> {
-//                        output.accept(ModItems.DIVING_ROD.get());
-//                    })
-//                    .build());
+    public static final RegistryObject<CreativeModeTab> MOD_SCROLLS = CREATIVE_MODE_TABS.register("mod_scrolls_tab",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.COMBUSTION_SCROLL.get()))
+                    .title(Component.translatable("tab.mod_scrolls_tab"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.BLANK_SCROLL.get());
+                        output.accept(ModItems.COMBUSTION_SCROLL.get());
+                    })
+                    .build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

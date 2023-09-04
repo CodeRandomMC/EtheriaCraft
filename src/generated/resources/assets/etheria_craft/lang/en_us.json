@@ -12,6 +12,9 @@
   "item.etheria_craft.chilli": "Chilli",
   "item.etheria_craft.tomato": "Tomato",
 
+  "item.etheria_craft.blank_scroll": "Blank Scroll",
+  "item.etheria_craft.combustion_scroll": "Scroll of Combustion",
+
   "block.etheria_craft.end_gold_ore": "End Gold Ore",
   "block.etheria_craft.silver_ore": "Silver Ore",
   "block.etheria_craft.deepslate_silver_ore": "Deepslate Silver Ore",
@@ -32,5 +35,11 @@
   "tab.mod_combat_tab": "Etheria Combat",
   "tab.mod_misc_tab": "Etheria Misc",
   "tab.mod_artifacts_tab": "Etheria Artifacts",
-  "tab.mod_blocks_tab": "Etheria Blocks"
+  "tab.mod_blocks_tab": "Etheria Blocks",
+  "tab.mod_scrolls_tab": "Etheria Scrolls",
+
+
+  "tooltip.etheria_craft.fuel_item": "Burntime",
+  "tooltip.etheria_craft.gem_dowsing_rod": "Detects gem ore below the block clicked to bedrock",
+  "tooltip.etheria_craft.metal_dowsing_rod": "Detects metal ore from the block clicked to bedrock"
 }

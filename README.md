@@ -46,7 +46,10 @@
 
 #### 🌱 Natural Blocks
 - QuickSand
-<!-- Add future natural blocks here -->
+
+#### 📜 [WIP] Scrolls
+- Blank Scroll
+- [WIP] Scroll of Combustion (Fuel x4 duration as coal)
 
 ---
 
