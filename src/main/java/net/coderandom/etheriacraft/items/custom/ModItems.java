@@ -38,7 +38,7 @@ public class ModItems {
     public static final RegistryObject<Item> BLANK_SCROLL = ITEMS.register("blank_scroll",
             () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> COMBUSTION_SCROLL = ITEMS.register("combustion_scroll",
-            () -> new CombustionScrollItem(new Item.Properties().rarity(Rarity.COMMON), 6400)); // x4 coal burntime
+            () -> new CombustionScrollItem(new Item.Properties().rarity(Rarity.COMMON), 64000)); // x4 coal block burntime
 
 
 

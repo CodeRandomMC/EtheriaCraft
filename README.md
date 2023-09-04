@@ -49,7 +49,7 @@
 
 #### 📜 [WIP] Scrolls
 - Blank Scroll
-- [WIP] Scroll of Combustion (Fuel x4 duration as coal)
+- [WIP] Scroll of Combustion (Fuel x4 duration as coal block)
 
 ---
 

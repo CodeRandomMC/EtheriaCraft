@@ -39,7 +39,7 @@
   "tab.mod_scrolls_tab": "Etheria Scrolls",
 
 
-  "tooltip.etheria_craft.fuel_item": "Burntime",
-  "tooltip.etheria_craft.gem_dowsing_rod": "Detects gem ore below the block clicked to bedrock",
-  "tooltip.etheria_craft.metal_dowsing_rod": "Detects metal ore from the block clicked to bedrock"
+  "tooltip.etheria_craft.fuel_item": "Burn time",
+  "tooltip.etheria_craft.gem_dowsing_rod": "Detects gems/dusts ore down to bedrock",
+  "tooltip.etheria_craft.metal_dowsing_rod": "Detects metal ore down to bedrock"
 }
