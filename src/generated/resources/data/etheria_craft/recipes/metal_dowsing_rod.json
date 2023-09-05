@@ -6,17 +6,16 @@
       "item": "minecraft:stick"
     },
     {
-      "item": "minecraft:raw_copper"
-    },
-    {
       "item": "etheria_craft:raw_silver"
     },
     {
       "item": "minecraft:raw_gold"
+    },
+    {
+      "item": "minecraft:raw_copper"
     }
   ],
   "result": {
-    "item": "etheria_craft:metal_dowsing_rod",
-    "count": 1
+    "item": "etheria_craft:metal_dowsing_rod"
   }
 }

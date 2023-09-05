@@ -25,13 +25,22 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(ModBlocks.SILVER_BLOCK.get());
-        dropSelf(ModBlocks.RAW_SILVER_BLOCK.get());
-        dropSelf(ModBlocks.SILVER_BLOCK.get());
-        dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
-        dropSelf(ModBlocks.RUBY_BLOCK.get());
-        dropSelf(ModBlocks.TOPAZ_BLOCK.get());
-        dropSelf(ModBlocks.QUICK_SAND.get());
+        this.dropSelf(ModBlocks.SILVER_BLOCK.get());
+        this.dropSelf(ModBlocks.RAW_SILVER_BLOCK.get());
+        this.dropSelf(ModBlocks.SILVER_BLOCK.get());
+
+        this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
+        this.dropSelf(ModBlocks.RUBY_BLOCK.get());
+        this.dropSelf(ModBlocks.TOPAZ_BLOCK.get());
+
+        this.dropSelf(ModBlocks.QUICK_SAND.get());
+
+        this.dropSelf(ModBlocks.MOSSY_BRICK.get());
+        this.dropSelf(ModBlocks.MOSSY_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.MOSSY_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get());
+        this.add(ModBlocks.MOSSY_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.MOSSY_BRICK_SLAB.get()));
 
         this.add(ModBlocks.SILVER_ORE.get(),
                 block -> createOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get(), 1.00F, 3.00F));

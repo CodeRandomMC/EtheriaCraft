@@ -1,0 +1,51 @@
+{
+  "item.etheria_craft.raw_silver": "Raw Silver",
+  "item.etheria_craft.silver_ingot": "Silver Ingot",
+  "item.etheria_craft.silver_nugget": "Silver Nugget",
+  "item.etheria_craft.sapphire": "Sapphire",
+  "item.etheria_craft.ruby": "Ruby",
+  "item.etheria_craft.topaz": "Topaz",
+  "item.etheria_craft.metal_dowsing_rod": "Metal Dowsing Rod",
+  "item.etheria_craft.gem_dowsing_rod": "Gem Dowsing Rod",
+  "item.etheria_craft.portable_crafting_table": "Portable Crafting Table",
+
+  "item.etheria_craft.chilli": "Chilli",
+  "item.etheria_craft.tomato": "Tomato",
+
+  "item.etheria_craft.blank_scroll": "Blank Scroll",
+  "item.etheria_craft.combustion_scroll": "Scroll of Combustion",
+
+  "block.etheria_craft.end_gold_ore": "End Gold Ore",
+  "block.etheria_craft.silver_ore": "Silver Ore",
+  "block.etheria_craft.deepslate_silver_ore": "Deepslate Silver Ore",
+  "block.etheria_craft.nether_silver_ore": "Nether Silver Ore",
+  "block.etheria_craft.end_silver_ore": "End Silver Ore",
+  "block.etheria_craft.silver_block": "Silver Block",
+  "block.etheria_craft.raw_silver_block": "Raw Silver Block",
+  "block.etheria_craft.sapphire_block": "Sapphire Block",
+  "block.etheria_craft.sapphire_ore": "Sapphire Ore",
+  "block.etheria_craft.ruby_block": "Ruby Block",
+  "block.etheria_craft.ruby_ore": "Ruby Ore",
+  "block.etheria_craft.topaz_block": "Topaz Block",
+  "block.etheria_craft.topaz_ore": "Topaz Ore",
+
+  "block.etheria_craft.quick_sand": "Quick Sand",
+  "block.etheria_craft.mossy_brick": "Mossy Bricks",
+  "block.etheria_craft.mossy_brick_slab": "Mossy Brick Slab",
+  "block.etheria_craft.mossy_brick_stairs": "Mossy Brick Stairs",
+  "block.etheria_craft.mossy_brick_wall": "Mossy Brick Wall",
+  "block.etheria_craft.mossy_brick_pressure_plate": "Mossy Brick Pressure Plate",
+
+  "tab.mod_ingredients_tab": "Etheria Ingredients",
+  "tab.mod_tools_and_utilities_tab": "Etheria Tools & Utilities",
+  "tab.mod_combat_tab": "Etheria Combat",
+  "tab.mod_misc_tab": "Etheria Misc",
+  "tab.mod_artifacts_tab": "Etheria Artifacts",
+  "tab.mod_blocks_tab": "Etheria Blocks",
+  "tab.mod_scrolls_tab": "Etheria Scrolls",
+
+
+  "tooltip.etheria_craft.fuel_item": "Burn time",
+  "tooltip.etheria_craft.gem_dowsing_rod": "Detects gems/dusts ore down to bedrock",
+  "tooltip.etheria_craft.metal_dowsing_rod": "Detects metal ore down to bedrock"
+}

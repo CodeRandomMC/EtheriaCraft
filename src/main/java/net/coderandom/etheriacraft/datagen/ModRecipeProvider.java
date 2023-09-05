@@ -10,6 +10,7 @@ import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -19,7 +20,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     public static final List<ItemLike> SILVER_SMELTABLES = List.of(
             ModItems.RAW_SILVER.get(),
             ModBlocks.SILVER_ORE.get(),
-            ModBlocks.DEEPSLATE_SILVER_ORE.get());
+            ModBlocks.DEEPSLATE_SILVER_ORE.get(),
+            ModBlocks.NETHER_SILVER_ORE.get());
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -50,13 +52,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', ModItems.SILVER_INGOT.get())
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_INGOT.get())
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModItems.SILVER_NUGGET.get())
-                .unlockedBy(getHasName(ModItems.SILVER_NUGGET.get()), has(ModItems.SILVER_NUGGET.get()))
-                .save(pWriter);
+//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_INGOT.get())
+//                .pattern("###")
+//                .pattern("###")
+//                .pattern("###")
+//                .define('#', ModItems.SILVER_NUGGET.get())
+//                .unlockedBy(getHasName(ModItems.SILVER_NUGGET.get()), has(ModItems.SILVER_NUGGET.get()))
+//                .save(pWriter);
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SAPPHIRE_BLOCK.get())
@@ -128,6 +130,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.RAW_GOLD)
                 .requires(Items.RAW_COPPER)
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(pWriter);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MOSSY_BRICK.get(), 1)
+                .requires(Blocks.BRICKS)
+                .requires(Items.VINE)
+                .unlockedBy(getHasName(Blocks.BRICKS), has(Items.VINE))
                 .save(pWriter);
     }
 

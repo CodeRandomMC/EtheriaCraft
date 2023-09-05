@@ -26,6 +26,7 @@
 - Gem Dowsing Rod
 
 ### 🏗️ Blocks
+- Mossy Bricks, Slab, Stairs, Wall, Pressure Plate
 
 #### 💎 Precious Stones
 - Sapphire Ore

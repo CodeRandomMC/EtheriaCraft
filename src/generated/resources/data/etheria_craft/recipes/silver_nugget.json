@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "etheria_craft:silver_nugget",
-    "count": 9
+    "count": 9,
+    "item": "etheria_craft:silver_nugget"
   }
 }

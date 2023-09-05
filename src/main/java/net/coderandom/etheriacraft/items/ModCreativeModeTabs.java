@@ -59,6 +59,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                         output.accept(ModBlocks.RUBY_BLOCK.get());
                         output.accept(ModBlocks.TOPAZ_BLOCK.get());
+
+                        output.accept(ModBlocks.MOSSY_BRICK.get());
+                        output.accept(ModBlocks.MOSSY_BRICK_SLAB.get());
+                        output.accept(ModBlocks.MOSSY_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.MOSSY_BRICK_WALL.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> MOD_COMBAT = CREATIVE_MODE_TABS.register("mod_combat_tab",
@@ -76,6 +81,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.TOMATO.get());
                         output.accept(ModItems.CHILLI.get());
+                        output.accept(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> MOD_SCROLLS = CREATIVE_MODE_TABS.register("mod_scrolls_tab",

@@ -1,15 +1,19 @@
 {
   "values": [
+    "#etheria_craft:ores_silver",
+    "etheria_craft:silver_block",
+    "etheria_craft:raw_silver_block",
     "etheria_craft:sapphire_ore",
-    "etheria_craft:sapphire_block",
     "etheria_craft:ruby_ore",
-    "etheria_craft:ruby_block",
     "etheria_craft:topaz_ore",
+    "etheria_craft:sapphire_block",
+    "etheria_craft:ruby_block",
     "etheria_craft:topaz_block",
-    "etheria_craft:silver_ore",
-    "etheria_craft:deepslate_silver_ore",
-    "etheria_craft:nether_silver_ore",
-    "etheria_craft:end_silver_ore",
-    "etheria_craft:end_gold_ore"
+    "etheria_craft:end_gold_ore",
+    "etheria_craft:mossy_brick",
+    "etheria_craft:mossy_brick_wall",
+    "etheria_craft:mossy_brick_stairs",
+    "etheria_craft:mossy_brick_slab",
+    "etheria_craft:mossy_brick_pressure_plate"
   ]
 }

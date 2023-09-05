@@ -60,7 +60,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(
-                        ModBlocks.QUICK_SAND.get()
+                        ModBlocks.QUICK_SAND.get(),
+                        ModBlocks.MOSSY_BRICK.get(),
+//                        ModBlocks.MOSSY_BRICK_WALL.get(),
+                        ModBlocks.MOSSY_BRICK_STAIRS.get(),
+                        ModBlocks.MOSSY_BRICK_SLAB.get(),
+                        ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get()
                 );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
@@ -102,12 +107,33 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.SAPPHIRE_BLOCK.get(),
                         ModBlocks.RUBY_BLOCK.get(),
                         ModBlocks.TOPAZ_BLOCK.get(),
-                        ModBlocks.END_GOLD_ORE.get()
+                        ModBlocks.END_GOLD_ORE.get(),
+                        ModBlocks.MOSSY_BRICK.get(),
+                        ModBlocks.MOSSY_BRICK_WALL.get(),
+                        ModBlocks.MOSSY_BRICK_STAIRS.get(),
+                        ModBlocks.MOSSY_BRICK_SLAB.get(),
+                        ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get()
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(
                         ModBlocks.QUICK_SAND.get()
                 );
+
+        this.tag(BlockTags.FENCES);
+
+        this.tag(BlockTags.FENCE_GATES);
+
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.MOSSY_BRICK_WALL.get());
+
+        this.tag(BlockTags.STAIRS)
+                .add(ModBlocks.MOSSY_BRICK_STAIRS.get());
+//
+        this.tag(BlockTags.SLABS)
+                .add(ModBlocks.MOSSY_BRICK_SLAB.get());
+//
+        this.tag(BlockTags.PRESSURE_PLATES)
+                .add(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get());
     }
 }
