@@ -76,9 +76,9 @@
 ![2023-09-06_04.05.41.png](run%2Fscreenshots%2F2023-09-06_04.05.41.png)
 ![2023-09-06_04.05.49.png](run%2Fscreenshots%2F2023-09-06_04.05.49.png)
 ![2023-09-06_04.05.56.png](run%2Fscreenshots%2F2023-09-06_04.05.56.png)
-![2023-09-05_18.05.20.png](run%2Fscreenshots%2F2023-09-05_18.05.20.png)
-![2023-09-05_18.04.50.png](run%2Fscreenshots%2F2023-09-05_18.04.50.png)
 ![2023-09-06_04.13.40.png](run%2Fscreenshots%2F2023-09-06_04.13.40.png)
+![2023-09-06_04.23.25.png](run%2Fscreenshots%2F2023-09-06_04.23.25.png)
+![2023-09-06_04.23.15.png](run%2Fscreenshots%2F2023-09-06_04.23.15.png)
 
 ---
 
@@ -86,5 +86,6 @@
 Place in forge mods folder
 
 ## 📜 License
+Copyright (c) 2023 D4RKJ0K3R, CodeRandom Studios
 All Rights Reserved
 
