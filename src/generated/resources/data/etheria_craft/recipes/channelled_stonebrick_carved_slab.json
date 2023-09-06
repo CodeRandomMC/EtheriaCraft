@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "etheria_craft:channelled_stonebrick_carved"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "etheria_craft:channelled_stonebrick_carved_slab"
+  },
+  "show_notification": true
+}

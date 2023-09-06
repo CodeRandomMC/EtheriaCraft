@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "etheria_craft:block/channelled_mossy_stonebrick_slab"
+    },
+    "type=double": {
+      "model": "etheria_craft:block/channelled_mossy_stonebrick"
+    },
+    "type=top": {
+      "model": "etheria_craft:block/channelled_mossy_stonebrick_slab_top"
+    }
+  }
+}

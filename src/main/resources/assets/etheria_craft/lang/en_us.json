@@ -67,6 +67,21 @@
   "block.etheria_craft.packed_ice_stairs": "Packed Ice Stairs",
   "block.etheria_craft.packed_ice_wall": "Packed Ice Wall",
 
+  "block.etheria_craft.channelled_stonebrick": "Channelled Stone Bricks",
+  "block.etheria_craft.channelled_stonebrick_slab": "Channelled Stone Brick Slab",
+  "block.etheria_craft.channelled_stonebrick_stairs": "Channelled Stone Brick Stairs",
+  "block.etheria_craft.channelled_stonebrick_wall": "Channelled Stone Brick Wall",
+
+  "block.etheria_craft.channelled_mossy_stonebrick": "Channelled Mossy Stone Bricks",
+  "block.etheria_craft.channelled_mossy_stonebrick_slab": "Channelled Mossy Stone Brick Slab",
+  "block.etheria_craft.channelled_mossy_stonebrick_stairs": "Channelled Mossy Stone Brick Stairs",
+  "block.etheria_craft.channelled_mossy_stonebrick_wall": "Channelled Mossy Stone Brick Wall",
+
+  "block.etheria_craft.channelled_stonebrick_carved": "Channelled Chiseled Stone Bricks",
+  "block.etheria_craft.channelled_stonebrick_carved_slab": "Channelled Chiseled Stone Brick Slab",
+  "block.etheria_craft.channelled_stonebrick_carved_stairs": "Channelled Chiseled Stone Brick Stairs",
+  "block.etheria_craft.channelled_stonebrick_carved_wall": "Channelled Chiseled Stone Brick Wall",
+
   "tab.mod_ingredients_tab": "Etheria Ingredients",
   "tab.mod_tools_and_utilities_tab": "Etheria Tools & Utilities",
   "tab.mod_combat_tab": "Etheria Combat",

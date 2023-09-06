@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "etheria_craft:block/channelled_stonebrick_carved_slab"
+    },
+    "type=double": {
+      "model": "etheria_craft:block/channelled_stonebrick_carved"
+    },
+    "type=top": {
+      "model": "etheria_craft:block/channelled_stonebrick_carved_slab_top"
+    }
+  }
+}

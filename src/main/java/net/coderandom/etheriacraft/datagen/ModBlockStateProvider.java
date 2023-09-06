@@ -58,7 +58,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGate(ModBlocks.ENRICHED_NETHER_BRICK_FENCE_GATE.get(), ModBlocks.ENRICHED_NETHER_BRICK.get());
 
         blockWithItem(ModBlocks.ENRICHED_RED_NETHER_BRICK);
-        stairs(ModBlocks.ENRICHED_RED_NETHER_BRICK_STAIRS.get(), ModBlocks.ENRICHED_NETHER_BRICK.get());
+        stairs(ModBlocks.ENRICHED_RED_NETHER_BRICK_STAIRS.get(), ModBlocks.ENRICHED_RED_NETHER_BRICK.get());
         slabBlock(((SlabBlock) ModBlocks.ENRICHED_RED_NETHER_BRICK_SLAB.get()), blockTexture(ModBlocks.ENRICHED_RED_NETHER_BRICK.get()), blockTexture(ModBlocks.ENRICHED_RED_NETHER_BRICK.get()));
         wall(ModBlocks.ENRICHED_RED_NETHER_BRICK_WALL.get(), ModBlocks.ENRICHED_RED_NETHER_BRICK.get());
         fence(ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE.get(), ModBlocks.ENRICHED_RED_NETHER_BRICK.get());
@@ -67,6 +67,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairs(ModBlocks.PACKED_ICE_STAIRS.get(), Blocks.PACKED_ICE);
         slabBlock(((SlabBlock) ModBlocks.PACKED_ICE_SLAB.get()), blockTexture(Blocks.PACKED_ICE), blockTexture(Blocks.PACKED_ICE));
         wall(ModBlocks.PACKED_ICE_WALL.get(), Blocks.PACKED_ICE);
+
+        blockWithItem(ModBlocks.CHANNELLED_STONEBRICK);
+        stairs(ModBlocks.CHANNELLED_STONEBRICK_STAIRS.get(), ModBlocks.CHANNELLED_STONEBRICK.get());
+        slabBlock(((SlabBlock) ModBlocks.CHANNELLED_STONEBRICK_SLAB.get()), blockTexture(ModBlocks.CHANNELLED_STONEBRICK.get()), blockTexture(ModBlocks.CHANNELLED_STONEBRICK.get()));
+        wall(ModBlocks.CHANNELLED_STONEBRICK_WALL.get(), ModBlocks.CHANNELLED_STONEBRICK.get());
+
+        blockWithItem(ModBlocks.CHANNELLED_MOSSY_STONEBRICK);
+        stairs(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_STAIRS.get(), ModBlocks.CHANNELLED_MOSSY_STONEBRICK.get());
+        slabBlock(((SlabBlock) ModBlocks.CHANNELLED_MOSSY_STONEBRICK_SLAB.get()), blockTexture(ModBlocks.CHANNELLED_MOSSY_STONEBRICK.get()), blockTexture(ModBlocks.CHANNELLED_MOSSY_STONEBRICK.get()));
+        wall(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_WALL.get(), ModBlocks.CHANNELLED_MOSSY_STONEBRICK.get());
+
+        blockWithItem(ModBlocks.CHANNELLED_STONEBRICK_CARVED);
+        stairs(ModBlocks.CHANNELLED_STONEBRICK_CARVED_STAIRS.get(), ModBlocks.CHANNELLED_STONEBRICK_CARVED.get());
+        slabBlock(((SlabBlock) ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get()), blockTexture(ModBlocks.CHANNELLED_STONEBRICK_CARVED.get()), blockTexture(ModBlocks.CHANNELLED_STONEBRICK_CARVED.get()));
+        wall(ModBlocks.CHANNELLED_STONEBRICK_CARVED_WALL.get(), ModBlocks.CHANNELLED_STONEBRICK_CARVED.get());
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

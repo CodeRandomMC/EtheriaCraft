@@ -93,6 +93,21 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE.get());
                         output.accept(ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE_GATE.get());
 
+                        output.accept(ModBlocks.CHANNELLED_STONEBRICK.get());
+                        output.accept(ModBlocks.CHANNELLED_STONEBRICK_SLAB.get());
+                        output.accept(ModBlocks.CHANNELLED_STONEBRICK_STAIRS.get());
+                        output.accept(ModBlocks.CHANNELLED_STONEBRICK_WALL.get());
+
+                        output.accept(ModBlocks.CHANNELLED_MOSSY_STONEBRICK.get());
+                        output.accept(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_SLAB.get());
+                        output.accept(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_STAIRS.get());
+                        output.accept(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_WALL.get());
+
+                        output.accept(ModBlocks.CHANNELLED_STONEBRICK_CARVED.get());
+                        output.accept(ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get());
+                        output.accept(ModBlocks.CHANNELLED_STONEBRICK_CARVED_STAIRS.get());
+                        output.accept(ModBlocks.CHANNELLED_STONEBRICK_CARVED_WALL.get());
+
                         output.accept(ModBlocks.PACKED_ICE_SLAB.get());
                         output.accept(ModBlocks.PACKED_ICE_STAIRS.get());
                         output.accept(ModBlocks.PACKED_ICE_WALL.get());

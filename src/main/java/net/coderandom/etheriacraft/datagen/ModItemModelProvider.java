@@ -71,6 +71,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(ModBlocks.PACKED_ICE_WALL.get()).getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall",  new ResourceLocation("minecraft", "block/" + ForgeRegistries.BLOCKS.getKey(Blocks.PACKED_ICE).getPath()));
 
+        simpleBlockItem(ModBlocks.CHANNELLED_STONEBRICK_STAIRS);
+        simpleBlockItem(ModBlocks.CHANNELLED_STONEBRICK_SLAB);
+        wallItem(ModBlocks.CHANNELLED_STONEBRICK_WALL, ModBlocks.CHANNELLED_STONEBRICK);
+
+        simpleBlockItem(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_STAIRS);
+        simpleBlockItem(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_SLAB);
+        wallItem(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_WALL, ModBlocks.CHANNELLED_MOSSY_STONEBRICK);
+
+        simpleBlockItem(ModBlocks.CHANNELLED_STONEBRICK_CARVED_STAIRS);
+        simpleBlockItem(ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB);
+        wallItem(ModBlocks.CHANNELLED_STONEBRICK_CARVED_WALL, ModBlocks.CHANNELLED_STONEBRICK_CARVED);
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> itemRegistryObject) {

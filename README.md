@@ -29,11 +29,22 @@
 
 ### 🏗️ Blocks
 - Mossy Bricks, Slab, Stairs, Wall, Pressure Plate
-- Gilded Blackstone Brick, Slab, Stairs, Wall
-- Infused End Stone Brick, Slab, Stairs, Wall
-- Enriched Nether Brick, Slab, Stairs, Wall, Fence, Fence Gate
-- Enriched Red Nether Brick, Slab, Stairs, Wall, Fence, Fence Gate
-- Added to [Packed Ice], Slab, Stairs, Wall
+- Gilded Blackstone Brick
+  - Slab, Stairs, Wall
+- Infused End Stone Brick (Animated)
+  - Slab, Stairs, Wall
+- Enriched Nether Brick (Animated)
+  - Slab, Stairs, Wall, Fence, Fence Gate
+- Enriched Red Nether Brick (Animated)
+  - Slab, Stairs, Wall, Fence, Fence Gate
+- Added to [Packed Ice]
+  - Slab, Stairs, Wall
+- Channelled Stone Brick (Animated)
+  - Slab, Stairs, Wall
+- Channelled Stone Brick Carved/Chiseled (Animated)
+  - Slab, Stairs, Wall
+- Channelled Mossy Stone Brick (Animated)
+  - Slab, Stairs, Wall
 
 #### 💎 Precious Stones
 - Sapphire Ore
@@ -60,6 +71,14 @@
 - Blank Scroll
 - [WIP] Scroll of Combustion (Fuel x4 duration as coal block)
 
+---
+## 🖼 Images
+![2023-09-06_04.05.41.png](run%2Fscreenshots%2F2023-09-06_04.05.41.png)
+![2023-09-06_04.05.49.png](run%2Fscreenshots%2F2023-09-06_04.05.49.png)
+![2023-09-06_04.05.56.png](run%2Fscreenshots%2F2023-09-06_04.05.56.png)
+![2023-09-05_18.05.20.png](run%2Fscreenshots%2F2023-09-05_18.05.20.png)
+![2023-09-05_18.04.50.png](run%2Fscreenshots%2F2023-09-05_18.04.50.png)
+![2023-09-06_04.13.40.png](run%2Fscreenshots%2F2023-09-06_04.13.40.png)
 ---
 
 ## 📚 How to Install
