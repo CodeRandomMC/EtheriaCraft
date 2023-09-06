@@ -1,5 +1,7 @@
 {
   "values": [
-    "etheria_craft:mossy_brick_slab"
+    "etheria_craft:mossy_brick_slab",
+    "etheria_craft:gilded_blackstone_brick_slab",
+    "etheria_craft:infused_end_stone_brick_slab"
   ]
 }

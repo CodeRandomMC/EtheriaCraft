@@ -9,6 +9,7 @@
     "#forge:ores/netherite_scrap",
     "etheria_craft:sapphire_ore",
     "etheria_craft:ruby_ore",
-    "etheria_craft:topaz_ore"
+    "etheria_craft:topaz_ore",
+    "etheria_craft:enderite_scrap_ore"
   ]
 }

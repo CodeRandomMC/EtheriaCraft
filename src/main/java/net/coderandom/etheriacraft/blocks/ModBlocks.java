@@ -12,7 +12,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -26,6 +25,8 @@ public class ModBlocks {
             dropExperienceBlock("end_gold_ore", Blocks.END_STONE,6, 8);
     public static final RegistryObject<Block> END_SILVER_ORE =
             dropExperienceBlock("end_silver_ore", Blocks.END_STONE,6, 8);
+    public static final RegistryObject<Block> ENDERITE_SCRAP_ORE =
+            dropExperienceBlock("enderite_scrap_ore", Blocks.END_STONE,8, 12);
     public static final RegistryObject<Block> SILVER_ORE =
             dropExperienceBlock("silver_ore", Blocks.GOLD_ORE,3, 4);
     public static final RegistryObject<Block> DEEPSLATE_SILVER_ORE =
@@ -57,15 +58,32 @@ public class ModBlocks {
     public static final RegistryObject<Block> MOSSY_BRICK_STAIRS = registerBlock("mossy_brick_stairs",
             () -> new StairBlock(() -> ModBlocks.MOSSY_BRICK.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.BRICK_STAIRS)));
-
     public static final RegistryObject<Block> MOSSY_BRICK_SLAB = registerBlock("mossy_brick_slab",
              () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICK_SLAB)));
-
     public static final RegistryObject<Block> MOSSY_BRICK_PRESSURE_PLATE = registerBlock("mossy_brick_pressure_plate",
                 () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING ,BlockBehaviour.Properties.copy(Blocks.STONE_PRESSURE_PLATE), BlockSetType.STONE));
-
     public static final RegistryObject<Block> MOSSY_BRICK_WALL = registerBlock("mossy_brick_wall",
                 () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.BRICK_WALL)));
+
+    public static final RegistryObject<Block> GILDED_BLACKSTONE_BRICK =
+            registerBasicBlock("gilded_blackstone_brick", Blocks.POLISHED_BLACKSTONE_BRICKS);
+    public static final RegistryObject<Block> GILDED_BLACKSTONE_BRICK_STAIRS = registerBlock("gilded_blackstone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.GILDED_BLACKSTONE_BRICK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE_BRICK_STAIRS)));
+    public static final RegistryObject<Block> GILDED_BLACKSTONE_BRICK_SLAB = registerBlock("gilded_blackstone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE_BRICK_SLAB)));
+    public static final RegistryObject<Block> GILDED_BLACKSTONE_BRICK_WALL = registerBlock("gilded_blackstone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE_BRICK_WALL)));
+
+    public static final RegistryObject<Block> INFUSED_END_BRICK =
+            registerBasicBlock("infused_end_stone_brick", Blocks.END_STONE_BRICKS);
+    public static final RegistryObject<Block> INFUSED_END_BRICK_STAIRS = registerBlock("infused_end_stone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.INFUSED_END_BRICK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICK_STAIRS)));
+    public static final RegistryObject<Block> INFUSED_END_BRICK_SLAB = registerBlock("infused_end_stone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICK_SLAB)));
+    public static final RegistryObject<Block> INFUSED_END_BRICK_WALL = registerBlock("infused_end_stone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICK_WALL)));
 
 
 

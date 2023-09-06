@@ -5,6 +5,8 @@
   "item.etheria_craft.sapphire": "Sapphire",
   "item.etheria_craft.ruby": "Ruby",
   "item.etheria_craft.topaz": "Topaz",
+  "item.etheria_craft.enderite_scrap": "Enderite Scrap",
+  "item.etheria_craft.enderite_ingot": "Enderite Ingot",
   "item.etheria_craft.metal_dowsing_rod": "Metal Dowsing Rod",
   "item.etheria_craft.gem_dowsing_rod": "Gem Dowsing Rod",
   "item.etheria_craft.portable_crafting_table": "Portable Crafting Table",
@@ -20,6 +22,7 @@
   "block.etheria_craft.deepslate_silver_ore": "Deepslate Silver Ore",
   "block.etheria_craft.nether_silver_ore": "Nether Silver Ore",
   "block.etheria_craft.end_silver_ore": "End Silver Ore",
+  "block.etheria_craft.enderite_scrap_ore": "Enderite Scrap Ore",
   "block.etheria_craft.silver_block": "Silver Block",
   "block.etheria_craft.raw_silver_block": "Raw Silver Block",
   "block.etheria_craft.sapphire_block": "Sapphire Block",
@@ -35,6 +38,16 @@
   "block.etheria_craft.mossy_brick_stairs": "Mossy Brick Stairs",
   "block.etheria_craft.mossy_brick_wall": "Mossy Brick Wall",
   "block.etheria_craft.mossy_brick_pressure_plate": "Mossy Brick Pressure Plate",
+
+  "block.etheria_craft.gilded_blackstone_brick": "Gilded Blackstone Bricks",
+  "block.etheria_craft.gilded_blackstone_brick_slab": "Gilded Blackstone Brick Slab",
+  "block.etheria_craft.gilded_blackstone_brick_stairs": "Gilded Blackstone Brick Stairs",
+  "block.etheria_craft.gilded_blackstone_brick_wall": "Gilded Blackstone Brick Wall",
+
+  "block.etheria_craft.infused_end_stone_brick": "Infused End Stone Bricks",
+  "block.etheria_craft.infused_end_stone_brick_slab": "Infused End Stone Brick Slab",
+  "block.etheria_craft.infused_end_stone_brick_stairs": "Infused End Stone Brick Stairs",
+  "block.etheria_craft.infused_end_stone_brick_wall": "Infused End Stone Brick Wall",
 
   "tab.mod_ingredients_tab": "Etheria Ingredients",
   "tab.mod_tools_and_utilities_tab": "Etheria Tools & Utilities",

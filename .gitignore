@@ -1,5 +1,6 @@
 # User-specific stuff
 .idea/
+src/generated/resources/.cache/
 
 *.iml
 *.ipr
@@ -120,3 +121,4 @@ run/
 
 # Ignore gimp editor files
 *.xcf
+/src/generated/resources/.cache/

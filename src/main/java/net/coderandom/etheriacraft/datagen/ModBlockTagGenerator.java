@@ -20,6 +20,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        this.tag(ModTags.Blocks.END_ORES)
+                .add(
+                        ModBlocks.END_GOLD_ORE.get(),
+                        ModBlocks.END_SILVER_ORE.get(),
+                        ModBlocks.ENDERITE_SCRAP_ORE.get()
+                );
+
         this.tag(ModTags.Blocks.ORES_SILVER)
                 .add(
                         ModBlocks.SILVER_ORE.get(),
@@ -40,7 +47,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(
                         ModBlocks.SAPPHIRE_ORE.get(),
                         ModBlocks.RUBY_ORE.get(),
-                        ModBlocks.TOPAZ_ORE.get()
+                        ModBlocks.TOPAZ_ORE.get(),
+                        ModBlocks.ENDERITE_SCRAP_ORE.get()
                 );
 
 
@@ -53,19 +61,41 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.END_GOLD_ORE.get()
                 );
 
+        this.tag(ModTags.Blocks.MOSSY_BRICK)
+                .add(
+                        ModBlocks.MOSSY_BRICK.get(),
+                        ModBlocks.MOSSY_BRICK_SLAB.get(),
+                        ModBlocks.MOSSY_BRICK_STAIRS.get(),
+                        ModBlocks.MOSSY_BRICK_WALL.get(),
+                        ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get()
+                );
+
+        this.tag(ModTags.Blocks.GILDED_BLACKSTONE_BRICK)
+                .add(
+                        ModBlocks.GILDED_BLACKSTONE_BRICK.get(),
+                        ModBlocks.GILDED_BLACKSTONE_BRICK_SLAB.get(),
+                        ModBlocks.GILDED_BLACKSTONE_BRICK_STAIRS.get(),
+                        ModBlocks.GILDED_BLACKSTONE_BRICK_WALL.get()
+                );
+
+        this.tag(ModTags.Blocks.INFUSED_END_STONE_BRICK)
+                .add(
+                        ModBlocks.INFUSED_END_BRICK.get(),
+                        ModBlocks.INFUSED_END_BRICK_SLAB.get(),
+                        ModBlocks.INFUSED_END_BRICK_STAIRS.get(),
+                        ModBlocks.INFUSED_END_BRICK_WALL.get()
+                );
+
 
         this.tag(Tags.Blocks.NEEDS_WOOD_TOOL);
 
         this.tag(Tags.Blocks.NEEDS_GOLD_TOOL);
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
+                .addTag(ModTags.Blocks.MOSSY_BRICK)
+                .addTag(ModTags.Blocks.INFUSED_END_STONE_BRICK)
                 .add(
-                        ModBlocks.QUICK_SAND.get(),
-                        ModBlocks.MOSSY_BRICK.get(),
-//                        ModBlocks.MOSSY_BRICK_WALL.get(),
-                        ModBlocks.MOSSY_BRICK_STAIRS.get(),
-                        ModBlocks.MOSSY_BRICK_SLAB.get(),
-                        ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get()
+                        ModBlocks.QUICK_SAND.get()
                 );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
@@ -83,14 +113,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.TOPAZ_BLOCK.get()
                 );
 
-        this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .addTag(ModTags.Blocks.GILDED_BLACKSTONE_BRICK);
 
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
-                .add(
-                        ModBlocks.END_GOLD_ORE.get(),
-                        ModBlocks.END_SILVER_ORE.get()
-                );
+                .addTag(ModTags.Blocks.END_ORES);
+//                .add(
+//                        ModBlocks.END_GOLD_ORE.get(),
+//                        ModBlocks.END_SILVER_ORE.get()
+//                );
 
         this.tag(BlockTags.MINEABLE_WITH_AXE);
 
@@ -98,6 +130,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .addTag(ModTags.Blocks.ORES_SILVER)
+                .addTag(ModTags.Blocks.END_ORES)
+                .addTag(ModTags.Blocks.MOSSY_BRICK)
+                .addTag(ModTags.Blocks.GILDED_BLACKSTONE_BRICK)
+                .addTag(ModTags.Blocks.INFUSED_END_STONE_BRICK)
                 .add(
                         ModBlocks.SILVER_BLOCK.get(),
                         ModBlocks.RAW_SILVER_BLOCK.get(),
@@ -106,13 +142,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.TOPAZ_ORE.get(),
                         ModBlocks.SAPPHIRE_BLOCK.get(),
                         ModBlocks.RUBY_BLOCK.get(),
-                        ModBlocks.TOPAZ_BLOCK.get(),
-                        ModBlocks.END_GOLD_ORE.get(),
-                        ModBlocks.MOSSY_BRICK.get(),
-                        ModBlocks.MOSSY_BRICK_WALL.get(),
-                        ModBlocks.MOSSY_BRICK_STAIRS.get(),
-                        ModBlocks.MOSSY_BRICK_SLAB.get(),
-                        ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get()
+                        ModBlocks.TOPAZ_BLOCK.get()
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
@@ -125,14 +155,20 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.FENCE_GATES);
 
         this.tag(BlockTags.WALLS)
-                .add(ModBlocks.MOSSY_BRICK_WALL.get());
+                .add(ModBlocks.MOSSY_BRICK_WALL.get())
+                .add(ModBlocks.GILDED_BLACKSTONE_BRICK_WALL.get())
+                .add(ModBlocks.INFUSED_END_BRICK_WALL.get());
 
         this.tag(BlockTags.STAIRS)
-                .add(ModBlocks.MOSSY_BRICK_STAIRS.get());
-//
+                .add(ModBlocks.MOSSY_BRICK_STAIRS.get())
+                .add(ModBlocks.GILDED_BLACKSTONE_BRICK_STAIRS.get())
+                .add(ModBlocks.INFUSED_END_BRICK_STAIRS.get());
+
         this.tag(BlockTags.SLABS)
-                .add(ModBlocks.MOSSY_BRICK_SLAB.get());
-//
+                .add(ModBlocks.MOSSY_BRICK_SLAB.get())
+                .add(ModBlocks.GILDED_BLACKSTONE_BRICK_SLAB.get())
+                .add(ModBlocks.INFUSED_END_BRICK_SLAB.get());
+
         this.tag(BlockTags.PRESSURE_PLATES)
                 .add(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get());
     }

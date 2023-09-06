@@ -42,6 +42,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.MOSSY_BRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.MOSSY_BRICK_SLAB.get()));
 
+        this.dropSelf(ModBlocks.GILDED_BLACKSTONE_BRICK.get());
+        this.dropSelf(ModBlocks.GILDED_BLACKSTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.GILDED_BLACKSTONE_BRICK_WALL.get());
+        this.add(ModBlocks.GILDED_BLACKSTONE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GILDED_BLACKSTONE_BRICK_SLAB.get()));
+
+        this.dropSelf(ModBlocks.INFUSED_END_BRICK.get());
+        this.dropSelf(ModBlocks.INFUSED_END_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.INFUSED_END_BRICK_WALL.get());
+        this.add(ModBlocks.INFUSED_END_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.INFUSED_END_BRICK_SLAB.get()));
+
         this.add(ModBlocks.SILVER_ORE.get(),
                 block -> createOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get(), 1.00F, 3.00F));
         this.add(ModBlocks.DEEPSLATE_SILVER_ORE.get(),
@@ -52,6 +64,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createOreDrops(ModBlocks.END_SILVER_ORE.get(), ModItems.SILVER_INGOT.get(), 1.00F, 2.00F));
         this.add(ModBlocks.END_GOLD_ORE.get(),
                 block -> createOreDrops(ModBlocks.END_GOLD_ORE.get(), Items.GOLD_INGOT, 1.00F, 2.00F));
+        this.add(ModBlocks.ENDERITE_SCRAP_ORE.get(),
+                block -> createOreDrops(ModBlocks.ENDERITE_SCRAP_ORE.get(), ModItems.ENDERITE_SCRAP.get(), 1.00F, 2.00F));
         this.add(ModBlocks.DEEPSLATE_SILVER_ORE.get(),
                 block -> createOreDrops(ModBlocks.DEEPSLATE_SILVER_ORE.get(), ModItems.RAW_SILVER.get(), 2.00F, 6.00F));
         this.add(ModBlocks.SAPPHIRE_ORE.get(),

@@ -24,9 +24,13 @@
 - Topaz
 - Metal Dowsing Rod
 - Gem Dowsing Rod
+- Enderite Scrap
+- Enderite Ingot
 
 ### 🏗️ Blocks
 - Mossy Bricks, Slab, Stairs, Wall, Pressure Plate
+- Gilded Blackstone Brick, Slab, Stairs, Wall
+- Infused End Stone Brick, Slab, Stairs, Wall
 
 #### 💎 Precious Stones
 - Sapphire Ore
@@ -35,6 +39,7 @@
 - Ruby Block
 - Topaz Ore
 - Topaz Block
+- Enderite Scrap Ore
 
 #### 🏭 Metals
 - Silver Block

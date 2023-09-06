@@ -28,6 +28,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RUBY);
         simpleItem(ModItems.TOPAZ);
 
+        simpleItem(ModItems.ENDERITE_SCRAP);
+        simpleItem(ModItems.ENDERITE_INGOT);
+
         simpleItem(ModItems.METAL_DOWSING_ROD);
         simpleItem(ModItems.GEM_DOWSING_ROD);
 
@@ -37,10 +40,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.BLANK_SCROLL);
         simpleItem(ModItems.COMBUSTION_SCROLL);
 
-        evenSimplerBlockItem(ModBlocks.MOSSY_BRICK_STAIRS);
-        evenSimplerBlockItem(ModBlocks.MOSSY_BRICK_SLAB);
-        evenSimplerBlockItem(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE);
+        simpleBlockItem(ModBlocks.MOSSY_BRICK_STAIRS);
+        simpleBlockItem(ModBlocks.MOSSY_BRICK_SLAB);
+        simpleBlockItem(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE);
         wallItem(ModBlocks.MOSSY_BRICK_WALL, ModBlocks.MOSSY_BRICK);
+
+        simpleBlockItem(ModBlocks.GILDED_BLACKSTONE_BRICK_STAIRS);
+        simpleBlockItem(ModBlocks.GILDED_BLACKSTONE_BRICK_SLAB);
+        wallItem(ModBlocks.GILDED_BLACKSTONE_BRICK_WALL, ModBlocks.GILDED_BLACKSTONE_BRICK);
+
+        simpleBlockItem(ModBlocks.INFUSED_END_BRICK_STAIRS);
+        simpleBlockItem(ModBlocks.INFUSED_END_BRICK_SLAB);
+        wallItem(ModBlocks.INFUSED_END_BRICK_WALL, ModBlocks.INFUSED_END_BRICK);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> itemRegistryObject) {
@@ -49,13 +60,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation(EtheriaCraft.MOD_ID, "item/" +itemRegistryObject.getId().getPath()));
     }
 
-    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
-        return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(EtheriaCraft.MOD_ID,"item/" + item.getId().getPath()));
-    }
-
-    public void evenSimplerBlockItem(RegistryObject<Block> block) {
+    public void simpleBlockItem(RegistryObject<Block> block) {
         this.withExistingParent(EtheriaCraft.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
     }

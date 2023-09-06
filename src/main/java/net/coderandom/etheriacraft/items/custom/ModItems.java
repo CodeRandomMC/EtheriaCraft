@@ -23,6 +23,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> TOPAZ = ITEMS.register("topaz",
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> ENDERITE_SCRAP = ITEMS.register("enderite_scrap",
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> ENDERITE_INGOT = ITEMS.register("enderite_ingot",
+        () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> METAL_DOWSING_ROD = ITEMS.register("metal_dowsing_rod",
             MetalDowsingRodItem::new);
     public static final RegistryObject<Item> GEM_DOWSING_ROD = ITEMS.register("gem_dowsing_rod",
@@ -34,7 +38,7 @@ public class ModItems {
     public static final RegistryObject<Item> CHILLI = ITEMS.register("chilli",
             () -> new Item(new Item.Properties().food(ModFoods.CHILLI)));
 
-
+    //Scrolls
     public static final RegistryObject<Item> BLANK_SCROLL = ITEMS.register("blank_scroll",
             () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> COMBUSTION_SCROLL = ITEMS.register("combustion_scroll",

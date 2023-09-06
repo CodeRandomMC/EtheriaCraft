@@ -16,6 +16,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.END_GOLD_ORE);
+        blockWithItem(ModBlocks.ENDERITE_SCRAP_ORE);
 
         blockWithItem(ModBlocks.SILVER_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_SILVER_ORE);
@@ -38,6 +39,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(((SlabBlock) ModBlocks.MOSSY_BRICK_SLAB.get()), blockTexture(ModBlocks.MOSSY_BRICK.get()), blockTexture(ModBlocks.MOSSY_BRICK.get()));
         pressurePlate(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get(), ModBlocks.MOSSY_BRICK.get());
         wall(ModBlocks.MOSSY_BRICK_WALL.get(), ModBlocks.MOSSY_BRICK.get());
+
+
+        blockWithItem(ModBlocks.GILDED_BLACKSTONE_BRICK);
+        stairs(ModBlocks.GILDED_BLACKSTONE_BRICK_STAIRS.get(), ModBlocks.GILDED_BLACKSTONE_BRICK.get());
+        slabBlock(((SlabBlock) ModBlocks.GILDED_BLACKSTONE_BRICK_SLAB.get()), blockTexture(ModBlocks.GILDED_BLACKSTONE_BRICK.get()), blockTexture(ModBlocks.GILDED_BLACKSTONE_BRICK.get()));
+        wall(ModBlocks.GILDED_BLACKSTONE_BRICK_WALL.get(), ModBlocks.GILDED_BLACKSTONE_BRICK.get());
+
+
+        blockWithItem(ModBlocks.INFUSED_END_BRICK);
+        stairs(ModBlocks.INFUSED_END_BRICK_STAIRS.get(), ModBlocks.INFUSED_END_BRICK.get());
+        slabBlock(((SlabBlock) ModBlocks.INFUSED_END_BRICK_SLAB.get()), blockTexture(ModBlocks.INFUSED_END_BRICK.get()), blockTexture(ModBlocks.INFUSED_END_BRICK.get()));
+        wall(ModBlocks.INFUSED_END_BRICK_WALL.get(), ModBlocks.INFUSED_END_BRICK.get());
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

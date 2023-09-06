@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "etheria_craft:block/infused_end_stone_brick",
+    "side": "etheria_craft:block/infused_end_stone_brick",
+    "top": "etheria_craft:block/infused_end_stone_brick"
+  }
+}
