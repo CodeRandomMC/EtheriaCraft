@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side",
+  "textures": {
+    "wall": "etheria_craft:block/channelled_mossy_stonebrick"
+  }
+}

@@ -111,6 +111,22 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.PACKED_ICE_WALL.get()
                 );
 
+        this.tag(ModTags.Blocks.CHANNELLED_STONEBRICK)
+                .add(
+                        ModBlocks.CHANNELLED_STONEBRICK.get(),
+                        ModBlocks.CHANNELLED_STONEBRICK_STAIRS.get(),
+                        ModBlocks.CHANNELLED_STONEBRICK_SLAB.get(),
+                        ModBlocks.CHANNELLED_STONEBRICK_WALL.get(),
+                        ModBlocks.CHANNELLED_MOSSY_STONEBRICK.get(),
+                        ModBlocks.CHANNELLED_MOSSY_STONEBRICK_STAIRS.get(),
+                        ModBlocks.CHANNELLED_MOSSY_STONEBRICK_SLAB.get(),
+                        ModBlocks.CHANNELLED_MOSSY_STONEBRICK_WALL.get(),
+                        ModBlocks.CHANNELLED_STONEBRICK_CARVED.get(),
+                        ModBlocks.CHANNELLED_STONEBRICK_CARVED_STAIRS.get(),
+                        ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get(),
+                        ModBlocks.CHANNELLED_STONEBRICK_CARVED_WALL.get()
+                );
+
 
         this.tag(Tags.Blocks.NEEDS_WOOD_TOOL);
 
@@ -121,6 +137,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.INFUSED_END_STONE_BRICK)
                 .addTag(ModTags.Blocks.ENRICHED_NETHER_BRICK)
                 .addTag(ModTags.Blocks.PACKED_ICE)
+                .addTag(ModTags.Blocks.CHANNELLED_STONEBRICK)
                 .add(
                         ModBlocks.QUICK_SAND.get()
                 );
@@ -163,6 +180,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.INFUSED_END_STONE_BRICK)
                 .addTag(ModTags.Blocks.ENRICHED_NETHER_BRICK)
                 .addTag(ModTags.Blocks.PACKED_ICE)
+                .addTag(ModTags.Blocks.CHANNELLED_STONEBRICK)
                 .add(
                         ModBlocks.SILVER_BLOCK.get(),
                         ModBlocks.RAW_SILVER_BLOCK.get(),
@@ -197,7 +215,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.INFUSED_END_BRICK_WALL.get())
                 .add(ModBlocks.ENRICHED_NETHER_BRICK_WALL.get())
                 .add(ModBlocks.ENRICHED_RED_NETHER_BRICK_WALL.get())
-                .add(ModBlocks.PACKED_ICE_WALL.get());
+                .add(ModBlocks.PACKED_ICE_WALL.get())
+                .add(ModBlocks.CHANNELLED_STONEBRICK_WALL.get())
+                .add(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_WALL.get())
+                .add(ModBlocks.CHANNELLED_STONEBRICK_CARVED_WALL.get());
 
         this.tag(BlockTags.STAIRS)
                 .add(ModBlocks.MOSSY_BRICK_STAIRS.get())
@@ -205,7 +226,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.INFUSED_END_BRICK_STAIRS.get())
                 .add(ModBlocks.ENRICHED_NETHER_BRICK_STAIRS.get())
                 .add(ModBlocks.ENRICHED_RED_NETHER_BRICK_STAIRS.get())
-                .add(ModBlocks.PACKED_ICE_STAIRS.get());
+                .add(ModBlocks.PACKED_ICE_STAIRS.get())
+                .add(ModBlocks.CHANNELLED_STONEBRICK_STAIRS.get())
+                .add(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_STAIRS.get())
+                .add(ModBlocks.CHANNELLED_STONEBRICK_CARVED_STAIRS.get());;
 
         this.tag(BlockTags.SLABS)
                 .add(ModBlocks.MOSSY_BRICK_SLAB.get())
@@ -213,7 +237,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.INFUSED_END_BRICK_SLAB.get())
                 .add(ModBlocks.ENRICHED_NETHER_BRICK_SLAB.get())
                 .add(ModBlocks.ENRICHED_RED_NETHER_BRICK_SLAB.get())
-                .add(ModBlocks.PACKED_ICE_SLAB.get());
+                .add(ModBlocks.PACKED_ICE_SLAB.get())
+                .add(ModBlocks.CHANNELLED_STONEBRICK_SLAB.get())
+                .add(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_SLAB.get())
+                .add(ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get());;
 
         this.tag(BlockTags.PRESSURE_PLATES)
                 .add(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get());

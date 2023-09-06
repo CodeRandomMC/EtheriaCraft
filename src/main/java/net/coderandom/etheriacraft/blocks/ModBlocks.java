@@ -120,6 +120,36 @@ public class ModBlocks {
     public static final RegistryObject<Block> PACKED_ICE_WALL = registerBlock("packed_ice_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.PACKED_ICE)));
 
+    public static final RegistryObject<Block> CHANNELLED_STONEBRICK =
+            registerBasicBlock("channelled_stonebrick", Blocks.STONE_BRICKS);
+    public static final RegistryObject<Block> CHANNELLED_STONEBRICK_STAIRS = registerBlock("channelled_stonebrick_stairs",
+            () -> new StairBlock(() -> ModBlocks.CHANNELLED_STONEBRICK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+    public static final RegistryObject<Block> CHANNELLED_STONEBRICK_SLAB = registerBlock("channelled_stonebrick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+    public static final RegistryObject<Block> CHANNELLED_STONEBRICK_WALL = registerBlock("channelled_stonebrick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+
+    public static final RegistryObject<Block> CHANNELLED_MOSSY_STONEBRICK =
+            registerBasicBlock("channelled_mossy_stonebrick", Blocks.STONE_BRICKS);
+    public static final RegistryObject<Block> CHANNELLED_MOSSY_STONEBRICK_STAIRS = registerBlock("channelled_mossy_stonebrick_stairs",
+            () -> new StairBlock(() -> ModBlocks.CHANNELLED_MOSSY_STONEBRICK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)));
+    public static final RegistryObject<Block> CHANNELLED_MOSSY_STONEBRICK_SLAB = registerBlock("channelled_mossy_stonebrick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)));
+    public static final RegistryObject<Block> CHANNELLED_MOSSY_STONEBRICK_WALL = registerBlock("channelled_mossy_stonebrick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)));
+
+    public static final RegistryObject<Block> CHANNELLED_STONEBRICK_CARVED =
+            registerBasicBlock("channelled_stonebrick_carved", Blocks.CHISELED_STONE_BRICKS);
+    public static final RegistryObject<Block> CHANNELLED_STONEBRICK_CARVED_STAIRS = registerBlock("channelled_stonebrick_carved_stairs",
+            () -> new StairBlock(() -> ModBlocks.CHANNELLED_STONEBRICK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CHISELED_STONE_BRICKS)));
+    public static final RegistryObject<Block> CHANNELLED_STONEBRICK_CARVED_SLAB = registerBlock("channelled_stonebrick_carved_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_STONE_BRICKS)));
+    public static final RegistryObject<Block> CHANNELLED_STONEBRICK_CARVED_WALL = registerBlock("channelled_stonebrick_carved_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_STONE_BRICKS)));
+
 
 
 

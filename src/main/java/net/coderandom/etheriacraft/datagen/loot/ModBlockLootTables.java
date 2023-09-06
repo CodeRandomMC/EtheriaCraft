@@ -75,6 +75,24 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.PACKED_ICE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.PACKED_ICE_SLAB.get()));
 
+        this.dropSelf(ModBlocks.CHANNELLED_STONEBRICK.get());
+        this.dropSelf(ModBlocks.CHANNELLED_STONEBRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.CHANNELLED_STONEBRICK_WALL.get());
+        this.add(ModBlocks.CHANNELLED_STONEBRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CHANNELLED_STONEBRICK_SLAB.get()));
+
+        this.dropSelf(ModBlocks.CHANNELLED_MOSSY_STONEBRICK.get());
+        this.dropSelf(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_WALL.get());
+        this.add(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_SLAB.get()));
+
+        this.dropSelf(ModBlocks.CHANNELLED_STONEBRICK_CARVED.get());
+        this.dropSelf(ModBlocks.CHANNELLED_STONEBRICK_CARVED_STAIRS.get());
+        this.dropSelf(ModBlocks.CHANNELLED_STONEBRICK_CARVED_WALL.get());
+        this.add(ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get()));
+
         this.add(ModBlocks.SILVER_ORE.get(),
                 block -> createOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get(), 1.00F, 3.00F));
         this.add(ModBlocks.DEEPSLATE_SILVER_ORE.get(),
