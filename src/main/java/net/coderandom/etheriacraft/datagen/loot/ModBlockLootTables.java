@@ -54,6 +54,27 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.INFUSED_END_BRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.INFUSED_END_BRICK_SLAB.get()));
 
+        this.dropSelf(ModBlocks.ENRICHED_NETHER_BRICK.get());
+        this.dropSelf(ModBlocks.ENRICHED_NETHER_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.ENRICHED_NETHER_BRICK_WALL.get());
+        this.add(ModBlocks.ENRICHED_NETHER_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ENRICHED_NETHER_BRICK_SLAB.get()));
+        this.dropSelf(ModBlocks.ENRICHED_NETHER_BRICK_FENCE.get());
+        this.dropSelf(ModBlocks.ENRICHED_NETHER_BRICK_FENCE_GATE.get());
+
+        this.dropSelf(ModBlocks.ENRICHED_RED_NETHER_BRICK.get());
+        this.dropSelf(ModBlocks.ENRICHED_RED_NETHER_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.ENRICHED_RED_NETHER_BRICK_WALL.get());
+        this.add(ModBlocks.ENRICHED_RED_NETHER_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ENRICHED_RED_NETHER_BRICK_SLAB.get()));
+        this.dropSelf(ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE.get());
+        this.dropSelf(ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE_GATE.get());
+
+        this.dropSelf(ModBlocks.PACKED_ICE_STAIRS.get());
+        this.dropSelf(ModBlocks.PACKED_ICE_WALL.get());
+        this.add(ModBlocks.PACKED_ICE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PACKED_ICE_SLAB.get()));
+
         this.add(ModBlocks.SILVER_ORE.get(),
                 block -> createOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get(), 1.00F, 3.00F));
         this.add(ModBlocks.DEEPSLATE_SILVER_ORE.get(),

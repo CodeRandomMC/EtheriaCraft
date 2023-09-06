@@ -78,6 +78,24 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.INFUSED_END_BRICK_SLAB.get());
                         output.accept(ModBlocks.INFUSED_END_BRICK_STAIRS.get());
                         output.accept(ModBlocks.INFUSED_END_BRICK_WALL.get());
+
+                        output.accept(ModBlocks.ENRICHED_NETHER_BRICK.get());
+                        output.accept(ModBlocks.ENRICHED_NETHER_BRICK_SLAB.get());
+                        output.accept(ModBlocks.ENRICHED_NETHER_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.ENRICHED_NETHER_BRICK_WALL.get());
+                        output.accept(ModBlocks.ENRICHED_NETHER_BRICK_FENCE.get());
+                        output.accept(ModBlocks.ENRICHED_NETHER_BRICK_FENCE_GATE.get());
+
+                        output.accept(ModBlocks.ENRICHED_RED_NETHER_BRICK.get());
+                        output.accept(ModBlocks.ENRICHED_RED_NETHER_BRICK_SLAB.get());
+                        output.accept(ModBlocks.ENRICHED_RED_NETHER_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.ENRICHED_RED_NETHER_BRICK_WALL.get());
+                        output.accept(ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE.get());
+                        output.accept(ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE_GATE.get());
+
+                        output.accept(ModBlocks.PACKED_ICE_SLAB.get());
+                        output.accept(ModBlocks.PACKED_ICE_STAIRS.get());
+                        output.accept(ModBlocks.PACKED_ICE_WALL.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> MOD_COMBAT = CREATIVE_MODE_TABS.register("mod_combat_tab",

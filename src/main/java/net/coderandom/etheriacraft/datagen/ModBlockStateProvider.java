@@ -40,17 +40,33 @@ public class ModBlockStateProvider extends BlockStateProvider {
         pressurePlate(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get(), ModBlocks.MOSSY_BRICK.get());
         wall(ModBlocks.MOSSY_BRICK_WALL.get(), ModBlocks.MOSSY_BRICK.get());
 
-
         blockWithItem(ModBlocks.GILDED_BLACKSTONE_BRICK);
         stairs(ModBlocks.GILDED_BLACKSTONE_BRICK_STAIRS.get(), ModBlocks.GILDED_BLACKSTONE_BRICK.get());
         slabBlock(((SlabBlock) ModBlocks.GILDED_BLACKSTONE_BRICK_SLAB.get()), blockTexture(ModBlocks.GILDED_BLACKSTONE_BRICK.get()), blockTexture(ModBlocks.GILDED_BLACKSTONE_BRICK.get()));
         wall(ModBlocks.GILDED_BLACKSTONE_BRICK_WALL.get(), ModBlocks.GILDED_BLACKSTONE_BRICK.get());
 
-
         blockWithItem(ModBlocks.INFUSED_END_BRICK);
         stairs(ModBlocks.INFUSED_END_BRICK_STAIRS.get(), ModBlocks.INFUSED_END_BRICK.get());
         slabBlock(((SlabBlock) ModBlocks.INFUSED_END_BRICK_SLAB.get()), blockTexture(ModBlocks.INFUSED_END_BRICK.get()), blockTexture(ModBlocks.INFUSED_END_BRICK.get()));
         wall(ModBlocks.INFUSED_END_BRICK_WALL.get(), ModBlocks.INFUSED_END_BRICK.get());
+
+        blockWithItem(ModBlocks.ENRICHED_NETHER_BRICK);
+        stairs(ModBlocks.ENRICHED_NETHER_BRICK_STAIRS.get(), ModBlocks.ENRICHED_NETHER_BRICK.get());
+        slabBlock(((SlabBlock) ModBlocks.ENRICHED_NETHER_BRICK_SLAB.get()), blockTexture(ModBlocks.ENRICHED_NETHER_BRICK.get()), blockTexture(ModBlocks.ENRICHED_NETHER_BRICK.get()));
+        wall(ModBlocks.ENRICHED_NETHER_BRICK_WALL.get(), ModBlocks.ENRICHED_NETHER_BRICK.get());
+        fence(ModBlocks.ENRICHED_NETHER_BRICK_FENCE.get(), ModBlocks.ENRICHED_NETHER_BRICK.get());
+        fenceGate(ModBlocks.ENRICHED_NETHER_BRICK_FENCE_GATE.get(), ModBlocks.ENRICHED_NETHER_BRICK.get());
+
+        blockWithItem(ModBlocks.ENRICHED_RED_NETHER_BRICK);
+        stairs(ModBlocks.ENRICHED_RED_NETHER_BRICK_STAIRS.get(), ModBlocks.ENRICHED_NETHER_BRICK.get());
+        slabBlock(((SlabBlock) ModBlocks.ENRICHED_RED_NETHER_BRICK_SLAB.get()), blockTexture(ModBlocks.ENRICHED_RED_NETHER_BRICK.get()), blockTexture(ModBlocks.ENRICHED_RED_NETHER_BRICK.get()));
+        wall(ModBlocks.ENRICHED_RED_NETHER_BRICK_WALL.get(), ModBlocks.ENRICHED_RED_NETHER_BRICK.get());
+        fence(ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE.get(), ModBlocks.ENRICHED_RED_NETHER_BRICK.get());
+        fenceGate(ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE_GATE.get(), ModBlocks.ENRICHED_RED_NETHER_BRICK.get());
+
+        stairs(ModBlocks.PACKED_ICE_STAIRS.get(), Blocks.PACKED_ICE);
+        slabBlock(((SlabBlock) ModBlocks.PACKED_ICE_SLAB.get()), blockTexture(Blocks.PACKED_ICE), blockTexture(Blocks.PACKED_ICE));
+        wall(ModBlocks.PACKED_ICE_WALL.get(), Blocks.PACKED_ICE);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "etheria_craft:block/enriched_nether_brick"
+    }
+  }
+}

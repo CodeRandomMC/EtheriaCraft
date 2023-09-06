@@ -2,6 +2,9 @@
   "values": [
     "etheria_craft:mossy_brick_stairs",
     "etheria_craft:gilded_blackstone_brick_stairs",
-    "etheria_craft:infused_end_stone_brick_stairs"
+    "etheria_craft:infused_end_stone_brick_stairs",
+    "etheria_craft:enriched_nether_brick_stairs",
+    "etheria_craft:enriched_red_nether_brick_stairs",
+    "etheria_craft:packed_ice_stairs"
   ]
 }

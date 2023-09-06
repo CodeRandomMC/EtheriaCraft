@@ -49,6 +49,24 @@
   "block.etheria_craft.infused_end_stone_brick_stairs": "Infused End Stone Brick Stairs",
   "block.etheria_craft.infused_end_stone_brick_wall": "Infused End Stone Brick Wall",
 
+  "block.etheria_craft.enriched_nether_brick": "Enriched Nether Bricks",
+  "block.etheria_craft.enriched_nether_brick_slab": "Enriched Nether Brick Slab",
+  "block.etheria_craft.enriched_nether_brick_stairs": "Enriched Nether Brick Stairs",
+  "block.etheria_craft.enriched_nether_brick_wall": "Enriched Nether Brick Wall",
+  "block.etheria_craft.enriched_nether_brick_fence": "Enriched Nether Brick Fence",
+  "block.etheria_craft.enriched_nether_brick_fence_gate": "Enriched Nether Brick Fence Gate",
+
+  "block.etheria_craft.enriched_red_nether_brick": "Enriched Red Nether Bricks",
+  "block.etheria_craft.enriched_red_nether_brick_slab": "Enriched Red Nether Brick Slab",
+  "block.etheria_craft.enriched_red_nether_brick_stairs": "Enriched Red Nether Brick Stairs",
+  "block.etheria_craft.enriched_red_nether_brick_wall": "Enriched Red Nether Brick Wall",
+  "block.etheria_craft.enriched_red_nether_brick_fence": "Enriched Red Nether Brick Fence",
+  "block.etheria_craft.enriched_red_nether_brick_fence_gate": "Enriched Red Nether Brick Fence Gate",
+
+  "block.etheria_craft.packed_ice_slab": "Packed Ice Slab",
+  "block.etheria_craft.packed_ice_stairs": "Packed Ice Stairs",
+  "block.etheria_craft.packed_ice_wall": "Packed Ice Wall",
+
   "tab.mod_ingredients_tab": "Etheria Ingredients",
   "tab.mod_tools_and_utilities_tab": "Etheria Tools & Utilities",
   "tab.mod_combat_tab": "Etheria Combat",

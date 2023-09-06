@@ -31,6 +31,9 @@
 - Mossy Bricks, Slab, Stairs, Wall, Pressure Plate
 - Gilded Blackstone Brick, Slab, Stairs, Wall
 - Infused End Stone Brick, Slab, Stairs, Wall
+- Enriched Nether Brick, Slab, Stairs, Wall, Fence, Fence Gate
+- Enriched Red Nether Brick, Slab, Stairs, Wall, Fence, Fence Gate
+- Added to [Packed Ice], Slab, Stairs, Wall
 
 #### 💎 Precious Stones
 - Sapphire Ore

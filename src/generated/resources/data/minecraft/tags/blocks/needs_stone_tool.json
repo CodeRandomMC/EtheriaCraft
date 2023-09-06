@@ -2,6 +2,8 @@
   "values": [
     "#etheria_craft:mossy_brick",
     "#etheria_craft:infused_end_stone_brick",
+    "#etheria_craft:enriched_nether_brick",
+    "#etheria_craft:packed_ice",
     "etheria_craft:quick_sand"
   ]
 }

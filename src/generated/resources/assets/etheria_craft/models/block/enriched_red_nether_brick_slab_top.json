@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "etheria_craft:block/enriched_red_nether_brick",
+    "side": "etheria_craft:block/enriched_red_nether_brick",
+    "top": "etheria_craft:block/enriched_red_nether_brick"
+  }
+}

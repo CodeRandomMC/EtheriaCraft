@@ -7,6 +7,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -52,6 +53,24 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.INFUSED_END_BRICK_STAIRS);
         simpleBlockItem(ModBlocks.INFUSED_END_BRICK_SLAB);
         wallItem(ModBlocks.INFUSED_END_BRICK_WALL, ModBlocks.INFUSED_END_BRICK);
+
+        simpleBlockItem(ModBlocks.ENRICHED_NETHER_BRICK_STAIRS);
+        simpleBlockItem(ModBlocks.ENRICHED_NETHER_BRICK_SLAB);
+        wallItem(ModBlocks.ENRICHED_NETHER_BRICK_WALL, ModBlocks.ENRICHED_NETHER_BRICK);
+        fenceItem(ModBlocks.ENRICHED_NETHER_BRICK_FENCE, ModBlocks.ENRICHED_NETHER_BRICK);
+        simpleBlockItem(ModBlocks.ENRICHED_NETHER_BRICK_FENCE_GATE);
+
+        simpleBlockItem(ModBlocks.ENRICHED_RED_NETHER_BRICK_STAIRS);
+        simpleBlockItem(ModBlocks.ENRICHED_RED_NETHER_BRICK_SLAB);
+        wallItem(ModBlocks.ENRICHED_RED_NETHER_BRICK_WALL, ModBlocks.ENRICHED_RED_NETHER_BRICK);
+        fenceItem(ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE, ModBlocks.ENRICHED_RED_NETHER_BRICK);
+        simpleBlockItem(ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE_GATE);
+
+        simpleBlockItem(ModBlocks.PACKED_ICE_STAIRS);
+        simpleBlockItem(ModBlocks.PACKED_ICE_SLAB);
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(ModBlocks.PACKED_ICE_WALL.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  new ResourceLocation("minecraft", "block/" + ForgeRegistries.BLOCKS.getKey(Blocks.PACKED_ICE).getPath()));
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> itemRegistryObject) {

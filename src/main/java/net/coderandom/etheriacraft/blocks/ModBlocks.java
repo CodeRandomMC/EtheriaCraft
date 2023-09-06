@@ -85,6 +85,40 @@ public class ModBlocks {
     public static final RegistryObject<Block> INFUSED_END_BRICK_WALL = registerBlock("infused_end_stone_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICK_WALL)));
 
+    public static final RegistryObject<Block> ENRICHED_NETHER_BRICK =
+            registerBasicBlock("enriched_nether_brick", Blocks.NETHER_BRICKS);
+    public static final RegistryObject<Block> ENRICHED_NETHER_BRICK_STAIRS = registerBlock("enriched_nether_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.ENRICHED_NETHER_BRICK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.NETHER_BRICK_STAIRS)));
+    public static final RegistryObject<Block> ENRICHED_NETHER_BRICK_SLAB = registerBlock("enriched_nether_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICK_SLAB)));
+    public static final RegistryObject<Block> ENRICHED_NETHER_BRICK_WALL = registerBlock("enriched_nether_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICK_WALL)));
+    public static final RegistryObject<Block> ENRICHED_NETHER_BRICK_FENCE = registerBlock("enriched_nether_brick_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICK_FENCE)));
+    public static final RegistryObject<Block> ENRICHED_NETHER_BRICK_FENCE_GATE = registerBlock("enriched_nether_brick_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+    public static final RegistryObject<Block> ENRICHED_RED_NETHER_BRICK =
+            registerBasicBlock("enriched_red_nether_brick", Blocks.RED_NETHER_BRICKS);
+    public static final RegistryObject<Block> ENRICHED_RED_NETHER_BRICK_STAIRS = registerBlock("enriched_red_nether_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.ENRICHED_NETHER_BRICK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICK_STAIRS)));
+    public static final RegistryObject<Block> ENRICHED_RED_NETHER_BRICK_SLAB = registerBlock("enriched_red_nether_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICK_SLAB)));
+    public static final RegistryObject<Block> ENRICHED_RED_NETHER_BRICK_WALL = registerBlock("enriched_red_nether_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICK_WALL)));
+    public static final RegistryObject<Block> ENRICHED_RED_NETHER_BRICK_FENCE = registerBlock("enriched_red_nether_brick_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICK_FENCE)));
+    public static final RegistryObject<Block> ENRICHED_RED_NETHER_BRICK_FENCE_GATE = registerBlock("enriched_red_nether_brick_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> PACKED_ICE_STAIRS = registerBlock("packed_ice_stairs",
+            () -> new StairBlock(() -> Blocks.PACKED_ICE.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.PACKED_ICE)));
+    public static final RegistryObject<Block> PACKED_ICE_SLAB = registerBlock("packed_ice_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.PACKED_ICE)));
+    public static final RegistryObject<Block> PACKED_ICE_WALL = registerBlock("packed_ice_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.PACKED_ICE)));
 
 
 
@@ -115,21 +149,6 @@ public class ModBlocks {
         return registerBlock(registryName,
                 () -> new PressurePlateBlock(sensitivity ,BlockBehaviour.Properties.copy(copyProperties),
                 blockSetType));
-    }
-    public static RegistryObject<Block> registerFence(String registry_name, Block copyProperties) {
-        return registerBlock(registry_name,
-                () -> new FenceBlock(BlockBehaviour.Properties.copy(copyProperties)));
-    }
-    public static RegistryObject<Block> registerFenceGate(String registry_name, Block copyProperties) {
-        return registerFenceGate(registry_name, copyProperties, SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE);
-    }
-    public static RegistryObject<Block> registerFenceGate(String registry_name, Block copyProperties, SoundEvent openSound, SoundEvent closeSound) {
-        return registerBlock(registry_name,
-                () -> new FenceGateBlock(BlockBehaviour.Properties.copy(copyProperties), openSound, closeSound));
-    }
-    public static RegistryObject<Block> registerWall(String registry_name, Block copyProperties) {
-        return registerBlock(registry_name,
-                () -> new WallBlock(BlockBehaviour.Properties.copy(copyProperties)));
     }
     public static RegistryObject<Block> registerDoor(String registry_name, Block copyProperties) {
         return registerBlock(registry_name,

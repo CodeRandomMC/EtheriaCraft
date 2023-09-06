@@ -17,6 +17,8 @@ public class ModTags {
         public static final TagKey<Block> MOSSY_BRICK = tagKey("mossy_brick");
         public static final TagKey<Block> GILDED_BLACKSTONE_BRICK = tagKey("gilded_blackstone_brick");
         public static final TagKey<Block> INFUSED_END_STONE_BRICK = tagKey("infused_end_stone_brick");
+        public static final TagKey<Block> ENRICHED_NETHER_BRICK = tagKey("enriched_nether_brick");
+        public static final TagKey<Block> PACKED_ICE = tagKey("packed_ice");
 
 
         private static TagKey<Block> tagKey(String key) {

@@ -6,6 +6,7 @@ import net.coderandom.etheriacraft.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -86,6 +87,30 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.INFUSED_END_BRICK_WALL.get()
                 );
 
+        this.tag(ModTags.Blocks.ENRICHED_NETHER_BRICK)
+                .add(
+                        ModBlocks.ENRICHED_NETHER_BRICK.get(),
+                        ModBlocks.ENRICHED_NETHER_BRICK_SLAB.get(),
+                        ModBlocks.ENRICHED_NETHER_BRICK_STAIRS.get(),
+                        ModBlocks.ENRICHED_NETHER_BRICK_WALL.get(),
+                        ModBlocks.ENRICHED_NETHER_BRICK_FENCE.get(),
+                        ModBlocks.ENRICHED_NETHER_BRICK_FENCE_GATE.get(),
+                        ModBlocks.ENRICHED_RED_NETHER_BRICK.get(),
+                        ModBlocks.ENRICHED_RED_NETHER_BRICK_SLAB.get(),
+                        ModBlocks.ENRICHED_RED_NETHER_BRICK_STAIRS.get(),
+                        ModBlocks.ENRICHED_RED_NETHER_BRICK_WALL.get(),
+                        ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE.get(),
+                        ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE_GATE.get()
+                );
+
+        this.tag(ModTags.Blocks.PACKED_ICE)
+                .add(
+                        Blocks.PACKED_ICE,
+                        ModBlocks.PACKED_ICE_SLAB.get(),
+                        ModBlocks.PACKED_ICE_SLAB.get(),
+                        ModBlocks.PACKED_ICE_WALL.get()
+                );
+
 
         this.tag(Tags.Blocks.NEEDS_WOOD_TOOL);
 
@@ -94,6 +119,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .addTag(ModTags.Blocks.MOSSY_BRICK)
                 .addTag(ModTags.Blocks.INFUSED_END_STONE_BRICK)
+                .addTag(ModTags.Blocks.ENRICHED_NETHER_BRICK)
+                .addTag(ModTags.Blocks.PACKED_ICE)
                 .add(
                         ModBlocks.QUICK_SAND.get()
                 );
@@ -134,6 +161,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.MOSSY_BRICK)
                 .addTag(ModTags.Blocks.GILDED_BLACKSTONE_BRICK)
                 .addTag(ModTags.Blocks.INFUSED_END_STONE_BRICK)
+                .addTag(ModTags.Blocks.ENRICHED_NETHER_BRICK)
+                .addTag(ModTags.Blocks.PACKED_ICE)
                 .add(
                         ModBlocks.SILVER_BLOCK.get(),
                         ModBlocks.RAW_SILVER_BLOCK.get(),
@@ -150,26 +179,47 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.QUICK_SAND.get()
                 );
 
-        this.tag(BlockTags.FENCES);
+        this.tag(BlockTags.FENCES)
+                .add(
+                        ModBlocks.ENRICHED_NETHER_BRICK_FENCE.get(),
+                        ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE.get()
+                );
 
-        this.tag(BlockTags.FENCE_GATES);
+        this.tag(BlockTags.FENCE_GATES)
+                .add(
+                        ModBlocks.ENRICHED_NETHER_BRICK_FENCE_GATE.get(),
+                        ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE_GATE.get()
+                );
 
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.MOSSY_BRICK_WALL.get())
                 .add(ModBlocks.GILDED_BLACKSTONE_BRICK_WALL.get())
-                .add(ModBlocks.INFUSED_END_BRICK_WALL.get());
+                .add(ModBlocks.INFUSED_END_BRICK_WALL.get())
+                .add(ModBlocks.ENRICHED_NETHER_BRICK_WALL.get())
+                .add(ModBlocks.ENRICHED_RED_NETHER_BRICK_WALL.get())
+                .add(ModBlocks.PACKED_ICE_WALL.get());
 
         this.tag(BlockTags.STAIRS)
                 .add(ModBlocks.MOSSY_BRICK_STAIRS.get())
                 .add(ModBlocks.GILDED_BLACKSTONE_BRICK_STAIRS.get())
-                .add(ModBlocks.INFUSED_END_BRICK_STAIRS.get());
+                .add(ModBlocks.INFUSED_END_BRICK_STAIRS.get())
+                .add(ModBlocks.ENRICHED_NETHER_BRICK_STAIRS.get())
+                .add(ModBlocks.ENRICHED_RED_NETHER_BRICK_STAIRS.get())
+                .add(ModBlocks.PACKED_ICE_STAIRS.get());
 
         this.tag(BlockTags.SLABS)
                 .add(ModBlocks.MOSSY_BRICK_SLAB.get())
                 .add(ModBlocks.GILDED_BLACKSTONE_BRICK_SLAB.get())
-                .add(ModBlocks.INFUSED_END_BRICK_SLAB.get());
+                .add(ModBlocks.INFUSED_END_BRICK_SLAB.get())
+                .add(ModBlocks.ENRICHED_NETHER_BRICK_SLAB.get())
+                .add(ModBlocks.ENRICHED_RED_NETHER_BRICK_SLAB.get())
+                .add(ModBlocks.PACKED_ICE_SLAB.get());
 
         this.tag(BlockTags.PRESSURE_PLATES)
                 .add(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get());
+
+        this.tag(BlockTags.DOORS);
+
+        this.tag(BlockTags.TRAPDOORS);
     }
 }

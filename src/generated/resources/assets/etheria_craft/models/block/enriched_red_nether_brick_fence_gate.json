@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate",
+  "textures": {
+    "texture": "etheria_craft:block/enriched_red_nether_brick"
+  }
+}
