@@ -14,6 +14,8 @@
 ### 🌿 Crops
 - Chilli Crop
 - Tomato Crop
+- [WIP] Essence Flower Crops
+  - Emerald
 
 ### 🍲 Food
 - Chilli

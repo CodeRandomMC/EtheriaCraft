@@ -97,6 +97,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get()));
 
+        // Ore
         this.add(ModBlocks.SILVER_ORE.get(),
                 block -> createOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get(), 1.00F, 3.00F));
         this.add(ModBlocks.DEEPSLATE_SILVER_ORE.get(),
@@ -118,19 +119,24 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.TOPAZ_ORE.get(),
                 block -> createOreDrops(ModBlocks.TOPAZ_ORE.get(), ModItems.TOPAZ.get(), 1.00F, 3.00F));
 
-        // CROPS Generate then move to resources
+        // Crops
         LootItemCondition.Builder tomatoLootitemcondition$builder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.TOMATO_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.AGE_7, 7));
         this.add(ModBlocks.TOMATO_CROP.get(), createCropDrops(ModBlocks.TOMATO_CROP.get(), ModItems.TOMATO.get(),
                 ModItems.TOMATO_SEEDS.get(), tomatoLootitemcondition$builder));
 
-        // CROPS Generate then move to resources
         LootItemCondition.Builder chilliLootitemcondition$builder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.CHILLI_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.AGE_7, 7));
         this.add(ModBlocks.CHILLI_CROP.get(), createCropDrops(ModBlocks.CHILLI_CROP.get(), ModItems.CHILLI.get(),
                 ModItems.CHILLI_SEEDS.get(), chilliLootitemcondition$builder));
+
+        LootItemCondition.Builder EmeraldEssenceLootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.EMERALD_ESSENCE_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.AGE_7, 7));
+        this.add(ModBlocks.EMERALD_ESSENCE_CROP.get(), createCropDrops(ModBlocks.EMERALD_ESSENCE_CROP.get(), ModItems.EMERALD_ESSENCE.get(),
+                ModItems.EMERALD_ESSENCE_SEEDS.get(), EmeraldEssenceLootitemcondition$builder));
     }
 
     protected LootTable.Builder createOreDrops(Block block, Item item, Float min, Float max) {

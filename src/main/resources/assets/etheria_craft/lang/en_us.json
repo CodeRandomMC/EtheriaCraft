@@ -12,9 +12,12 @@
   "item.etheria_craft.portable_crafting_table": "Portable Crafting Table",
 
   "item.etheria_craft.chilli": "Chilli",
-  "item.etheria_craft.chilli_seeds": "Chilli Seeds",
   "item.etheria_craft.tomato": "Tomato",
   "item.etheria_craft.tomato_seeds": "Tomato Seeds",
+  "item.etheria_craft.chilli_seeds": "Chilli Seeds",
+  "item.etheria_craft.emerald_essence_seeds": "Emerald Essence Seeds",
+
+  "item.etheria_craft.emerald_essence": "Emerald Essence",
 
   "item.etheria_craft.blank_scroll": "Blank Scroll",
   "item.etheria_craft.combustion_scroll": "Scroll of Combustion",
@@ -94,5 +97,6 @@
 
   "tooltip.etheria_craft.fuel_item": "Burn time",
   "tooltip.etheria_craft.gem_dowsing_rod": "Detects gems/dusts ore down to bedrock",
-  "tooltip.etheria_craft.metal_dowsing_rod": "Detects metal ore down to bedrock"
+  "tooltip.etheria_craft.metal_dowsing_rod": "Detects metal ore down to bedrock",
+  "tab.mod_crops": "Etheria Crops"
 }

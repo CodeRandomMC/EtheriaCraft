@@ -31,6 +31,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.ENDERITE_SCRAP.get());
                         output.accept(ModItems.ENDERITE_INGOT.get());
+                        // Essence
+                        output.accept(ModItems.EMERALD_ESSENCE.get());
                     })
                     .build());
 
@@ -131,6 +133,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHILLI.get());
                         output.accept(ModItems.CHILLI_SEEDS.get());
                         output.accept(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get());
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> MOD_CROPS = CREATIVE_MODE_TABS.register("mod_crops",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.TOMATO.get()))
+                    .title(Component.translatable("tab.mod_crops")) // Crops and Seeds
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.TOMATO.get());
+                        output.accept(ModItems.TOMATO_SEEDS.get());
+                        output.accept(ModItems.CHILLI.get());
+                        output.accept(ModItems.CHILLI_SEEDS.get());
+                        output.accept(ModItems.EMERALD_ESSENCE_SEEDS.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> MOD_SCROLLS = CREATIVE_MODE_TABS.register("mod_scrolls_tab",

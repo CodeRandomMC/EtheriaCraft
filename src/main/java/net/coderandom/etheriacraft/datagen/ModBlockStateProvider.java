@@ -4,6 +4,7 @@ import net.coderandom.etheriacraft.EtheriaCraft;
 import net.coderandom.etheriacraft.blocks.ModBlocks;
 import net.coderandom.etheriacraft.blocks.custom.crops.CilliCropBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.TomatoCropBlock;
+import net.coderandom.etheriacraft.blocks.custom.crops.essence_crops.EmeraldEssenceCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -90,8 +91,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(((SlabBlock) ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get()), blockTexture(ModBlocks.CHANNELLED_STONEBRICK_CARVED.get()), blockTexture(ModBlocks.CHANNELLED_STONEBRICK_CARVED.get()));
         wall(ModBlocks.CHANNELLED_STONEBRICK_CARVED_WALL.get(), ModBlocks.CHANNELLED_STONEBRICK_CARVED.get());
 
+        // Crops
         makeTomatoCrop((CropBlock) ModBlocks.TOMATO_CROP.get(), "tomato_stage_", "tomato_stage_");
         makeChilliCrop((CropBlock) ModBlocks.CHILLI_CROP.get(), "chilli_stage_", "chilli_stage_");
+        makeEmeraldEssenceCrop((CropBlock) ModBlocks.EMERALD_ESSENCE_CROP.get(), "emerald_essence_stage_", "emerald_essence_stage_");
     }
 
 
@@ -120,6 +123,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((TomatoCropBlock) block).getAgeProperty()),
                 new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + textureName + state.getValue(((TomatoCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+
+    public void makeEmeraldEssenceCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> EssenceStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] EssenceStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((EmeraldEssenceCropBlock) block).getAgeProperty()),
+                new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + textureName + state.getValue(((EmeraldEssenceCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }

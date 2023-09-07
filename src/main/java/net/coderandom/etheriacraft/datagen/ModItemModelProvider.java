@@ -21,6 +21,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        // Ingots & Gems
         simpleItem(ModItems.RAW_SILVER);
         simpleItem(ModItems.SILVER_INGOT);
         simpleItem(ModItems.SILVER_NUGGET);
@@ -32,17 +33,25 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ENDERITE_SCRAP);
         simpleItem(ModItems.ENDERITE_INGOT);
 
+        // Essence
+        simpleItem(ModItems.EMERALD_ESSENCE);
+
         simpleItem(ModItems.METAL_DOWSING_ROD);
         simpleItem(ModItems.GEM_DOWSING_ROD);
-
+        // Food
         simpleItem(ModItems.TOMATO);
-        simpleItem(ModItems.TOMATO_SEEDS);
         simpleItem(ModItems.CHILLI);
-        simpleItem(ModItems.CHILLI_SEEDS);
 
+        // Seeds
+        simpleItem(ModItems.CHILLI_SEEDS);
+        simpleItem(ModItems.TOMATO_SEEDS);
+        simpleItem(ModItems.EMERALD_ESSENCE_SEEDS);
+
+        // Scrolls
         simpleItem(ModItems.BLANK_SCROLL);
         simpleItem(ModItems.COMBUSTION_SCROLL);
 
+        // Decoration Blocks
         simpleBlockItem(ModBlocks.MOSSY_BRICK_STAIRS);
         simpleBlockItem(ModBlocks.MOSSY_BRICK_SLAB);
         simpleBlockItem(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE);
