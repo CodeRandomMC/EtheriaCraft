@@ -1,0 +1,33 @@
+{
+  "feature": "etheria_craft:ore_topaz",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 32,
+          "max_inclusive": 64
+        }
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:trapezoid",
+        "min_inclusive": {
+          "absolute": -64
+        },
+        "max_inclusive": {
+          "absolute": 480
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

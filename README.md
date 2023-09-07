@@ -11,6 +11,10 @@
 
 ## 🎉 Current Features
 
+### 🌿 Crops
+- Chilli Crop
+- Tomato Crop
+
 ### 🍲 Food
 - Chilli
 - Tomato
@@ -48,21 +52,21 @@
 
 #### 💎 Precious Stones
 - Sapphire Ore
-- Sapphire Block
 - Ruby Ore
-- Ruby Block
 - Topaz Ore
-- Topaz Block
 - Enderite Scrap Ore
+- Sapphire Block
+- Ruby Block
+- Topaz Block
 
 #### 🏭 Metals
-- Silver Block
-- Raw Silver Block
 - Silver Ore
 - Deepslate Silver Ore
 - Nether Silver Ore
 - End Silver Ore
 - End Gold Ore
+- Silver Block
+- Raw Silver Block
 
 #### 🌱 Natural Blocks
 - QuickSand
@@ -77,8 +81,19 @@
 ![2023-09-06_04.05.49.png](run%2Fscreenshots%2F2023-09-06_04.05.49.png)
 ![2023-09-06_04.05.56.png](run%2Fscreenshots%2F2023-09-06_04.05.56.png)
 ![2023-09-06_04.13.40.png](run%2Fscreenshots%2F2023-09-06_04.13.40.png)
-![2023-09-06_04.23.25.png](run%2Fscreenshots%2F2023-09-06_04.23.25.png)
-![2023-09-06_04.23.15.png](run%2Fscreenshots%2F2023-09-06_04.23.15.png)
+![2023-09-07_00.17.39.png](run%2Fscreenshots%2F2023-09-07_00.17.39.png)
+![2023-09-07_00.19.17.png](run%2Fscreenshots%2F2023-09-07_00.19.17.png)
+![2023-09-07_00.19.26.png](run%2Fscreenshots%2F2023-09-07_00.19.26.png)
+![2023-09-07_00.19.46.png](run%2Fscreenshots%2F2023-09-07_00.19.46.png)
+![2023-09-07_00.20.21.png](run%2Fscreenshots%2F2023-09-07_00.20.21.png)
+![2023-09-07_00.26.51.png](run%2Fscreenshots%2F2023-09-07_00.26.51.png)
+![2023-09-07_00.29.29.png](run%2Fscreenshots%2F2023-09-07_00.29.29.png)
+
+
+
+
+
+
 
 ---
 
@@ -89,3 +104,7 @@ Place in forge mods folder
 Copyright (c) 2023 D4RKJ0K3R, CodeRandom Studios
 All Rights Reserved
 
+---
+## 📜 THANKS
+Forge Team,
+Minecraft/Microsoft Team,for there continued work and dedication to this game :)

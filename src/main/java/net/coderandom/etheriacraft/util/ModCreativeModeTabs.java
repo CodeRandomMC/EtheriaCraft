@@ -127,7 +127,9 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("tab.mod_misc_tab"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.TOMATO.get());
+                        output.accept(ModItems.TOMATO_SEEDS.get());
                         output.accept(ModItems.CHILLI.get());
+                        output.accept(ModItems.CHILLI_SEEDS.get());
                         output.accept(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get());
                     })
                     .build());

@@ -2,11 +2,18 @@ package net.coderandom.etheriacraft.datagen;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
 import net.coderandom.etheriacraft.blocks.ModBlocks;
+import net.coderandom.etheriacraft.blocks.custom.crops.CilliCropBlock;
+import net.coderandom.etheriacraft.blocks.custom.crops.TomatoCropBlock;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -82,6 +89,39 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairs(ModBlocks.CHANNELLED_STONEBRICK_CARVED_STAIRS.get(), ModBlocks.CHANNELLED_STONEBRICK_CARVED.get());
         slabBlock(((SlabBlock) ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get()), blockTexture(ModBlocks.CHANNELLED_STONEBRICK_CARVED.get()), blockTexture(ModBlocks.CHANNELLED_STONEBRICK_CARVED.get()));
         wall(ModBlocks.CHANNELLED_STONEBRICK_CARVED_WALL.get(), ModBlocks.CHANNELLED_STONEBRICK_CARVED.get());
+
+        makeTomatoCrop((CropBlock) ModBlocks.TOMATO_CROP.get(), "tomato_stage_", "tomato_stage_");
+        makeChilliCrop((CropBlock) ModBlocks.CHILLI_CROP.get(), "chilli_stage_", "chilli_stage_");
+    }
+
+
+    public void makeChilliCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> ChilliStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] ChilliStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CilliCropBlock) block).getAgeProperty()),
+                new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + textureName + state.getValue(((CilliCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+
+    public void makeTomatoCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> TomatoStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] TomatoStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((TomatoCropBlock) block).getAgeProperty()),
+                new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + textureName + state.getValue(((TomatoCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

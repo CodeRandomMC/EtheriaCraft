@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "etheria_craft:ore_end_enderite_scrap",
+  "biomes": "#minecraft:is_end",
+  "step": "underground_ores"
+}

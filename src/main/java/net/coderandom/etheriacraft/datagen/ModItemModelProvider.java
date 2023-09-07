@@ -36,7 +36,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.GEM_DOWSING_ROD);
 
         simpleItem(ModItems.TOMATO);
+        simpleItem(ModItems.TOMATO_SEEDS);
         simpleItem(ModItems.CHILLI);
+        simpleItem(ModItems.CHILLI_SEEDS);
 
         simpleItem(ModItems.BLANK_SCROLL);
         simpleItem(ModItems.COMBUSTION_SCROLL);
