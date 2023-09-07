@@ -2,16 +2,20 @@ package net.coderandom.etheriacraft.datagen.loot;
 
 import net.coderandom.etheriacraft.blocks.ModBlocks;
 import net.coderandom.etheriacraft.items.custom.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
@@ -113,6 +117,20 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createOreDrops(ModBlocks.RUBY_ORE.get(), ModItems.RUBY.get(), 1.00F, 3.00F));
         this.add(ModBlocks.TOPAZ_ORE.get(),
                 block -> createOreDrops(ModBlocks.TOPAZ_ORE.get(), ModItems.TOPAZ.get(), 1.00F, 3.00F));
+
+        // CROPS Generate then move to resources
+        LootItemCondition.Builder tomatoLootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.TOMATO_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.AGE_7, 7));
+        this.add(ModBlocks.TOMATO_CROP.get(), createCropDrops(ModBlocks.TOMATO_CROP.get(), ModItems.TOMATO.get(),
+                ModItems.TOMATO_SEEDS.get(), tomatoLootitemcondition$builder));
+
+        // CROPS Generate then move to resources
+        LootItemCondition.Builder chilliLootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.CHILLI_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.AGE_7, 7));
+        this.add(ModBlocks.CHILLI_CROP.get(), createCropDrops(ModBlocks.CHILLI_CROP.get(), ModItems.CHILLI.get(),
+                ModItems.CHILLI_SEEDS.get(), chilliLootitemcondition$builder));
     }
 
     protected LootTable.Builder createOreDrops(Block block, Item item, Float min, Float max) {

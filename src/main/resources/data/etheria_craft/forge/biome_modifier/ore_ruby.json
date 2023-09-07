@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "etheria_craft:ore_ruby",
+  "biomes": "#minecraft:is_overworld",
+  "step": "underground_ores"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "etheria_craft:ore_end_gold",
+  "biomes": "#minecraft:is_end",
+  "step": "underground_ores"
+}

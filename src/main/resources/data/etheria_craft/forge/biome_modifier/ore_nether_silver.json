@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "etheria_craft:ore_nether_silver",
+  "biomes": "#minecraft:is_nether",
+  "step": "underground_ores"
+}

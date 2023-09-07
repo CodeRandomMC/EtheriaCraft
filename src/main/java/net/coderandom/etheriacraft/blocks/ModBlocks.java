@@ -2,8 +2,9 @@ package net.coderandom.etheriacraft.blocks;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
 import net.coderandom.etheriacraft.blocks.custom.QuickSandBlock;
+import net.coderandom.etheriacraft.blocks.custom.crops.CilliCropBlock;
+import net.coderandom.etheriacraft.blocks.custom.crops.TomatoCropBlock;
 import net.coderandom.etheriacraft.items.custom.ModItems;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -11,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -149,6 +151,12 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_STONE_BRICKS)));
     public static final RegistryObject<Block> CHANNELLED_STONEBRICK_CARVED_WALL = registerBlock("channelled_stonebrick_carved_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_STONE_BRICKS)));
+
+    // GROPS
+    public static final RegistryObject<Block> TOMATO_CROP = BLOCKS.register("tomato_crop",
+            () -> new TomatoCropBlock());
+    public static final RegistryObject<Block> CHILLI_CROP = BLOCKS.register("chilli_crop",
+            () -> new CilliCropBlock());
 
 
 

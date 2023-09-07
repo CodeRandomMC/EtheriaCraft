@@ -1,7 +1,9 @@
 package net.coderandom.etheriacraft.items.custom;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
+import net.coderandom.etheriacraft.blocks.ModBlocks;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -32,11 +34,15 @@ public class ModItems {
     public static final RegistryObject<Item> GEM_DOWSING_ROD = ITEMS.register("gem_dowsing_rod",
             GemDowsingRodItem::new);
 
-    // Food
+    // Food & Crop Seeds
     public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
             () -> new Item(new Item.Properties().food(ModFoods.TOMATO)));
+    public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.TOMATO_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> CHILLI = ITEMS.register("chilli",
             () -> new Item(new Item.Properties().food(ModFoods.CHILLI)));
+    public static final RegistryObject<Item> CHILLI_SEEDS = ITEMS.register("chilli_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CHILLI_CROP.get(), new Item.Properties()));
 
     //Scrolls
     public static final RegistryObject<Item> BLANK_SCROLL = ITEMS.register("blank_scroll",
