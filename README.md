@@ -14,12 +14,16 @@
 ### 🌿 Crops
 - Chilli Crop
 - Tomato Crop
-- [WIP] Essence Flower Crops
+- Lettuce Crop
+- Corn Crop
+- [WIP] Essence Crops
   - Emerald
 
 ### 🍲 Food
 - Chilli
 - Tomato
+- Lettuce
+- Corn
 
 ### 🛠️ Items
 - Raw Silver

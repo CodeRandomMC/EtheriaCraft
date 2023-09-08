@@ -1,6 +1,7 @@
 package net.coderandom.etheriacraft.datagen.loot;
 
 import net.coderandom.etheriacraft.blocks.ModBlocks;
+import net.coderandom.etheriacraft.blocks.custom.crops.CornCropBlock;
 import net.coderandom.etheriacraft.items.custom.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -131,6 +132,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.AGE_7, 7));
         this.add(ModBlocks.CHILLI_CROP.get(), createCropDrops(ModBlocks.CHILLI_CROP.get(), ModItems.CHILLI.get(),
                 ModItems.CHILLI_SEEDS.get(), chilliLootitemcondition$builder));
+
+        LootItemCondition.Builder lettuceLootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.LETTUCE_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.AGE_3, 3));
+        this.add(ModBlocks.LETTUCE_CROP.get(), createCropDrops(ModBlocks.LETTUCE_CROP.get(), ModItems.LETTUCE.get(),
+                ModItems.LETTUCE_SEEDS.get(), lettuceLootitemcondition$builder));
+
+        LootItemCondition.Builder cornLootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 7))
+                .or(LootItemBlockStatePropertyCondition
+                        .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 8)));
+        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(),
+                ModItems.CORN_SEEDS.get(), cornLootitemcondition$builder));
 
         LootItemCondition.Builder EmeraldEssenceLootitemcondition$builder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.EMERALD_ESSENCE_CROP.get())

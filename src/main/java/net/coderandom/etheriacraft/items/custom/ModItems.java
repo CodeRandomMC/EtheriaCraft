@@ -43,11 +43,19 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.TOMATO)));
     public static final RegistryObject<Item> CHILLI = ITEMS.register("chilli",
             () -> new Item(new Item.Properties().food(ModFoods.CHILLI)));
+    public static final RegistryObject<Item> LETTUCE = ITEMS.register("lettuce",
+            () -> new Item(new Item.Properties().food(ModFoods.LETTUCE)));
+    public static final RegistryObject<Item> CORN = ITEMS.register("corn",
+            () -> new Item(new Item.Properties().food(ModFoods.CORN)));
     // Seeds
     public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
             () -> new ItemNameBlockItem(ModBlocks.TOMATO_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> CHILLI_SEEDS = ITEMS.register("chilli_seeds",
             () -> new ItemNameBlockItem(ModBlocks.CHILLI_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LETTUCE_SEEDS = ITEMS.register("lettuce_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.LETTUCE_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> EMERALD_ESSENCE_SEEDS = ITEMS.register("emerald_essence_seeds",
             () -> new ItemNameBlockItem(ModBlocks.EMERALD_ESSENCE_CROP.get(), new Item.Properties()));
 

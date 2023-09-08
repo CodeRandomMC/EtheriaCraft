@@ -145,6 +145,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TOMATO_SEEDS.get());
                         output.accept(ModItems.CHILLI.get());
                         output.accept(ModItems.CHILLI_SEEDS.get());
+                        output.accept(ModItems.LETTUCE.get());
+                        output.accept(ModItems.LETTUCE_SEEDS.get());
                         output.accept(ModItems.EMERALD_ESSENCE_SEEDS.get());
                     })
                     .build());

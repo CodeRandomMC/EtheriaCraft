@@ -3,6 +3,8 @@ package net.coderandom.etheriacraft.datagen;
 import net.coderandom.etheriacraft.EtheriaCraft;
 import net.coderandom.etheriacraft.blocks.ModBlocks;
 import net.coderandom.etheriacraft.blocks.custom.crops.CilliCropBlock;
+import net.coderandom.etheriacraft.blocks.custom.crops.CornCropBlock;
+import net.coderandom.etheriacraft.blocks.custom.crops.LettuceCropBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.TomatoCropBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.essence_crops.EmeraldEssenceCropBlock;
 import net.minecraft.data.PackOutput;
@@ -94,7 +96,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // Crops
         makeTomatoCrop((CropBlock) ModBlocks.TOMATO_CROP.get(), "tomato_stage_", "tomato_stage_");
         makeChilliCrop((CropBlock) ModBlocks.CHILLI_CROP.get(), "chilli_stage_", "chilli_stage_");
+        makeLettuceCrop((CropBlock) ModBlocks.LETTUCE_CROP.get(), "lettuce_stage_", "lettuce_stage_");
         makeEmeraldEssenceCrop((CropBlock) ModBlocks.EMERALD_ESSENCE_CROP.get(), "emerald_essence_stage_", "emerald_essence_stage_");
+        makeCornCrop(((CropBlock) ModBlocks.CORN_CROP.get()), "corn_stage_", "corn_stage_");
     }
 
 
@@ -128,13 +132,42 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
 
-    public void makeEmeraldEssenceCrop(CropBlock block, String modelName, String textureName) {
-        Function<BlockState, ConfiguredModel[]> function = state -> EssenceStates(state, block, modelName, textureName);
+    public void makeLettuceCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> lettuceStates(state, block, modelName, textureName);
 
         getVariantBuilder(block).forAllStates(function);
     }
 
-    private ConfiguredModel[] EssenceStates(BlockState state, CropBlock block, String modelName, String textureName) {
+    private ConfiguredModel[] lettuceStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((LettuceCropBlock) block).getAgeProperty()),
+                new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + textureName + state.getValue(((LettuceCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+    public void makeCornCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> cornStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),
+                new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + textureName + state.getValue(((CornCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+
+    public void makeEmeraldEssenceCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> EmeraldEssenceStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] EmeraldEssenceStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((EmeraldEssenceCropBlock) block).getAgeProperty()),
                 new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + textureName + state.getValue(((EmeraldEssenceCropBlock) block).getAgeProperty()))).renderType("cutout"));

@@ -13,10 +13,14 @@
 
   "item.etheria_craft.chilli": "Chilli",
   "item.etheria_craft.tomato": "Tomato",
+  "item.etheria_craft.lettuce": "Lettuce",
+  "item.etheria_craft.corn": "Corn",
   "item.etheria_craft.tomato_seeds": "Tomato Seeds",
   "item.etheria_craft.chilli_seeds": "Chilli Seeds",
-  "item.etheria_craft.emerald_essence_seeds": "Emerald Essence Seeds",
+  "item.etheria_craft.lettuce_seeds": "Lettuce Seeds",
+  "item.etheria_craft.corn_seeds": "Corn Seeds",
 
+  "item.etheria_craft.emerald_essence_seeds": "Emerald Essence Seeds",
   "item.etheria_craft.emerald_essence": "Emerald Essence",
 
   "item.etheria_craft.blank_scroll": "Blank Scroll",

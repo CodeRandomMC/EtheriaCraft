@@ -2,6 +2,8 @@ package net.coderandom.etheriacraft.blocks;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
 import net.coderandom.etheriacraft.blocks.custom.QuickSandBlock;
+import net.coderandom.etheriacraft.blocks.custom.crops.CornCropBlock;
+import net.coderandom.etheriacraft.blocks.custom.crops.LettuceCropBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.CilliCropBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.TomatoCropBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.essence_crops.EmeraldEssenceCropBlock;
@@ -157,6 +159,10 @@ public class ModBlocks {
             () -> new TomatoCropBlock());
     public static final RegistryObject<Block> CHILLI_CROP = BLOCKS.register("chilli_crop",
             () -> new CilliCropBlock());
+    public static final RegistryObject<Block> LETTUCE_CROP = BLOCKS.register("lettuce_crop",
+            () -> new LettuceCropBlock());
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
+            () -> new CornCropBlock());
     public static final RegistryObject<Block> EMERALD_ESSENCE_CROP = BLOCKS.register("emerald_essence_crop",
             () -> new EmeraldEssenceCropBlock());
 

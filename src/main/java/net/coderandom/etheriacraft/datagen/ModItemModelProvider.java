@@ -41,10 +41,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         // Food
         simpleItem(ModItems.TOMATO);
         simpleItem(ModItems.CHILLI);
+        simpleItem(ModItems.LETTUCE);
+        simpleItem(ModItems.CORN);
 
         // Seeds
         simpleItem(ModItems.CHILLI_SEEDS);
         simpleItem(ModItems.TOMATO_SEEDS);
+        simpleItem(ModItems.LETTUCE_SEEDS);
+        simpleItem(ModItems.CORN_SEEDS);
         simpleItem(ModItems.EMERALD_ESSENCE_SEEDS);
 
         // Scrolls
