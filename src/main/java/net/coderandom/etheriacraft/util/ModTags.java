@@ -27,6 +27,7 @@ public class ModTags {
         }
     }
     public static class Items {
+        public static final TagKey<Item> TURTLE = tagKey("turtle");
 
 
         private static TagKey<Item> tagKey(String key) {

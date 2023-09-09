@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ender_pearl": {
+    "has_infused_end_stone_brick": {
       "conditions": {
         "items": [
           {
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_ender_pearl",
+      "has_infused_end_stone_brick",
       "has_the_recipe"
     ]
   ],

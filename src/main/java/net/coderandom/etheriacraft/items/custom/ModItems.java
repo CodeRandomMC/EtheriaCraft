@@ -2,15 +2,15 @@ package net.coderandom.etheriacraft.items.custom;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
 import net.coderandom.etheriacraft.blocks.ModBlocks;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.Rarity;
+import net.coderandom.etheriacraft.items.custom.armor.CustomArmorItem;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
+    public static final Item.Properties item = new Item.Properties();
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, EtheriaCraft.MOD_ID);
     public static final RegistryObject<Item> RAW_SILVER = ITEMS.register("raw_silver",
@@ -65,6 +65,13 @@ public class ModItems {
     public static final RegistryObject<Item> COMBUSTION_SCROLL = ITEMS.register("combustion_scroll",
             () -> new CombustionScrollItem(new Item.Properties().rarity(Rarity.COMMON), 64000)); // x4 coal block burntime
 
+    // Armor
+    public static final RegistryObject<Item> TURTLE_CHESTPLATE = ITEMS.register("turtle_chestplate",
+            () -> new CustomArmorItem(ArmorMaterials.TURTLE, ArmorItem.Type.CHESTPLATE, item.rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> TURTLE_LEGGINGS = ITEMS.register("turtle_leggings",
+            () -> new CustomArmorItem(ArmorMaterials.TURTLE, ArmorItem.Type.LEGGINGS, item.rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> TURTLE_BOOTS = ITEMS.register("turtle_boots",
+            () -> new CustomArmorItem(ArmorMaterials.TURTLE, ArmorItem.Type.BOOTS, item.rarity(Rarity.RARE)));
 
 
 

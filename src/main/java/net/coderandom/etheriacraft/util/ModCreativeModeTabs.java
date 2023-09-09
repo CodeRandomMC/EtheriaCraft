@@ -120,7 +120,9 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(Items.NETHERITE_SWORD))
                     .title(Component.translatable("tab.mod_combat_tab"))
                     .displayItems((parameters, output) -> {
-                        output.accept(ModItems.GEM_DOWSING_ROD.get());
+                        output.accept(ModItems.TURTLE_CHESTPLATE.get());
+                        output.accept(ModItems.TURTLE_LEGGINGS.get());
+                        output.accept(ModItems.TURTLE_BOOTS.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> MOD_MISC = CREATIVE_MODE_TABS.register("mod_misc_tab",
