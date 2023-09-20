@@ -28,7 +28,7 @@ public class ExcavatorItem extends DiggerItem implements Vanishable {
         BlockState state = world.getBlockState(pos);
 
         // Check if the block can be turned into a path
-        if (isPaveable(state, world.getBlockState(pos.above()))) {
+        if (isPaveable(state, world.getBlockState(pos.above())) || state.is(Blocks.DIRT_PATH)) {
             Player player = context.getPlayer();
             ItemStack stack = context.getItemInHand();
 
@@ -37,6 +37,13 @@ public class ExcavatorItem extends DiggerItem implements Vanishable {
                 if (!player.isCreative()) {
                     stack.hurtAndBreak(1, player, (p_220040_1_) ->
                             p_220040_1_.broadcastBreakEvent(context.getHand()));
+                }
+
+                // Check if the block is already a dirt path block
+                if (state.is(Blocks.DIRT_PATH)) {
+                    // Replace the dirt path block with a dirt block
+                    world.setBlockAndUpdate(pos, Blocks.DIRT.defaultBlockState());
+                    return InteractionResult.SUCCESS;
                 }
 
                 // Replace the dirt block with a dirt path block
@@ -49,6 +56,6 @@ public class ExcavatorItem extends DiggerItem implements Vanishable {
 
     // Check if a block can be turned into a path (paveable)
     private boolean isPaveable(BlockState state, BlockState aboveState) {
-        return state.is(BlockTags.DIRT) && (aboveState.isAir() || aboveState.is(BlockTags.REPLACEABLE_BY_TREES));
+        return state.is(BlockTags.DIRT) && (aboveState.isAir() || aboveState.is(BlockTags.REPLACEABLE_BY_TREES) || aboveState.is(BlockTags.SMALL_FLOWERS));
     }
 }
