@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "etheria_craft:item/etherian_excavator"
+  }
+}
