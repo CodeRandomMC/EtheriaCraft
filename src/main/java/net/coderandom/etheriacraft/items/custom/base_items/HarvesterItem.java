@@ -2,6 +2,8 @@ package net.coderandom.etheriacraft.items.custom.base_items;
 
 import net.coderandom.etheriacraft.util.ModTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -33,6 +35,7 @@ public class HarvesterItem extends DiggerItem implements Vanishable {
             ItemStack stack = context.getItemInHand();
 
             if (player != null) {
+                world.playLocalSound(pos, SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0F, 1.0F, true);
                 // Damage the Harvester if not in creative mode
                 if (!player.isCreative()) {
                     stack.hurtAndBreak(1, player, (p_220040_1_) ->
@@ -56,6 +59,7 @@ public class HarvesterItem extends DiggerItem implements Vanishable {
             ItemStack stack = context.getItemInHand();
 
             if (player != null) {
+                world.playLocalSound(pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F, true);
                 // Damage the Harvester if not in creative mode
                 if (!player.isCreative()) {
                     stack.hurtAndBreak(1, player, (p_220040_1_) ->
@@ -96,7 +100,7 @@ public class HarvesterItem extends DiggerItem implements Vanishable {
     }
 
     private boolean isStrippable(BlockState state) {
-        return state.is(BlockTags.LOGS);
+        return state.is(ModTags.Blocks.STRIPPABLE_LOGS);
     }
 
     // Check if a block can be turned into a path (paveable)

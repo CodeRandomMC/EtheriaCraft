@@ -38,6 +38,8 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_ENDERITE_TOOL = tagKey("needs_enderite_tool");
         public static final TagKey<Block> NEEDS_ETHERIAN_TOOL = tagKey("needs_etherian_tool");
 
+        public static final TagKey<Block> STRIPPABLE_LOGS = tagKey("strippable_logs");
+
         /**
          * Utility method to create a TagKey for blocks.
          *

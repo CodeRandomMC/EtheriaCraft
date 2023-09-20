@@ -258,5 +258,19 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.DOORS);
 
         this.tag(BlockTags.TRAPDOORS);
+
+        this.tag(ModTags.Blocks.STRIPPABLE_LOGS)
+                .add(
+                        Blocks.OAK_LOG,
+                        Blocks.SPRUCE_LOG,
+                        Blocks.BIRCH_LOG,
+                        Blocks.ACACIA_LOG,
+                        Blocks.CHERRY_LOG,
+                        Blocks.JUNGLE_LOG,
+                        Blocks.DARK_OAK_LOG,
+                        Blocks.CRIMSON_STEM,
+                        Blocks.WARPED_STEM,
+                        Blocks.MANGROVE_LOG
+                );
     }
 }

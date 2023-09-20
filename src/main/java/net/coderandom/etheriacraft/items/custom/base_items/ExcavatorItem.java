@@ -2,6 +2,8 @@ package net.coderandom.etheriacraft.items.custom.base_items;
 
 import net.coderandom.etheriacraft.util.ModTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -33,6 +35,7 @@ public class ExcavatorItem extends DiggerItem implements Vanishable {
             ItemStack stack = context.getItemInHand();
 
             if (player != null) {
+                world.playLocalSound(pos, SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0F, 1.0F, true);
                 // Damage the Excavator if not in creative mode
                 if (!player.isCreative()) {
                     stack.hurtAndBreak(1, player, (p_220040_1_) ->
