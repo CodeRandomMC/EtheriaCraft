@@ -2,6 +2,8 @@ package net.coderandom.etheriacraft.datagen;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
 import net.coderandom.etheriacraft.init.ModBlocks;
+import net.coderandom.etheriacraft.init.itemsInit.ModArmor;
+import net.coderandom.etheriacraft.init.itemsInit.ModFoods;
 import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.coderandom.etheriacraft.init.itemsInit.ModTools;
 import net.minecraft.data.PackOutput;
@@ -14,7 +16,6 @@ import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -69,15 +70,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         handHeldItem(ModTools.ETHERIAN_HOE);
         handHeldItem(ModTools.ETHERIAN_EXCAVATOR);
         handHeldItem(ModTools.ETHERIAN_HARVESTER);
+        handHeldItem(ModTools.ETHERIAN_HAMMER);
 
         // Essence
         simpleItem(ModItems.EMERALD_ESSENCE);
 
         // Food
-        simpleItem(ModItems.TOMATO);
-        simpleItem(ModItems.CHILLI);
-        simpleItem(ModItems.LETTUCE);
-        simpleItem(ModItems.CORN);
+        simpleItem(ModFoods.TOMATO);
+        simpleItem(ModFoods.CHILLI);
+        simpleItem(ModFoods.LETTUCE);
+        simpleItem(ModFoods.CORN);
 
         // Seeds
         simpleItem(ModItems.CHILLI_SEEDS);
@@ -91,10 +93,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COMBUSTION_SCROLL);
 
         // Armor
-        trimmedArmorItem(ModItems.TURTLE_CHESTPLATE);
-        trimmedArmorItem(ModItems.TURTLE_LEGGINGS);
-        trimmedArmorItem(ModItems.TURTLE_BOOTS);
-        trimmedArmorItem(ModItems.VILLAGE_CHESTPLATE);
+        trimmedArmorItem(ModArmor.TURTLE_CHESTPLATE);
+        trimmedArmorItem(ModArmor.TURTLE_LEGGINGS);
+        trimmedArmorItem(ModArmor.TURTLE_BOOTS);
+        trimmedArmorItem(ModArmor.VILLAGE_CHESTPLATE);
+        trimmedArmorItem(ModArmor.ETHERIAN_HELMET);
+        trimmedArmorItem(ModArmor.ETHERIAN_CHESTPLATE);
+        trimmedArmorItem(ModArmor.ETHERIAN_LEGGINGS);
+        trimmedArmorItem(ModArmor.ETHERIAN_BOOTS);
 
         //Spawn Eggs
         withExistingParent(ModItems.BLACK_BEAR_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
@@ -146,14 +152,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     }
 
-    private ItemModelBuilder handHeldItem(RegistryObject<Item> itemRegistryObject) {
-        return withExistingParent(itemRegistryObject.getId().getPath(),
+    private void handHeldItem(RegistryObject<Item> itemRegistryObject) {
+        this.withExistingParent(itemRegistryObject.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation(EtheriaCraft.MOD_ID, "item/" + itemRegistryObject.getId().getPath()));
     }
 
-    private ItemModelBuilder simpleItem(RegistryObject<Item> itemRegistryObject) {
-        return withExistingParent(itemRegistryObject.getId().getPath(),
+    private void simpleItem(RegistryObject<Item> itemRegistryObject) {
+        this.withExistingParent(itemRegistryObject.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(EtheriaCraft.MOD_ID, "item/" + itemRegistryObject.getId().getPath()));
     }

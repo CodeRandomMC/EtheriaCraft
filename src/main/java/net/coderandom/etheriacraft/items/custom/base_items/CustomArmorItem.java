@@ -1,7 +1,7 @@
-package net.coderandom.etheriacraft.items.custom.armor;
+package net.coderandom.etheriacraft.items.custom.base_items;
 
 import com.google.common.collect.ImmutableMap;
-import net.coderandom.etheriacraft.init.itemsInit.ModItems;
+import net.coderandom.etheriacraft.init.itemsInit.ModArmor;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -40,10 +40,10 @@ public class CustomArmorItem extends ArmorItem {
 
     private void applyIndividualArmorEffects(ItemStack stack, Player player) {
         // You can add other armor-effect pairings here
-        applyEffectIfItemMatches(stack, player, ModItems.TURTLE_CHESTPLATE.get(), MobEffects.DIG_SPEED);
-        applyEffectIfItemMatches(stack, player, ModItems.TURTLE_LEGGINGS.get(), MobEffects.DAMAGE_RESISTANCE);
-        applyEffectIfItemMatches(stack, player, ModItems.TURTLE_BOOTS.get(), MobEffects.DOLPHINS_GRACE);
-        applyEffectIfItemMatches(stack, player, ModItems.VILLAGE_CHESTPLATE.get(), MobEffects.HERO_OF_THE_VILLAGE);
+        applyEffectIfItemMatches(stack, player, ModArmor.TURTLE_CHESTPLATE.get(), MobEffects.DIG_SPEED);
+        applyEffectIfItemMatches(stack, player, ModArmor.TURTLE_LEGGINGS.get(), MobEffects.DAMAGE_RESISTANCE);
+        applyEffectIfItemMatches(stack, player, ModArmor.TURTLE_BOOTS.get(), MobEffects.DOLPHINS_GRACE);
+        applyEffectIfItemMatches(stack, player, ModArmor.VILLAGE_CHESTPLATE.get(), MobEffects.HERO_OF_THE_VILLAGE);
     }
 
     private void applyEffectIfItemMatches(ItemStack stack, Player player, Item specificItem, MobEffect effect) {

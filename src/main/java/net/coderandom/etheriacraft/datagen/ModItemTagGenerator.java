@@ -1,7 +1,7 @@
 package net.coderandom.etheriacraft.datagen;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
-import net.coderandom.etheriacraft.init.itemsInit.ModItems;
+import net.coderandom.etheriacraft.init.itemsInit.ModArmor;
 import net.coderandom.etheriacraft.init.itemsInit.ModTools;
 import net.coderandom.etheriacraft.util.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -24,14 +24,22 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     protected void addTags(HolderLookup.@NotNull Provider pProvider) {
         this.tag(ModTags.Items.TURTLE)
                 .add(
-                        ModItems.TURTLE_CHESTPLATE.get(),
-                        ModItems.TURTLE_LEGGINGS.get(),
-                        ModItems.TURTLE_BOOTS.get()
+                        ModArmor.TURTLE_CHESTPLATE.get(),
+                        ModArmor.TURTLE_LEGGINGS.get(),
+                        ModArmor.TURTLE_BOOTS.get()
+                );
+        this.tag(ModTags.Items.ETHERIAN)
+                .add(
+                        ModArmor.ETHERIAN_HELMET.get(),
+                        ModArmor.ETHERIAN_CHESTPLATE.get(),
+                        ModArmor.ETHERIAN_LEGGINGS.get(),
+                        ModArmor.ETHERIAN_BOOTS.get()
                 );
 
         this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .addTag(ModTags.Items.ETHERIAN)
                 .addTag(ModTags.Items.TURTLE)
-                .add(ModItems.VILLAGE_CHESTPLATE.get());
+                .add(ModArmor.VILLAGE_CHESTPLATE.get());
 
         this.tag(ItemTags.SWORDS)
                 .add(ModTools.ETHERIAN_SWORD.get());

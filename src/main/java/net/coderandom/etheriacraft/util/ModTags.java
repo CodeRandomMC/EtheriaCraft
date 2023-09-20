@@ -33,7 +33,6 @@ public class ModTags {
         // Define custom block tags for tools
         public static final TagKey<Block> MINEABLE_WITH_EXCAVATOR = tagKey("mineable/mineable_with_excavator");
         public static final TagKey<Block> MINEABLE_WITH_HARVESTER = tagKey("mineable/mineable_with_harvester");
-        public static final TagKey<Block> MINEABLE_WITH_HAMMER = tagKey("mineable/mineable_with_hammer");
 
         public static final TagKey<Block> NEEDS_ENDERITE_TOOL = tagKey("needs_enderite_tool");
         public static final TagKey<Block> NEEDS_ETHERIAN_TOOL = tagKey("needs_etherian_tool");
@@ -57,6 +56,7 @@ public class ModTags {
     public static class Items {
         // Define custom item tags
         public static final TagKey<Item> TURTLE = tagKey("turtle");
+        public static final TagKey<Item> ETHERIAN = tagKey("etherian");
 
         /**
          * Utility method to create a TagKey for items.

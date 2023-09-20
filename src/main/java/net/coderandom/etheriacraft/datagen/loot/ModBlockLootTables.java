@@ -2,6 +2,7 @@ package net.coderandom.etheriacraft.datagen.loot;
 
 import net.coderandom.etheriacraft.blocks.custom.crops.CornCropBlock;
 import net.coderandom.etheriacraft.init.ModBlocks;
+import net.coderandom.etheriacraft.init.itemsInit.ModFoods;
 import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -125,19 +126,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         LootItemCondition.Builder tomatoLootitemcondition$builder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.TOMATO_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.AGE_7, 7));
-        this.add(ModBlocks.TOMATO_CROP.get(), createCropDrops(ModBlocks.TOMATO_CROP.get(), ModItems.TOMATO.get(),
+        this.add(ModBlocks.TOMATO_CROP.get(), createCropDrops(ModBlocks.TOMATO_CROP.get(), ModFoods.TOMATO.get(),
                 ModItems.TOMATO_SEEDS.get(), tomatoLootitemcondition$builder));
 
         LootItemCondition.Builder chilliLootitemcondition$builder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.CHILLI_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.AGE_7, 7));
-        this.add(ModBlocks.CHILLI_CROP.get(), createCropDrops(ModBlocks.CHILLI_CROP.get(), ModItems.CHILLI.get(),
+        this.add(ModBlocks.CHILLI_CROP.get(), createCropDrops(ModBlocks.CHILLI_CROP.get(), ModFoods.CHILLI.get(),
                 ModItems.CHILLI_SEEDS.get(), chilliLootitemcondition$builder));
 
         LootItemCondition.Builder lettuceLootitemcondition$builder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.LETTUCE_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.AGE_3, 3));
-        this.add(ModBlocks.LETTUCE_CROP.get(), createCropDrops(ModBlocks.LETTUCE_CROP.get(), ModItems.LETTUCE.get(),
+        this.add(ModBlocks.LETTUCE_CROP.get(), createCropDrops(ModBlocks.LETTUCE_CROP.get(), ModFoods.LETTUCE.get(),
                 ModItems.LETTUCE_SEEDS.get(), lettuceLootitemcondition$builder));
 
         LootItemCondition.Builder cornLootitemcondition$builder = LootItemBlockStatePropertyCondition
@@ -146,7 +147,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .or(LootItemBlockStatePropertyCondition
                         .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 8)));
-        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(),
+        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModFoods.CORN.get(),
                 ModItems.CORN_SEEDS.get(), cornLootitemcondition$builder));
 
         LootItemCondition.Builder EmeraldEssenceLootitemcondition$builder = LootItemBlockStatePropertyCondition

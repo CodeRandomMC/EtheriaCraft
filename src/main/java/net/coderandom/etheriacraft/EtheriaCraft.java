@@ -5,6 +5,8 @@ import net.coderandom.etheriacraft.entities.client.creatures.BisonRenderer;
 import net.coderandom.etheriacraft.entities.client.creatures.BlackBearRenderer;
 import net.coderandom.etheriacraft.entities.client.creatures.OstrichRenderer;
 import net.coderandom.etheriacraft.init.*;
+import net.coderandom.etheriacraft.init.itemsInit.ModArmor;
+import net.coderandom.etheriacraft.init.itemsInit.ModFoods;
 import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.coderandom.etheriacraft.init.itemsInit.ModTools;
 import net.coderandom.etheriacraft.loot.ModLootModifiers;
@@ -33,6 +35,8 @@ public class EtheriaCraft {
         // Register mod content to the mod event bus
         ModItems.register(modEventBus);
         ModTools.register(modEventBus);
+        ModFoods.register(modEventBus);
+        ModArmor.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEntities.register(modEventBus);
         ModLootModifiers.register(modEventBus);

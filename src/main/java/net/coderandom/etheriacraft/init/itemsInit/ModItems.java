@@ -3,11 +3,10 @@ package net.coderandom.etheriacraft.init.itemsInit;
 import net.coderandom.etheriacraft.EtheriaCraft;
 import net.coderandom.etheriacraft.init.ModBlocks;
 import net.coderandom.etheriacraft.init.ModEntities;
-import net.coderandom.etheriacraft.items.ModArmorMaterials;
-import net.coderandom.etheriacraft.items.ModFoods;
 import net.coderandom.etheriacraft.items.custom.CombustionScrollItem;
-import net.coderandom.etheriacraft.items.custom.armor.CustomArmorItem;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -51,15 +50,6 @@ public class ModItems {
     public static final RegistryObject<Item> EMERALD_ESSENCE = ITEMS.register("emerald_essence",
             () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
-    // Food
-    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
-            () -> new Item(new Item.Properties().food(ModFoods.TOMATO)));
-    public static final RegistryObject<Item> CHILLI = ITEMS.register("chilli",
-            () -> new Item(new Item.Properties().food(ModFoods.CHILLI)));
-    public static final RegistryObject<Item> LETTUCE = ITEMS.register("lettuce",
-            () -> new Item(new Item.Properties().food(ModFoods.LETTUCE)));
-    public static final RegistryObject<Item> CORN = ITEMS.register("corn",
-            () -> new Item(new Item.Properties().food(ModFoods.CORN)));
     // Seeds
     public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
             () -> new ItemNameBlockItem(ModBlocks.TOMATO_CROP.get(), new Item.Properties()));
@@ -77,16 +67,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> COMBUSTION_SCROLL = ITEMS.register("combustion_scroll",
             () -> new CombustionScrollItem(new Item.Properties().rarity(Rarity.COMMON), 64000)); // x4 coal block burntime
-
-    // Armor
-    public static final RegistryObject<Item> TURTLE_CHESTPLATE = ITEMS.register("turtle_chestplate",
-            () -> new CustomArmorItem(ArmorMaterials.TURTLE, ArmorItem.Type.CHESTPLATE, item.rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> TURTLE_LEGGINGS = ITEMS.register("turtle_leggings",
-            () -> new CustomArmorItem(ArmorMaterials.TURTLE, ArmorItem.Type.LEGGINGS, item.rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> TURTLE_BOOTS = ITEMS.register("turtle_boots",
-            () -> new CustomArmorItem(ArmorMaterials.TURTLE, ArmorItem.Type.BOOTS, item.rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> VILLAGE_CHESTPLATE = ITEMS.register("village_chestplate",
-            () -> new CustomArmorItem(ModArmorMaterials.VILLAGE, ArmorItem.Type.CHESTPLATE, item.rarity(Rarity.EPIC)));
 
 
     //TODO Fix portable crafting table

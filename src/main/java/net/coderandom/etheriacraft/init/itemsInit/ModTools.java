@@ -4,6 +4,7 @@ import net.coderandom.etheriacraft.EtheriaCraft;
 import net.coderandom.etheriacraft.items.custom.GemDowsingRodItem;
 import net.coderandom.etheriacraft.items.custom.MetalDowsingRodItem;
 import net.coderandom.etheriacraft.items.custom.base_items.ExcavatorItem;
+import net.coderandom.etheriacraft.items.custom.base_items.HammerItem;
 import net.coderandom.etheriacraft.items.custom.base_items.HarvesterItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -48,6 +49,8 @@ public class ModTools {
             registerExcavator("etherian_excavator", ModToolTiers.ETHERIAN, Rarity.EPIC);
     public static final RegistryObject<Item> ETHERIAN_HARVESTER =
             registerHarvester("etherian_harvester", ModToolTiers.ETHERIAN, Rarity.EPIC);
+    public static final RegistryObject<Item> ETHERIAN_HAMMER =
+            registerHammer("etherian_hammer", ModToolTiers.ETHERIAN, 7.5F, Rarity.EPIC);
 
 
     //Register functions
@@ -55,56 +58,56 @@ public class ModTools {
     private static RegistryObject<Item> registerSword(final String name, Tier tier, Rarity rarity) {
         return ITEMS.register(name,
                 () -> new SwordItem(
-                        tier,
-                        3, -2.4F, new Item.Properties().rarity(rarity)));
+                        tier, 3, -2.4F, new Item.Properties().rarity(rarity)));
     }
 
     //Axes
     private static RegistryObject<Item> registerAxe(final String name, Tier tier, float damageModifier, float speedModifier, Rarity rarity) {
         return ITEMS.register(name,
                 () -> new AxeItem(
-                        tier,
-                        damageModifier, speedModifier, new Item.Properties().rarity(rarity)));
+                        tier, damageModifier, speedModifier, new Item.Properties().rarity(rarity)));
     }
 
     //Pickaxes
     private static RegistryObject<Item> registerPickaxe(final String name, Tier tier, Rarity rarity) {
         return ITEMS.register(name,
                 () -> new PickaxeItem(
-                        tier,
-                        1, -2.8F, new Item.Properties().rarity(rarity)));
+                        tier, 1, -2.8F, new Item.Properties().rarity(rarity)));
     }
 
     //Shovels
     private static RegistryObject<Item> registerShovel(final String name, Tier tier, Rarity rarity) {
         return ITEMS.register(name,
                 () -> new ShovelItem(
-                        tier,
-                        1.5F, -3.0F, new Item.Properties().rarity(rarity)));
+                        tier, 1.5F, -3.0F, new Item.Properties().rarity(rarity)));
     }
 
     //Hoes
     private static RegistryObject<Item> registerHoe(final String name, Tier tier, int damageModifier, Rarity rarity) {
         return ITEMS.register(name,
                 () -> new HoeItem(
-                        tier,
-                        damageModifier, 0.0F, new Item.Properties().rarity(rarity)));
+                        tier, damageModifier, 0.0F, new Item.Properties().rarity(rarity)));
     }
 
     //Excavators
     private static RegistryObject<Item> registerExcavator(final String name, Tier tier, Rarity rarity) {
         return ITEMS.register(name,
                 () -> new ExcavatorItem(
-                        tier,
-                        1.25F, -2.9F, new Item.Properties().rarity(rarity)));
+                        tier, 1.25F, -2.9F, new Item.Properties().rarity(rarity)));
     }
 
     //Harvester
     private static RegistryObject<Item> registerHarvester(final String name, Tier tier, Rarity rarity) {
         return ITEMS.register(name,
                 () -> new HarvesterItem(
-                        tier,
-                        0.0F, 0.0F, new Item.Properties().rarity(rarity)));
+                        tier, 0.0F, 0.0F, new Item.Properties().rarity(rarity)));
+    }
+
+    //Hammers
+    private static RegistryObject<Item> registerHammer(final String name, Tier tier, float damageModifier, Rarity rarity) {
+        return ITEMS.register(name,
+                () -> new HammerItem(
+                        tier, damageModifier, -3.5F, new Item.Properties().rarity(rarity)));
     }
 
     public static void register(IEventBus eventBus) {

@@ -1,13 +1,14 @@
 package net.coderandom.etheriacraft.init;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
+import net.coderandom.etheriacraft.init.itemsInit.ModArmor;
+import net.coderandom.etheriacraft.init.itemsInit.ModFoods;
 import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.coderandom.etheriacraft.init.itemsInit.ModTools;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -51,6 +52,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModTools.ETHERIAN_HOE.get());
                         output.accept(ModTools.ETHERIAN_EXCAVATOR.get());
                         output.accept(ModTools.ETHERIAN_HARVESTER.get());
+                        output.accept(ModTools.ETHERIAN_HAMMER.get());
                         //Dowsing Rods
                         output.accept(ModTools.METAL_DOWSING_ROD.get());
                         output.accept(ModTools.GEM_DOWSING_ROD.get());
@@ -128,19 +130,25 @@ public class ModCreativeModeTabs {
                     .build());
     public static final RegistryObject<CreativeModeTab> MOD_COMBAT = CREATIVE_MODE_TABS.register("mod_combat_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(Items.NETHERITE_SWORD))
+                    .icon(() -> new ItemStack(ModArmor.ETHERIAN_HELMET.get()))
                     .title(Component.translatable("tab.mod_combat_tab"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModTools.ETHERIAN_SWORD.get());
-                        output.accept(ModItems.TURTLE_CHESTPLATE.get());
-                        output.accept(ModItems.TURTLE_LEGGINGS.get());
-                        output.accept(ModItems.TURTLE_BOOTS.get());
-                        output.accept(ModItems.VILLAGE_CHESTPLATE.get());
+                        output.accept(ModArmor.ETHERIAN_HELMET.get());
+                        output.accept(ModArmor.ETHERIAN_CHESTPLATE.get());
+                        output.accept(ModArmor.ETHERIAN_LEGGINGS.get());
+                        output.accept(ModArmor.ETHERIAN_BOOTS.get());
+
+                        output.accept(ModArmor.TURTLE_CHESTPLATE.get());
+                        output.accept(ModArmor.TURTLE_LEGGINGS.get());
+                        output.accept(ModArmor.TURTLE_BOOTS.get());
+
+                        output.accept(ModArmor.VILLAGE_CHESTPLATE.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> MOD_MISC = CREATIVE_MODE_TABS.register("mod_misc_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.TOMATO.get()))
+                    .icon(() -> new ItemStack(ModFoods.TOMATO.get()))
                     .title(Component.translatable("tab.mod_misc_tab"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.INFUSION_TABLE.get());
@@ -150,16 +158,16 @@ public class ModCreativeModeTabs {
 
     public static final RegistryObject<CreativeModeTab> MOD_CROPS = CREATIVE_MODE_TABS.register("mod_crops",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.TOMATO.get()))
+                    .icon(() -> new ItemStack(ModFoods.TOMATO.get()))
                     .title(Component.translatable("tab.mod_crops")) // Crops and Seeds
                     .displayItems((parameters, output) -> {
-                        output.accept(ModItems.TOMATO.get());
+                        output.accept(ModFoods.TOMATO.get());
                         output.accept(ModItems.TOMATO_SEEDS.get());
-                        output.accept(ModItems.CHILLI.get());
+                        output.accept(ModFoods.CHILLI.get());
                         output.accept(ModItems.CHILLI_SEEDS.get());
-                        output.accept(ModItems.LETTUCE.get());
+                        output.accept(ModFoods.LETTUCE.get());
                         output.accept(ModItems.LETTUCE_SEEDS.get());
-                        output.accept(ModItems.CORN.get());
+                        output.accept(ModFoods.CORN.get());
                         output.accept(ModItems.CORN_SEEDS.get());
                         output.accept(ModItems.EMERALD_ESSENCE_SEEDS.get());
                     })
