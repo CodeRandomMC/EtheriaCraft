@@ -1,18 +1,36 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "building",
-  "key": {
-    "#": {
+  "ingredients": [
+    {
+      "item": "etheria_craft:sapphire"
+    },
+    {
+      "item": "etheria_craft:sapphire"
+    },
+    {
+      "item": "etheria_craft:sapphire"
+    },
+    {
+      "item": "etheria_craft:sapphire"
+    },
+    {
+      "item": "etheria_craft:sapphire"
+    },
+    {
+      "item": "etheria_craft:sapphire"
+    },
+    {
+      "item": "etheria_craft:sapphire"
+    },
+    {
+      "item": "etheria_craft:sapphire"
+    },
+    {
       "item": "etheria_craft:sapphire"
     }
-  },
-  "pattern": [
-    "###",
-    "###",
-    "###"
   ],
   "result": {
     "item": "etheria_craft:sapphire_block"
-  },
-  "show_notification": true
+  }
 }

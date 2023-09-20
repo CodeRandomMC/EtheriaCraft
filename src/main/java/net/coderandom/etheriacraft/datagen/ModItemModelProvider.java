@@ -1,8 +1,9 @@
 package net.coderandom.etheriacraft.datagen;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
-import net.coderandom.etheriacraft.blocks.ModBlocks;
-import net.coderandom.etheriacraft.items.custom.ModItems;
+import net.coderandom.etheriacraft.init.ModBlocks;
+import net.coderandom.etheriacraft.init.itemsInit.ModItems;
+import net.coderandom.etheriacraft.init.itemsInit.ModTools;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -24,6 +25,7 @@ import java.util.LinkedHashMap;
 
 public class ModItemModelProvider extends ItemModelProvider {
     private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
+
     static {
         trimMaterials.put(TrimMaterials.QUARTZ, 0.1F);
         trimMaterials.put(TrimMaterials.IRON, 0.2F);
@@ -36,6 +38,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.LAPIS, 0.9F);
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
     }
+
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, EtheriaCraft.MOD_ID, existingFileHelper);
     }
@@ -53,12 +56,23 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.ENDERITE_SCRAP);
         simpleItem(ModItems.ENDERITE_INGOT);
+        simpleItem(ModItems.ETHERIAN_SCRAP);
+        simpleItem(ModItems.ETHERIAN_INGOT);
+
+        //Tools and Weapons
+        handHeldItem(ModTools.GEM_DOWSING_ROD);
+        handHeldItem(ModTools.METAL_DOWSING_ROD);
+        handHeldItem(ModTools.ETHERIAN_SWORD);
+        handHeldItem(ModTools.ETHERIAN_AXE);
+        handHeldItem(ModTools.ETHERIAN_PICKAXE);
+        handHeldItem(ModTools.ETHERIAN_SHOVEL);
+        handHeldItem(ModTools.ETHERIAN_HOE);
+        handHeldItem(ModTools.ETHERIAN_EXCAVATOR);
+        handHeldItem(ModTools.ETHERIAN_HARVESTER);
 
         // Essence
         simpleItem(ModItems.EMERALD_ESSENCE);
 
-        simpleItem(ModItems.METAL_DOWSING_ROD);
-        simpleItem(ModItems.GEM_DOWSING_ROD);
         // Food
         simpleItem(ModItems.TOMATO);
         simpleItem(ModItems.CHILLI);
@@ -80,6 +94,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.TURTLE_CHESTPLATE);
         trimmedArmorItem(ModItems.TURTLE_LEGGINGS);
         trimmedArmorItem(ModItems.TURTLE_BOOTS);
+        trimmedArmorItem(ModItems.VILLAGE_CHESTPLATE);
+
+        //Spawn Eggs
+        withExistingParent(ModItems.BLACK_BEAR_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.BISON_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.OSTRICH_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         // Decoration Blocks
         simpleBlockItem(ModBlocks.MOSSY_BRICK_STAIRS);
@@ -110,7 +130,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.PACKED_ICE_STAIRS);
         simpleBlockItem(ModBlocks.PACKED_ICE_SLAB);
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(ModBlocks.PACKED_ICE_WALL.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  new ResourceLocation("minecraft", "block/" + ForgeRegistries.BLOCKS.getKey(Blocks.PACKED_ICE).getPath()));
+                .texture("wall", new ResourceLocation("minecraft", "block/" + ForgeRegistries.BLOCKS.getKey(Blocks.PACKED_ICE).getPath()));
 
         simpleBlockItem(ModBlocks.CHANNELLED_STONEBRICK_STAIRS);
         simpleBlockItem(ModBlocks.CHANNELLED_STONEBRICK_SLAB);
@@ -126,10 +146,16 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     }
 
+    private ItemModelBuilder handHeldItem(RegistryObject<Item> itemRegistryObject) {
+        return withExistingParent(itemRegistryObject.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(EtheriaCraft.MOD_ID, "item/" + itemRegistryObject.getId().getPath()));
+    }
+
     private ItemModelBuilder simpleItem(RegistryObject<Item> itemRegistryObject) {
         return withExistingParent(itemRegistryObject.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(EtheriaCraft.MOD_ID, "item/" +itemRegistryObject.getId().getPath()));
+                new ResourceLocation(EtheriaCraft.MOD_ID, "item/" + itemRegistryObject.getId().getPath()));
     }
 
     public void simpleBlockItem(RegistryObject<Block> block) {
@@ -144,23 +170,23 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture", new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture", new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("wall", new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
         final String MOD_ID = EtheriaCraft.MOD_ID; // Change this to your mod id
 
-        if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
+        if (itemRegistryObject.get() instanceof ArmorItem armorItem) {
             trimMaterials.entrySet().forEach(entry -> {
 
                 ResourceKey<TrimMaterial> trimMaterial = entry.getKey();

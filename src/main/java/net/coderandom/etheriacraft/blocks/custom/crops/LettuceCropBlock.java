@@ -1,6 +1,6 @@
 package net.coderandom.etheriacraft.blocks.custom.crops;
 
-import net.coderandom.etheriacraft.items.custom.ModItems;
+import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;

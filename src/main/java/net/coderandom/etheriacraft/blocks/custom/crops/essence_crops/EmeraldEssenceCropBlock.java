@@ -1,6 +1,6 @@
 package net.coderandom.etheriacraft.blocks.custom.crops.essence_crops;
 
-import net.coderandom.etheriacraft.items.custom.ModItems;
+import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -35,9 +35,9 @@ public class EmeraldEssenceCropBlock extends CropBlock {
     public void animateTick(BlockState state, Level world, BlockPos pos, RandomSource random) {
         super.animateTick(state, world, pos, random);
         if (state.getValue(AGE) >= MAX_AGE) {
-            double x = (double)pos.getX() + random.nextDouble();
-            double y = (double)pos.getY() + random.nextDouble();
-            double z = (double)pos.getZ() + random.nextDouble();
+            double x = (double) pos.getX() + random.nextDouble();
+            double y = (double) pos.getY() + random.nextDouble();
+            double z = (double) pos.getZ() + random.nextDouble();
             world.addParticle(ParticleTypes.HAPPY_VILLAGER, x, y, z, 0.0D, 0.0D, 0.0D);
         }
     }

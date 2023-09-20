@@ -1,8 +1,9 @@
 package net.coderandom.etheriacraft.datagen;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
-import net.coderandom.etheriacraft.blocks.ModBlocks;
-import net.coderandom.etheriacraft.items.custom.ModItems;
+import net.coderandom.etheriacraft.init.ModBlocks;
+import net.coderandom.etheriacraft.init.itemsInit.ModItems;
+import net.coderandom.etheriacraft.init.itemsInit.ModTools;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
@@ -24,6 +25,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             ModBlocks.SILVER_ORE.get(),
             ModBlocks.DEEPSLATE_SILVER_ORE.get(),
             ModBlocks.NETHER_SILVER_ORE.get());
+
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -31,97 +33,48 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
         writer = pWriter;
-        oreSmelting(pWriter, SILVER_SMELTABLES, ModItems.SILVER_INGOT.get(), 0.25f , 100, "silver");
-        oreBlasting(pWriter, SILVER_SMELTABLES, ModItems.SILVER_INGOT.get(), 0.50f , 75, "silver");
-        oreSmelting(pWriter, List.of(ModBlocks.ENDERITE_SCRAP_ORE.get()), ModItems.ENDERITE_SCRAP.get(), 1.5f , 150, "enderite");
-        oreBlasting(pWriter, List.of(ModBlocks.ENDERITE_SCRAP_ORE.get()), ModItems.ENDERITE_SCRAP.get(), 2.0f , 100, "enderite");
 
-        oreSmelting(pWriter, List.of(ModBlocks.SAPPHIRE_ORE.get()), ModItems.SAPPHIRE.get(), 0.25f , 100, "sapphire");
-        oreBlasting(pWriter, List.of(ModBlocks.SAPPHIRE_ORE.get()), ModItems.SAPPHIRE.get(), 0.50f , 75, "sapphitre");
-        oreSmelting(pWriter, List.of(ModBlocks.RUBY_ORE.get()), ModItems.RUBY.get(), 0.25f , 100, "ruby");
-        oreBlasting(pWriter, List.of(ModBlocks.RUBY_ORE.get()), ModItems.RUBY.get(), 0.50f , 75, "ruby");
-        oreSmelting(pWriter, List.of(ModBlocks.TOPAZ_ORE.get()), ModItems.TOPAZ.get(), 0.25f , 100, "topaz");
-        oreBlasting(pWriter, List.of(ModBlocks.TOPAZ_ORE.get()), ModItems.TOPAZ.get(), 0.50f , 75, "topaz");
+        // Smelting and Cooking
+        oreSmelting(pWriter, SILVER_SMELTABLES, ModItems.SILVER_INGOT.get(), 0.25f, 100, "silver");
+        oreBlasting(pWriter, SILVER_SMELTABLES, ModItems.SILVER_INGOT.get(), 0.50f, 75, "silver");
+        oreSmelting(pWriter, List.of(ModBlocks.ENDERITE_SCRAP_ORE.get()), ModItems.ENDERITE_SCRAP.get(), 1.5f, 150, "enderite");
+        oreBlasting(pWriter, List.of(ModBlocks.ENDERITE_SCRAP_ORE.get()), ModItems.ENDERITE_SCRAP.get(), 2.0f, 100, "enderite");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_SILVER_BLOCK.get())
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModItems.RAW_SILVER.get())
-                .unlockedBy(getHasName(ModItems.RAW_SILVER.get()), has(ModItems.RAW_SILVER.get()))
-                .save(pWriter);
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILVER_BLOCK.get())
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModItems.SILVER_INGOT.get())
-                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()));
+        oreSmelting(pWriter, List.of(ModBlocks.SAPPHIRE_ORE.get()), ModItems.SAPPHIRE.get(), 0.25f, 100, "sapphire");
+        oreBlasting(pWriter, List.of(ModBlocks.SAPPHIRE_ORE.get()), ModItems.SAPPHIRE.get(), 0.50f, 75, "sapphire");
+        oreSmelting(pWriter, List.of(ModBlocks.RUBY_ORE.get()), ModItems.RUBY.get(), 0.25f, 100, "ruby");
+        oreBlasting(pWriter, List.of(ModBlocks.RUBY_ORE.get()), ModItems.RUBY.get(), 0.50f, 75, "ruby");
+        oreSmelting(pWriter, List.of(ModBlocks.TOPAZ_ORE.get()), ModItems.TOPAZ.get(), 0.25f, 100, "topaz");
+        oreBlasting(pWriter, List.of(ModBlocks.TOPAZ_ORE.get()), ModItems.TOPAZ.get(), 0.50f, 75, "topaz");
 
+        // Ingredient Blocks reverse recipe also made
+        solidBlockRecipe(ModBlocks.RAW_SILVER_BLOCK.get(), ModItems.RAW_SILVER.get());
+        solidBlockRecipe(ModBlocks.SILVER_BLOCK.get(), ModItems.SILVER_INGOT.get());
+        solidBlockRecipe(ModBlocks.SAPPHIRE_BLOCK.get(), ModItems.SAPPHIRE.get());
+        solidBlockRecipe(ModBlocks.RUBY_BLOCK.get(), ModItems.RUBY.get());
+        solidBlockRecipe(ModBlocks.TOPAZ_BLOCK.get(), ModItems.TOPAZ.get());
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SAPPHIRE_BLOCK.get())
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModItems.SAPPHIRE.get())
-                .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
-                .save(pWriter);
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUBY_BLOCK.get())
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModItems.RUBY.get())
-                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get()))
-                .save(pWriter);
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOPAZ_BLOCK.get())
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModItems.TOPAZ.get())
-                .unlockedBy(getHasName(ModItems.TOPAZ.get()), has(ModItems.TOPAZ.get()))
-                .save(pWriter);
-
+        // Nuggets handle ingot manually
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SILVER_NUGGET.get(), 9)
                 .requires(ModItems.SILVER_INGOT.get())
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 9)
-                .requires(ModBlocks.SILVER_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get()))
-                .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_SILVER.get(), 9)
-                .requires(ModBlocks.RAW_SILVER_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.RAW_SILVER_BLOCK.get()), has(ModBlocks.RAW_SILVER_BLOCK.get()))
-                .save(pWriter);
 
-
-    ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 9)
-                .requires(ModBlocks.SAPPHIRE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.SAPPHIRE_BLOCK.get()), has(ModBlocks.SAPPHIRE_BLOCK.get()))
-                .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY.get(), 9)
-                .requires(ModBlocks.RUBY_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()), has(ModBlocks.RUBY_BLOCK.get()))
-                .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TOPAZ.get(), 9)
-                .requires(ModBlocks.TOPAZ_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.TOPAZ_BLOCK.get()), has(ModBlocks.TOPAZ_BLOCK.get()))
-                .save(pWriter);
-
-
+        // Tools and Utilities
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLANK_SCROLL.get(), 1)
                 .requires(Items.PAPER)
                 .requires(Items.STICK, 2)
                 .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.GEM_DOWSING_ROD.get(), 1)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModTools.GEM_DOWSING_ROD.get(), 1)
                 .requires(Items.STICK)
                 .requires(ModItems.SAPPHIRE.get())
                 .requires(ModItems.RUBY.get())
                 .requires(ModItems.TOPAZ.get())
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.METAL_DOWSING_ROD.get(), 1)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModTools.METAL_DOWSING_ROD.get(), 1)
                 .requires(Items.STICK)
                 .requires(ModItems.RAW_SILVER.get())
                 .requires(Items.RAW_GOLD)
@@ -129,174 +82,76 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(pWriter);
 
+        // Building Blocks
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_BRICK.get(), 1)
                 .requires(Blocks.BRICKS)
                 .requires(Items.VINE)
                 .unlockedBy(getHasName(Blocks.BRICKS), has(Items.BRICKS))
                 .save(pWriter);
-        buildingSet(
+        buildingSetRecipes(
                 ModBlocks.MOSSY_BRICK_SLAB.get(),
                 ModBlocks.MOSSY_BRICK_STAIRS.get(),
                 ModBlocks.MOSSY_BRICK_WALL.get(),
-                ModBlocks.MOSSY_BRICK.get(), Blocks.BRICKS
+                ModBlocks.MOSSY_BRICK.get()
         );
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get())
                 .pattern("##")
                 .define('#', ModBlocks.MOSSY_BRICK.get())
                 .unlockedBy(getHasName(Blocks.BRICKS), has(ModBlocks.MOSSY_BRICK.get()))
                 .save(pWriter);
-
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GILDED_BLACKSTONE_BRICK.get(), 4)
-                .requires(Blocks.GILDED_BLACKSTONE, 4)
-                .unlockedBy(getHasName(Blocks.GILDED_BLACKSTONE), has(Items.GILDED_BLACKSTONE))
-                .save(pWriter);
-        buildingSet(
+        buildingSetRecipes(
                 ModBlocks.GILDED_BLACKSTONE_BRICK_SLAB.get(),
                 ModBlocks.GILDED_BLACKSTONE_BRICK_STAIRS.get(),
                 ModBlocks.GILDED_BLACKSTONE_BRICK_WALL.get(),
-                ModBlocks.GILDED_BLACKSTONE_BRICK.get(), ModBlocks.GILDED_BLACKSTONE_BRICK.get()
+                ModBlocks.GILDED_BLACKSTONE_BRICK.get()
         );
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.INFUSED_END_BRICK.get(), 4)
-                .requires(Blocks.END_STONE_BRICKS, 4)
-                .requires(Items.ENDER_PEARL)
-                .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.END_STONE_BRICKS))
-                .save(pWriter);
-        buildingSet(
+        buildingSetRecipes(
                 ModBlocks.INFUSED_END_BRICK_SLAB.get(),
                 ModBlocks.INFUSED_END_BRICK_STAIRS.get(),
                 ModBlocks.INFUSED_END_BRICK_WALL.get(),
-                ModBlocks.INFUSED_END_BRICK.get(), ModBlocks.INFUSED_END_BRICK.get()
+                ModBlocks.INFUSED_END_BRICK.get()
         );
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ENRICHED_NETHER_BRICK.get(), 4)
-                .requires(Blocks.NETHER_BRICKS, 4)
-                .requires(Items.BLAZE_POWDER)
-                .unlockedBy(getHasName(Items.BLAZE_POWDER), has(Items.NETHER_BRICKS))
-                .save(pWriter);
-        buildingSet(
+        buildingSetAndFenceRecipes(
+                ModBlocks.ENRICHED_NETHER_BRICK_FENCE.get(),
+                ModBlocks.ENRICHED_NETHER_BRICK_FENCE_GATE.get(),
                 ModBlocks.ENRICHED_NETHER_BRICK_SLAB.get(),
                 ModBlocks.ENRICHED_NETHER_BRICK_STAIRS.get(),
                 ModBlocks.ENRICHED_NETHER_BRICK_WALL.get(),
-                ModBlocks.ENRICHED_NETHER_BRICK.get(), ModBlocks.ENRICHED_NETHER_BRICK.get()
+                ModBlocks.ENRICHED_NETHER_BRICK.get()
         );
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ENRICHED_NETHER_BRICK_FENCE.get(), 6)
-                .pattern("#$#")
-                .pattern("#$#")
-                .define('#', ModBlocks.ENRICHED_NETHER_BRICK.get())
-                .define('$', ModBlocks.ENRICHED_NETHER_BRICK_SLAB.get())
-                .unlockedBy(getHasName(Items.BLAZE_POWDER), has(ModBlocks.ENRICHED_NETHER_BRICK.get()))
-                .save(pWriter);
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ENRICHED_NETHER_BRICK_FENCE_GATE.get(), 3)
-                .pattern("#$#")
-                .pattern("#$#")
-                .define('#', ModBlocks.ENRICHED_NETHER_BRICK_SLAB.get())
-                .define('$',ModBlocks.ENRICHED_NETHER_BRICK.get())
-                .unlockedBy(getHasName(Items.BLAZE_POWDER), has(ModBlocks.ENRICHED_NETHER_BRICK.get()))
-                .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ENRICHED_RED_NETHER_BRICK.get(), 4)
-                .requires(Blocks.RED_NETHER_BRICKS, 4)
-                .requires(Items.BLAZE_POWDER)
-                .unlockedBy(getHasName(Items.BLAZE_POWDER), has(Items.RED_NETHER_BRICKS))
-                .save(pWriter);
-        buildingSet(
+        buildingSetAndFenceRecipes(
+                ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE.get(),
+                ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE_GATE.get(),
                 ModBlocks.ENRICHED_RED_NETHER_BRICK_SLAB.get(),
                 ModBlocks.ENRICHED_RED_NETHER_BRICK_STAIRS.get(),
                 ModBlocks.ENRICHED_RED_NETHER_BRICK_WALL.get(),
-                ModBlocks.ENRICHED_RED_NETHER_BRICK.get(), ModBlocks.ENRICHED_RED_NETHER_BRICK.get()
+                ModBlocks.ENRICHED_RED_NETHER_BRICK.get()
         );
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE.get(), 6)
-                .pattern("#$#")
-                .pattern("#$#")
-                .define('#', ModBlocks.ENRICHED_RED_NETHER_BRICK.get())
-                .define('$', ModBlocks.ENRICHED_RED_NETHER_BRICK_SLAB.get())
-                .unlockedBy(getHasName(Items.BLAZE_POWDER), has(ModBlocks.ENRICHED_RED_NETHER_BRICK.get()))
-                .save(pWriter);
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ENRICHED_RED_NETHER_BRICK_FENCE_GATE.get(), 3)
-                .pattern("#$#")
-                .pattern("#$#")
-                .define('#', ModBlocks.ENRICHED_RED_NETHER_BRICK_SLAB.get())
-                .define('$',ModBlocks.ENRICHED_RED_NETHER_BRICK.get())
-                .unlockedBy(getHasName(Items.BLAZE_POWDER), has(ModBlocks.ENRICHED_RED_NETHER_BRICK.get()))
-                .save(pWriter);
-
-        buildingSet(
+        buildingSetRecipes(
                 ModBlocks.PACKED_ICE_SLAB.get(),
                 ModBlocks.PACKED_ICE_STAIRS.get(),
                 ModBlocks.PACKED_ICE_WALL.get(),
-                Blocks.PACKED_ICE, Blocks.PACKED_ICE
+                Blocks.PACKED_ICE
         );
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHANNELLED_STONEBRICK.get(), 4)
-                .requires(Blocks.STONE_BRICKS, 4)
-                .requires(Items.LAPIS_LAZULI)
-                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.STONE_BRICKS))
-                .save(pWriter);
-        buildingSet(
+        buildingSetRecipes(
                 ModBlocks.CHANNELLED_STONEBRICK_SLAB.get(),
                 ModBlocks.CHANNELLED_STONEBRICK_STAIRS.get(),
                 ModBlocks.CHANNELLED_STONEBRICK_WALL.get(),
-                ModBlocks.CHANNELLED_STONEBRICK.get(), Items.LAPIS_LAZULI
+                ModBlocks.CHANNELLED_STONEBRICK.get()
         );
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHANNELLED_MOSSY_STONEBRICK.get(), 4)
-                .requires(Blocks.MOSSY_STONE_BRICKS, 4)
-                .requires(Items.LAPIS_LAZULI)
-                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.MOSSY_STONE_BRICKS))
-                .save(pWriter);
-        buildingSet(
+        buildingSetRecipes(
                 ModBlocks.CHANNELLED_MOSSY_STONEBRICK_SLAB.get(),
                 ModBlocks.CHANNELLED_MOSSY_STONEBRICK_STAIRS.get(),
                 ModBlocks.CHANNELLED_MOSSY_STONEBRICK_WALL.get(),
-                ModBlocks.CHANNELLED_MOSSY_STONEBRICK.get(), Items.LAPIS_LAZULI
+                ModBlocks.CHANNELLED_MOSSY_STONEBRICK.get()
         );
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHANNELLED_STONEBRICK_CARVED.get(), 4)
-                .requires(Blocks.CHISELED_STONE_BRICKS, 4)
-                .requires(Items.LAPIS_LAZULI)
-                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.CHISELED_STONE_BRICKS))
-                .save(pWriter);
-        buildingSet(
+        buildingSetRecipes(
                 ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get(),
                 ModBlocks.CHANNELLED_STONEBRICK_CARVED_STAIRS.get(),
                 ModBlocks.CHANNELLED_STONEBRICK_CARVED_WALL.get(),
-                ModBlocks.CHANNELLED_STONEBRICK_CARVED.get(), Items.LAPIS_LAZULI
+                ModBlocks.CHANNELLED_STONEBRICK_CARVED.get()
         );
 
-    }
-
-    protected static void buildingSet(Block slabBlock, Block stairsBlock, Block wallBlock, ItemLike recipeItem , ItemLike unlockedBy) {
-        slab(slabBlock, recipeItem, unlockedBy);
-        stairs(stairsBlock, recipeItem, unlockedBy);
-        wall(wallBlock, recipeItem, unlockedBy);
-    }
-
-    protected static void slab(Block slabBlock, ItemLike recipeItem , ItemLike unlockedBy) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, slabBlock, 6)
-                .pattern("###")
-                .define('#', recipeItem)
-                .unlockedBy(getHasName(unlockedBy), has(unlockedBy))
-                .save(writer);
-    }
-
-    protected static void stairs(Block stairsBlock, ItemLike recipeItem , ItemLike unlockedBy) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, stairsBlock, 4)
-                .pattern("#  ")
-                .pattern("## ")
-                .pattern("###")
-                .define('#', recipeItem)
-                .unlockedBy(getHasName(unlockedBy), has(unlockedBy))
-                .save(writer);
-    }
-
-    protected static void wall(Block wallBlock, ItemLike recipeItem , ItemLike unlockedBy) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, wallBlock, 6)
-                .pattern("###")
-                .pattern("###")
-                .define('#', recipeItem)
-                .unlockedBy(getHasName(unlockedBy), has(unlockedBy))
-                .save(writer);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
@@ -308,12 +163,81 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
-        for(ItemLike itemlike : pIngredients) {
+        for (ItemLike itemlike : pIngredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), RecipeCategory.MISC, pResult, pExperience, pCookingTime, pCookingSerializer)
                     .group(pGroup)
                     .unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(pFinishedRecipeConsumer, EtheriaCraft.MOD_ID + ':' + (pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
 
+    protected static void solidBlockRecipe(Block block, ItemLike recipeItem) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, block, 1)
+                .requires(recipeItem, 9)
+                .unlockedBy(getHasName(recipeItem), has(recipeItem))
+                .save(writer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, recipeItem, 9)
+                .requires(ModBlocks.TOPAZ_BLOCK.get())
+                .unlockedBy(getHasName(block), has(block))
+                .save(writer);
+    }
+
+    protected static void buildingSetAndFenceRecipes(Block fence, Block fenceGate, Block slab, Block stairs, Block wall, Block recipeBlock) {
+        buildingSetRecipes(slab, stairs, wall, recipeBlock);
+        fenceRecipe(fence, recipeBlock, slab);
+        fenceGateRecipe(fenceGate, recipeBlock, slab);
+    }
+
+    protected static void buildingSetRecipes(Block slab, Block stairs, Block wall, ItemLike recipeItem) {
+        slab(slab, recipeItem);
+        stairs(stairs, recipeItem);
+        wall(wall, recipeItem);
+    }
+
+    protected static void fenceRecipe(Block fence, Block solid, Block slab) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, fence, 6)
+                .pattern("#$#")
+                .pattern("#$#")
+                .define('#', solid)
+                .define('$', slab)
+                .unlockedBy(getHasName(solid), has(solid))
+                .save(writer);
+    }
+
+    protected static void fenceGateRecipe(Block fenceGate, Block solid, Block slab) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, fenceGate, 6)
+                .pattern("#$#")
+                .pattern("#$#")
+                .define('$', solid)
+                .define('#', slab)
+                .unlockedBy(getHasName(solid), has(solid))
+                .save(writer);
+    }
+
+    protected static void slab(Block slab, ItemLike recipeItem) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, slab, 6)
+                .pattern("###")
+                .define('#', recipeItem)
+                .unlockedBy(getHasName(recipeItem), has(recipeItem))
+                .save(writer);
+    }
+
+    protected static void stairs(Block stairs, ItemLike recipeItem) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, stairs, 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', recipeItem)
+                .unlockedBy(getHasName(recipeItem), has(recipeItem))
+                .save(writer);
+    }
+
+    protected static void wall(Block wall, ItemLike recipeItem) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, wall, 6)
+                .pattern("###")
+                .pattern("###")
+                .define('#', recipeItem)
+                .unlockedBy(getHasName(recipeItem), has(recipeItem))
+                .save(writer);
     }
 }

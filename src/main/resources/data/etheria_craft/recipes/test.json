@@ -1,0 +1,14 @@
+{
+  "type": "etheria_craft:infusion",
+  "input1": {
+    "item": "minecraft:dirt"
+  },
+  "input2": {
+    "item": "minecraft:iron_ingot"
+  },
+  "output": {
+    "item": "etheria_craft:copper_ingot",
+    "count": 1
+  },
+  "infusionTime": 200
+}

@@ -1,7 +1,7 @@
 package net.coderandom.etheriacraft.datagen;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
-import net.coderandom.etheriacraft.blocks.ModBlocks;
+import net.coderandom.etheriacraft.init.ModBlocks;
 import net.coderandom.etheriacraft.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -107,7 +107,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(
                         Blocks.PACKED_ICE,
                         ModBlocks.PACKED_ICE_SLAB.get(),
-                        ModBlocks.PACKED_ICE_SLAB.get(),
+                        ModBlocks.PACKED_ICE_STAIRS.get(),
                         ModBlocks.PACKED_ICE_WALL.get()
                 );
 
@@ -143,9 +143,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .addTag(
-                        ModTags.Blocks.ORES_SILVER
-                )
                 .add(
                         ModBlocks.SAPPHIRE_ORE.get(),
                         ModBlocks.RUBY_ORE.get(),
@@ -154,7 +151,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.RUBY_BLOCK.get(),
                         ModBlocks.TOPAZ_BLOCK.get(),
                         ModBlocks.RUBY_BLOCK.get(),
-                        ModBlocks.TOPAZ_BLOCK.get()
+                        ModBlocks.TOPAZ_BLOCK.get(),
+                        ModBlocks.SILVER_ORE.get(),
+                        ModBlocks.DEEPSLATE_SILVER_ORE.get(),
+                        ModBlocks.NETHER_SILVER_ORE.get()
                 );
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -163,10 +163,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .addTag(ModTags.Blocks.END_ORES);
-//                .add(
-//                        ModBlocks.END_GOLD_ORE.get(),
-//                        ModBlocks.END_SILVER_ORE.get()
-//                );
+
+        this.tag(ModTags.Blocks.NEEDS_ENDERITE_TOOL);
+
+        this.tag(ModTags.Blocks.NEEDS_ETHERIAN_TOOL);
 
         this.tag(BlockTags.MINEABLE_WITH_AXE);
 
@@ -196,6 +196,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(
                         ModBlocks.QUICK_SAND.get()
                 );
+
+        this.tag(ModTags.Blocks.MINEABLE_WITH_EXCAVATOR)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(BlockTags.MINEABLE_WITH_SHOVEL);
+
+        this.tag(ModTags.Blocks.MINEABLE_WITH_HARVESTER)
+                .addTag(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(BlockTags.MINEABLE_WITH_HOE);
 
         this.tag(BlockTags.FENCES)
                 .add(
@@ -229,7 +237,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.PACKED_ICE_STAIRS.get())
                 .add(ModBlocks.CHANNELLED_STONEBRICK_STAIRS.get())
                 .add(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_STAIRS.get())
-                .add(ModBlocks.CHANNELLED_STONEBRICK_CARVED_STAIRS.get());;
+                .add(ModBlocks.CHANNELLED_STONEBRICK_CARVED_STAIRS.get());
+        ;
 
         this.tag(BlockTags.SLABS)
                 .add(ModBlocks.MOSSY_BRICK_SLAB.get())
@@ -240,7 +249,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.PACKED_ICE_SLAB.get())
                 .add(ModBlocks.CHANNELLED_STONEBRICK_SLAB.get())
                 .add(ModBlocks.CHANNELLED_MOSSY_STONEBRICK_SLAB.get())
-                .add(ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get());;
+                .add(ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB.get());
+        ;
 
         this.tag(BlockTags.PRESSURE_PLATES)
                 .add(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get());

@@ -1,12 +1,12 @@
 package net.coderandom.etheriacraft.datagen;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
-import net.coderandom.etheriacraft.blocks.ModBlocks;
 import net.coderandom.etheriacraft.blocks.custom.crops.CilliCropBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.CornCropBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.LettuceCropBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.TomatoCropBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.essence_crops.EmeraldEssenceCropBlock;
+import net.coderandom.etheriacraft.init.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -43,6 +43,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TOPAZ_BLOCK);
 
         blockWithItem(ModBlocks.QUICK_SAND);
+        blockWithItem(ModBlocks.INFUSION_TABLE);
 
         blockWithItem(ModBlocks.MOSSY_BRICK);
         stairs(ModBlocks.MOSSY_BRICK_STAIRS.get(), ModBlocks.MOSSY_BRICK.get());

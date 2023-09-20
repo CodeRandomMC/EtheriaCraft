@@ -12,7 +12,9 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     TURTLE("turtle", 26, new int[]{ 5, 7, 5, 4 }, 25,
-            SoundEvents.ARMOR_EQUIP_GOLD, 1f, 0f, () -> Ingredient.of(Items.SCUTE));
+            SoundEvents.ARMOR_EQUIP_GOLD, 1f, 0f, () -> Ingredient.of(Items.SCUTE)),
+    VILLAGE("village", 26, new int[]{ 5, 7, 5, 4 }, 25,
+            SoundEvents.ARMOR_EQUIP_GOLD, 1f, 0f, () -> Ingredient.of(Items.GOLD_INGOT));
 
     private final String name;
     private final int durabilityMultiplier;

@@ -13,9 +13,11 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Objects;
 
 public class GemDowsingRodItem extends Item {
     public GemDowsingRodItem() {
@@ -23,7 +25,7 @@ public class GemDowsingRodItem extends Item {
     }
 
     @Override
-    public InteractionResult useOn(UseOnContext context) {
+    public @NotNull InteractionResult useOn(UseOnContext context) {
         if (!context.getLevel().isClientSide){
             BlockPos blockPos = context.getClickedPos();
             Player player = context.getPlayer();
@@ -32,6 +34,7 @@ public class GemDowsingRodItem extends Item {
             for (int i = 0; i <= blockPos.getY() + 64; i++) {
                 BlockState state = context.getLevel().getBlockState(blockPos.below(i));
                 if (isValuableBlock(state)) {
+                    assert player != null;
                     outputFoundBlock(blockPos.below(i), player, state.getBlock());
                     foundBlock = true;
                     break;
@@ -39,16 +42,17 @@ public class GemDowsingRodItem extends Item {
             }
 
             if (!foundBlock) {
+                assert player != null;
                 player.sendSystemMessage(Component.literal("No Gems Detected!"));
             }
-            context.getItemInHand().hurtAndBreak(1, context.getPlayer(), player1 ->
+            context.getItemInHand().hurtAndBreak(1, Objects.requireNonNull(context.getPlayer()), player1 ->
                     player.broadcastBreakEvent(player.getUsedItemHand()));
         }
         return InteractionResult.SUCCESS;
     }
 
     @Override
-    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+    public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, @NotNull TooltipFlag pIsAdvanced) {
         pTooltipComponents.add(Component.translatable("tooltip.etheria_craft.gem_dowsing_rod"));
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }

@@ -1,6 +1,6 @@
 package net.coderandom.etheriacraft.blocks.custom.crops;
 
-import net.coderandom.etheriacraft.items.custom.ModItems;
+import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -54,9 +54,9 @@ public class CornCropBlock extends CropBlock {
             if (currentAge < this.getMaxAge()) {
                 float growthSpeed = getGrowthSpeed(this, pLevel, pPos);
 
-                if (net.minecraftforge.common.ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt((int)(25.0F / growthSpeed) + 1) == 0)) {
-                    if(currentAge == FIRST_STAGE_MAX_AGE) {
-                        if(pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
+                if (net.minecraftforge.common.ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt((int) (25.0F / growthSpeed) + 1) == 0)) {
+                    if (currentAge == FIRST_STAGE_MAX_AGE) {
+                        if (pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
                             pLevel.setBlock(pPos.above(1), this.getStateForAge(currentAge + 1), 2);
                         }
                     } else {
@@ -84,11 +84,11 @@ public class CornCropBlock extends CropBlock {
     public void growCrops(Level pLevel, BlockPos pPos, BlockState pState) {
         int nextAge = this.getAge(pState) + this.getBonemealAgeIncrease(pLevel);
         int maxAge = this.getMaxAge();
-        if(nextAge > maxAge) {
+        if (nextAge > maxAge) {
             nextAge = maxAge;
         }
 
-        if(this.getAge(pState) == FIRST_STAGE_MAX_AGE && pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
+        if (this.getAge(pState) == FIRST_STAGE_MAX_AGE && pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
             pLevel.setBlock(pPos.above(1), this.getStateForAge(nextAge), 2);
         } else {
             pLevel.setBlock(pPos, this.getStateForAge(nextAge - SECOND_STAGE_MAX_AGE), 2);

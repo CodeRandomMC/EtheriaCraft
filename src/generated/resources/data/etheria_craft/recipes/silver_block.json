@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "etheria_craft:silver_ingot"
+    },
+    {
+      "item": "etheria_craft:silver_ingot"
+    },
+    {
+      "item": "etheria_craft:silver_ingot"
+    },
+    {
+      "item": "etheria_craft:silver_ingot"
+    },
+    {
+      "item": "etheria_craft:silver_ingot"
+    },
+    {
+      "item": "etheria_craft:silver_ingot"
+    },
+    {
+      "item": "etheria_craft:silver_ingot"
+    },
+    {
+      "item": "etheria_craft:silver_ingot"
+    },
+    {
+      "item": "etheria_craft:silver_ingot"
+    }
+  ],
+  "result": {
+    "item": "etheria_craft:silver_block"
+  }
+}

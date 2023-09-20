@@ -1,8 +1,8 @@
 package net.coderandom.etheriacraft.datagen.loot;
 
-import net.coderandom.etheriacraft.blocks.ModBlocks;
 import net.coderandom.etheriacraft.blocks.custom.crops.CornCropBlock;
-import net.coderandom.etheriacraft.items.custom.ModItems;
+import net.coderandom.etheriacraft.init.ModBlocks;
+import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
@@ -39,6 +39,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.TOPAZ_BLOCK.get());
 
         this.dropSelf(ModBlocks.QUICK_SAND.get());
+        this.dropSelf(ModBlocks.INFUSION_TABLE.get());
 
         this.dropSelf(ModBlocks.MOSSY_BRICK.get());
         this.dropSelf(ModBlocks.MOSSY_BRICK_STAIRS.get());

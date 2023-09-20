@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "#": {
       "item": "etheria_craft:enriched_nether_brick_slab"
@@ -14,7 +14,7 @@
     "#$#"
   ],
   "result": {
-    "count": 3,
+    "count": 6,
     "item": "etheria_craft:enriched_nether_brick_fence_gate"
   },
   "show_notification": true

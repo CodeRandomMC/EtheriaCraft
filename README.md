@@ -8,8 +8,19 @@
 **EtheriaCraft** invites you to explore an enchanted world teeming with new resources, mystical herbs, and powerful enchantments. This expansive mod enhances the core Minecraft experience by adding a multitude of features that can be enjoyed by both casual players and devoted crafters.
 
 ---
-
 ## 🎉 Current Features
+
+### 🛡 Armor
+- Turtle Armor 
+  - Chestplate
+    - Effect: Haste
+  - Leggings
+    - Effect: Resistance
+  - Boots
+    - Effect: Dolphins Grace
+- Village Hero Armor
+  - Chestpalte
+    - Effect: Hero of the Village
 
 ### 🌿 Crops
 - Chilli Crop

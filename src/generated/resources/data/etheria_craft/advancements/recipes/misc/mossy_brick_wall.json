@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_bricks": {
+    "has_mossy_brick": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:bricks"
+              "etheria_craft:mossy_brick"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_bricks",
+      "has_mossy_brick",
       "has_the_recipe"
     ]
   ],

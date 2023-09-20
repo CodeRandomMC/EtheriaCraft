@@ -1,6 +1,5 @@
 {
   "values": [
-    "#etheria_craft:ores_silver",
     "etheria_craft:sapphire_ore",
     "etheria_craft:ruby_ore",
     "etheria_craft:topaz_ore",
@@ -8,6 +7,9 @@
     "etheria_craft:ruby_block",
     "etheria_craft:topaz_block",
     "etheria_craft:ruby_block",
-    "etheria_craft:topaz_block"
+    "etheria_craft:topaz_block",
+    "etheria_craft:silver_ore",
+    "etheria_craft:deepslate_silver_ore",
+    "etheria_craft:nether_silver_ore"
   ]
 }

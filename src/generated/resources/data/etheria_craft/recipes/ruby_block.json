@@ -1,18 +1,36 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "building",
-  "key": {
-    "#": {
+  "ingredients": [
+    {
+      "item": "etheria_craft:ruby"
+    },
+    {
+      "item": "etheria_craft:ruby"
+    },
+    {
+      "item": "etheria_craft:ruby"
+    },
+    {
+      "item": "etheria_craft:ruby"
+    },
+    {
+      "item": "etheria_craft:ruby"
+    },
+    {
+      "item": "etheria_craft:ruby"
+    },
+    {
+      "item": "etheria_craft:ruby"
+    },
+    {
+      "item": "etheria_craft:ruby"
+    },
+    {
       "item": "etheria_craft:ruby"
     }
-  },
-  "pattern": [
-    "###",
-    "###",
-    "###"
   ],
   "result": {
     "item": "etheria_craft:ruby_block"
-  },
-  "show_notification": true
+  }
 }

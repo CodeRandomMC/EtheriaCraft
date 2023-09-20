@@ -1,7 +1,7 @@
 package net.coderandom.etheriacraft.items.custom.armor;
 
 import com.google.common.collect.ImmutableMap;
-import net.coderandom.etheriacraft.items.custom.ModItems;
+import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -13,12 +13,10 @@ import java.util.Map;
 
 public class CustomArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ArmorMaterials.TURTLE, new MobEffectInstance(MobEffects.NIGHT_VISION, 0, 1,
-                            false,false, true))
-                    .put(ArmorMaterials.GOLD, new MobEffectInstance(MobEffects.DIG_SPEED, 0, 0,
-                            false,false, true))
-                    .build();
+            ImmutableMap.of(
+                    ArmorMaterials.TURTLE, new MobEffectInstance(MobEffects.NIGHT_VISION, 0, 0, false, false, true),
+                    ArmorMaterials.GOLD, new MobEffectInstance(MobEffects.DIG_SPEED, 0, 0, false, false, true)
+            );
 
     public CustomArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
@@ -26,72 +24,58 @@ public class CustomArmorItem extends ArmorItem {
 
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
-        if(!world.isClientSide()) {
-            if (player.isUnderWater()) {
-                if(hasFullSuitOfArmorOn(player)) {
-                    evaluateArmorEffects(player);
-                }
-                applyEffectBasedOnArmorItem(stack, player, ModItems.TURTLE_CHESTPLATE.get(), MobEffects.DIG_SPEED);
-                applyEffectBasedOnArmorItem(stack, player, ModItems.TURTLE_LEGGINGS.get(), MobEffects.DAMAGE_RESISTANCE);
-                applyEffectBasedOnArmorItem(stack, player, ModItems.TURTLE_BOOTS.get(), MobEffects.DOLPHINS_GRACE);
+        if (!world.isClientSide()) {
+            if (isSpecificMaterial(ArmorMaterials.TURTLE, stack) && !player.isUnderWater()) {
+                return;
             }
-        }
-    }
 
-    private void applyEffectBasedOnArmorItem(ItemStack stack, Player player, Item specificItem, MobEffect effect) {
-        if (stack.getItem() == specificItem) {
-            boolean hasPlayerEffect = player.hasEffect(effect);
-            if (!hasPlayerEffect) {
-                // Apply the effect for 10 seconds (200 ticks) with amplifier 0
-                player.addEffect(new MobEffectInstance(effect, 0, 0, false, false, true));
+            ArmorMaterial fullSetMaterial = hasFullArmorSet(player);
+            if (fullSetMaterial != null) {
+                applyArmorSetEffects(player, fullSetMaterial);
             }
+
+            applyIndividualArmorEffects(stack, player);
         }
     }
 
+    private void applyIndividualArmorEffects(ItemStack stack, Player player) {
+        // You can add other armor-effect pairings here
+        applyEffectIfItemMatches(stack, player, ModItems.TURTLE_CHESTPLATE.get(), MobEffects.DIG_SPEED);
+        applyEffectIfItemMatches(stack, player, ModItems.TURTLE_LEGGINGS.get(), MobEffects.DAMAGE_RESISTANCE);
+        applyEffectIfItemMatches(stack, player, ModItems.TURTLE_BOOTS.get(), MobEffects.DOLPHINS_GRACE);
+        applyEffectIfItemMatches(stack, player, ModItems.VILLAGE_CHESTPLATE.get(), MobEffects.HERO_OF_THE_VILLAGE);
+    }
 
-    private void evaluateArmorEffects(Player player) {
-        for (Map.Entry<ArmorMaterial, MobEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
-            ArmorMaterial mapArmorMaterial = entry.getKey();
-            MobEffectInstance mapStatusEffect = entry.getValue();
-
-            if(hasCorrectArmorOn(mapArmorMaterial, player)) {
-                addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
-            }
+    private void applyEffectIfItemMatches(ItemStack stack, Player player, Item specificItem, MobEffect effect) {
+        if (stack.getItem() == specificItem && !player.hasEffect(effect)) {
+            player.addEffect(new MobEffectInstance(effect, 0, 0, false, false, true));
         }
     }
 
-    private void addStatusEffectForMaterial(Player player, ArmorMaterial mapArmorMaterial,
-                                            MobEffectInstance mapStatusEffect) {
-        boolean hasPlayerEffect = player.hasEffect(mapStatusEffect.getEffect());
-
-        if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addEffect(new MobEffectInstance(mapStatusEffect));
+    private void applyArmorSetEffects(Player player, ArmorMaterial material) {
+        if (MATERIAL_TO_EFFECT_MAP.containsKey(material) && !player.hasEffect(MATERIAL_TO_EFFECT_MAP.get(material).getEffect())) {
+            player.addEffect(MATERIAL_TO_EFFECT_MAP.get(material));
         }
     }
 
-    private boolean hasFullSuitOfArmorOn(Player player) {
-        ItemStack boots = player.getInventory().getArmor(0);
-        ItemStack leggings = player.getInventory().getArmor(1);
-        ItemStack breastplate = player.getInventory().getArmor(2);
-        ItemStack helmet = player.getInventory().getArmor(3);
-
-        return !helmet.isEmpty() && !breastplate.isEmpty()
-                && !leggings.isEmpty() && !boots.isEmpty();
-    }
-
-    private boolean hasCorrectArmorOn(ArmorMaterial material, Player player) {
+    private ArmorMaterial hasFullArmorSet(Player player) {
+        ArmorMaterial material = null;
         for (ItemStack armorStack : player.getInventory().armor) {
-            if(!(armorStack.getItem() instanceof ArmorItem)) {
-                return false;
+            if (!(armorStack.getItem() instanceof ArmorItem)) {
+                return null;
+            }
+
+            ArmorMaterial currentMaterial = ((ArmorItem) armorStack.getItem()).getMaterial();
+            if (material == null) {
+                material = currentMaterial;
+            } else if (material != currentMaterial) {
+                return null;
             }
         }
+        return material;
+    }
 
-        ArmorItem boots = ((ArmorItem)player.getInventory().getArmor(0).getItem());
-        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmor(1).getItem());
-        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmor(2).getItem());
-        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmor(3).getItem());
-
-        return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
-                leggings.getMaterial() == material && boots.getMaterial() == material;
+    private boolean isSpecificMaterial(ArmorMaterial material, ItemStack stack) {
+        return stack.getItem() instanceof ArmorItem && ((ArmorItem) stack.getItem()).getMaterial() == material;
     }
 }
