@@ -15,6 +15,7 @@
   "item.etheria_craft.etherian_chestplate": "Etherian Chestplate",
   "item.etheria_craft.etherian_leggings": "Etherian Leggings",
   "item.etheria_craft.etherian_boots": "Etherian Boots",
+  "item.etheria_craft.etherian_horse_armor": "Etherian Horse Armor",
   "item.etheria_craft.etherian_sword": "Etherian Sword",
   "item.etheria_craft.etherian_pickaxe": "Etherian Pickaxe",
   "item.etheria_craft.etherian_axe": "Etherian Axe",
@@ -125,5 +126,6 @@
   "tooltip.etheria_craft.gem_dowsing_rod": "Detects gems/dusts ore down to bedrock",
   "tooltip.etheria_craft.metal_dowsing_rod": "Detects metal ore down to bedrock",
   "block.etheria_craft.infusion_table": "Infusion Table",
-  "gui.etheria_craft.infusion_table.button_fuse": "Fuse"
+  "gui.etheria_craft.infusion_table.button_fuse": "Fuse",
+  "block.etheria_craft.scribing_table": "Scribing Table"
 }

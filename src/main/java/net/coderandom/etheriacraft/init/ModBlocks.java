@@ -1,8 +1,23 @@
+/*
+ * // This code and associated files are protected by the Creative Commons Attribution-NonCommercial-NoDerivatives (CC BY-NC-ND) 4.0 International License.
+ * // You are not allowed to use this code or associated files for commercial purposes.
+ * // You may not modify or create derivative works based on this code.
+ * // Attribution must be given to the original author (DARKJ0K3R/CodeRandom Studios) if you use this code for non-commercial purposes.
+ *
+ * Copyright (c) 2023. All rights reserved.
+ *
+ * For more details about the license, please visit:
+ * https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+ *
+ */
+
 package net.coderandom.etheriacraft.init;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
+import net.coderandom.etheriacraft.blocks.custom.GemEmpoweringStationBlock;
 import net.coderandom.etheriacraft.blocks.custom.InfusionTableBlock;
 import net.coderandom.etheriacraft.blocks.custom.QuickSandBlock;
+import net.coderandom.etheriacraft.blocks.custom.ScribingTableBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.CilliCropBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.CornCropBlock;
 import net.coderandom.etheriacraft.blocks.custom.crops.LettuceCropBlock;
@@ -172,6 +187,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> INFUSION_TABLE = registerBlock("infusion_table",
             InfusionTableBlock::new);
 
+    public static final RegistryObject<Block> SCRIBING_TABLE = registerBlock("scribing_table",
+            () -> new ScribingTableBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> GEM_EMPOWERING_STATION = registerBlock("gem_empowering_station",
+            () -> new GemEmpoweringStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -179,8 +200,8 @@ public class ModBlocks {
         return toReturn;
     }
 
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     private static RegistryObject<Block> registerBasicBlock(String registry_name, Block copyProperties) {

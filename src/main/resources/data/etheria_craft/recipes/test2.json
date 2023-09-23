@@ -5,14 +5,11 @@
       "item": "etheria_craft:blank_scroll"
     },
     {
-      "item": "minecraft:coal_block"
-    },
-    {
-      "item": "minecraft:coal_block"
+      "item": "minecraft:diamond"
     }
   ],
   "result": {
-    "item": "etheria_craft:combustion_scroll",
+    "item": "minecraft:coal",
     "count": 2
   }
 }

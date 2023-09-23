@@ -1,6 +1,20 @@
+/*
+ * // This code and associated files are protected by the Creative Commons Attribution-NonCommercial-NoDerivatives (CC BY-NC-ND) 4.0 International License.
+ * // You are not allowed to use this code or associated files for commercial purposes.
+ * // You may not modify or create derivative works based on this code.
+ * // Attribution must be given to the original author (DARKJ0K3R/CodeRandom Studios) if you use this code for non-commercial purposes.
+ *
+ * Copyright (c) 2023. All rights reserved.
+ *
+ * For more details about the license, please visit:
+ * https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+ *
+ */
+
 package net.coderandom.etheriacraft.datagen;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
+import net.coderandom.etheriacraft.datagen.custom.GemEmpoweringRecipeBuilder;
 import net.coderandom.etheriacraft.init.ModBlocks;
 import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.coderandom.etheriacraft.init.itemsInit.ModTools;
@@ -34,8 +48,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
         writer = pWriter;
 
+        // Scribing Table Recipes
+//        new ScribingRecipeBuilder(ModItems.BLANK_SCROLL.get(), ModItems.SILVER_INGOT.get(), 1)
+//                .unlockedBy(getHasName(ModItems.BLANK_SCROLL.get()), has(ModItems.BLANK_SCROLL.get()))
+//                .save(pWriter);
+
+//        new ScribingRecipeBuilder(Items.PAPER, Items.COPPER_INGOT, 1)
+//                .group("etheriacraft:scribing_table")
+//                .unlockedBy("has_paper", has(Items.PAPER))
+//                .save(pWriter);
+
+        new GemEmpoweringRecipeBuilder(ModItems.BLANK_SCROLL.get(), ModItems.COMBUSTION_SCROLL.get(), 3)
+                .unlockedBy("has_paper", has(Items.PAPER)).save(pWriter);
+
         // Smelting and Cooking
-        oreSmelting(pWriter, SILVER_SMELTABLES, ModItems.SILVER_INGOT.get(), 0.25f, 100, "silver");
+        oreSmelting(writer, SILVER_SMELTABLES, ModItems.SILVER_INGOT.get(), 0.25f, 100, "silver");
         oreBlasting(pWriter, SILVER_SMELTABLES, ModItems.SILVER_INGOT.get(), 0.50f, 75, "silver");
         oreSmelting(pWriter, List.of(ModBlocks.ENDERITE_SCRAP_ORE.get()), ModItems.ENDERITE_SCRAP.get(), 1.5f, 150, "enderite");
         oreBlasting(pWriter, List.of(ModBlocks.ENDERITE_SCRAP_ORE.get()), ModItems.ENDERITE_SCRAP.get(), 2.0f, 100, "enderite");
@@ -61,12 +88,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         // Tools and Utilities
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLANK_SCROLL.get(), 1)
-                .requires(Items.PAPER)
-                .requires(Items.STICK, 2)
-                .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
-                .save(pWriter);
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModTools.GEM_DOWSING_ROD.get(), 1)
                 .requires(Items.STICK)
                 .requires(ModItems.SAPPHIRE.get())
@@ -151,6 +172,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.CHANNELLED_STONEBRICK_CARVED_WALL.get(),
                 ModBlocks.CHANNELLED_STONEBRICK_CARVED.get()
         );
+
 
     }
 

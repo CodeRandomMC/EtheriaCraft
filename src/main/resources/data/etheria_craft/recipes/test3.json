@@ -8,11 +8,11 @@
       "item": "minecraft:coal_block"
     },
     {
-      "item": "minecraft:coal_block"
+      "item": "minecraft:diamond_block"
     }
   ],
   "result": {
-    "item": "etheria_craft:combustion_scroll",
-    "count": 2
+    "item": "minecraft:beacon",
+    "count": 1
   }
 }
