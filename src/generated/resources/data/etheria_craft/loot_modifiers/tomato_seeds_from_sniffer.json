@@ -1,0 +1,14 @@
+{
+  "type": "etheria_craft:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:gameplay/sniffer_digging"
+    },
+    {
+      "chance": 0.35,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "etheria_craft:tomato_seeds"
+}

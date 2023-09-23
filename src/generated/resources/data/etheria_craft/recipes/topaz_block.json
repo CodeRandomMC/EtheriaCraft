@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "etheria_craft:topaz"
+    },
+    {
+      "item": "etheria_craft:topaz"
+    },
+    {
+      "item": "etheria_craft:topaz"
+    },
+    {
+      "item": "etheria_craft:topaz"
+    },
+    {
+      "item": "etheria_craft:topaz"
+    },
+    {
+      "item": "etheria_craft:topaz"
+    },
+    {
+      "item": "etheria_craft:topaz"
+    },
+    {
+      "item": "etheria_craft:topaz"
+    },
+    {
+      "item": "etheria_craft:topaz"
+    }
+  ],
+  "result": {
+    "item": "etheria_craft:topaz_block"
+  }
+}

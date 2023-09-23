@@ -1,0 +1,20 @@
+{
+  "values": [
+    "#etheria_craft:ores_silver",
+    "#etheria_craft:ores_end",
+    "#etheria_craft:mossy_brick",
+    "#etheria_craft:gilded_blackstone_brick",
+    "#etheria_craft:infused_end_stone_brick",
+    "#etheria_craft:enriched_nether_brick",
+    "#etheria_craft:packed_ice",
+    "#etheria_craft:channelled_stonebrick",
+    "etheria_craft:silver_block",
+    "etheria_craft:raw_silver_block",
+    "etheria_craft:sapphire_ore",
+    "etheria_craft:ruby_ore",
+    "etheria_craft:topaz_ore",
+    "etheria_craft:sapphire_block",
+    "etheria_craft:ruby_block",
+    "etheria_craft:topaz_block"
+  ]
+}

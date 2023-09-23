@@ -62,6 +62,7 @@ public class EtheriaCraft {
 
         // Register this mod with Minecraft Forge
         MinecraftForge.EVENT_BUS.register(this);
+
     }
 
     // Method for common setup (server-side)

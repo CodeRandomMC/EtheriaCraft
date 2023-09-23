@@ -1,0 +1,9 @@
+{
+  "entries": [
+    "etheria_craft:chilli_seeds_from_sniffer",
+    "etheria_craft:corn_seeds_from_sniffer",
+    "etheria_craft:tomato_seeds_from_sniffer",
+    "etheria_craft:lettuce_seeds_from_sniffer"
+  ],
+  "replace": false
+}

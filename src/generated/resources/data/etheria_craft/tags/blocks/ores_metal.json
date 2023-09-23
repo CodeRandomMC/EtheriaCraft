@@ -1,0 +1,9 @@
+{
+  "values": [
+    "#etheria_craft:ores_silver",
+    "#forge:ores/copper",
+    "#forge:ores/gold",
+    "#forge:ores/iron",
+    "etheria_craft:end_gold_ore"
+  ]
+}

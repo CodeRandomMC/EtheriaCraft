@@ -14,7 +14,6 @@
 package net.coderandom.etheriacraft.datagen;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
-import net.coderandom.etheriacraft.datagen.custom.GemEmpoweringRecipeBuilder;
 import net.coderandom.etheriacraft.init.ModBlocks;
 import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.coderandom.etheriacraft.init.itemsInit.ModTools;
@@ -58,8 +57,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 //                .unlockedBy("has_paper", has(Items.PAPER))
 //                .save(pWriter);
 
-        new GemEmpoweringRecipeBuilder(ModItems.BLANK_SCROLL.get(), ModItems.COMBUSTION_SCROLL.get(), 3)
-                .unlockedBy("has_paper", has(Items.PAPER)).save(pWriter);
+//        new GemEmpoweringRecipeBuilder(Items.PAPER, Items.PAPER, 3)
+//                .unlockedBy("has_paper", has(Items.PAPER)).save(pWriter);
 
         // Smelting and Cooking
         oreSmelting(writer, SILVER_SMELTABLES, ModItems.SILVER_INGOT.get(), 0.25f, 100, "silver");

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_channelled_stonebrick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "etheria_craft:channelled_stonebrick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "etheria_craft:channelled_stonebrick_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_channelled_stonebrick",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "etheria_craft:channelled_stonebrick_wall"
+    ]
+  },
+  "sends_telemetry_event": false
+}
