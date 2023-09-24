@@ -1,42 +1,50 @@
 # Etheria Craft: Unveil the Hidden Realms
+
 > **Discover the Mystical. Master the Elemental. Craft the Extraordinary.**
 
 ---
 
 ## 🌟 Description
 
-**EtheriaCraft** invites you to explore an enchanted world teeming with new resources, mystical herbs, and powerful enchantments. This expansive mod enhances the core Minecraft experience by adding a multitude of features that can be enjoyed by both casual players and devoted crafters.
+**EtheriaCraft** invites you to explore an enchanted world teeming with new resources, mystical herbs, and powerful
+enchantments. This expansive mod enhances the core Minecraft experience by adding a multitude of features that can be
+enjoyed by both casual players and devoted crafters.
 
 ---
+
 ## 🎉 Current Features
 
 ### 🛡 Armor
-- Turtle Armor 
-  - Chestplate
-    - Effect: Haste
-  - Leggings
-    - Effect: Resistance
-  - Boots
-    - Effect: Dolphins Grace
+
+- Turtle Armor
+    - Chestplate
+        - Effect: Haste
+    - Leggings
+        - Effect: Resistance
+    - Boots
+        - Effect: Dolphins Grace
 - Village Hero Armor
-  - Chestpalte
-    - Effect: Hero of the Village
+    - Chestpalte
+        - Effect: Hero of the Village
 
 ### 🌿 Crops
+
 - Chilli Crop
 - Tomato Crop
 - Lettuce Crop
 - Corn Crop
 - [WIP] Essence Crops
-  - Emerald
+    - Emerald
 
 ### 🍲 Food
+
 - Chilli
 - Tomato
 - Lettuce
 - Corn
 
 ### 🛠️ Items
+
 - Raw Silver
 - Silver Ingot
 - Silver Nugget
@@ -49,25 +57,27 @@
 - Enderite Ingot
 
 ### 🏗️ Blocks
+
 - Mossy Bricks, Slab, Stairs, Wall, Pressure Plate
 - Gilded Blackstone Brick
-  - Slab, Stairs, Wall
+    - Slab, Stairs, Wall
 - Infused End Stone Brick (Animated)
-  - Slab, Stairs, Wall
+    - Slab, Stairs, Wall
 - Enriched Nether Brick (Animated)
-  - Slab, Stairs, Wall, Fence, Fence Gate
+    - Slab, Stairs, Wall, Fence, Fence Gate
 - Enriched Red Nether Brick (Animated)
-  - Slab, Stairs, Wall, Fence, Fence Gate
+    - Slab, Stairs, Wall, Fence, Fence Gate
 - Added to [Packed Ice]
-  - Slab, Stairs, Wall
+    - Slab, Stairs, Wall
 - Channelled Stone Brick (Animated)
-  - Slab, Stairs, Wall
+    - Slab, Stairs, Wall
 - Channelled Stone Brick Carved/Chiseled (Animated)
-  - Slab, Stairs, Wall
+    - Slab, Stairs, Wall
 - Channelled Mossy Stone Brick (Animated)
-  - Slab, Stairs, Wall
+    - Slab, Stairs, Wall
 
 #### 💎 Precious Stones
+
 - Sapphire Ore
 - Ruby Ore
 - Topaz Ore
@@ -77,6 +87,7 @@
 - Topaz Block
 
 #### 🏭 Metals
+
 - Silver Ore
 - Deepslate Silver Ore
 - Nether Silver Ore
@@ -86,14 +97,18 @@
 - Raw Silver Block
 
 #### 🌱 Natural Blocks
+
 - QuickSand
 
 #### 📜 [WIP] Scrolls
+
 - Blank Scroll
 - [WIP] Scroll of Combustion (Fuel x4 duration as coal block)
 
 ---
+
 ## 🖼 Images
+
 ![2023-09-06_04.05.41.png](run%2Fscreenshots%2F2023-09-06_04.05.41.png)
 ![2023-09-06_04.05.49.png](run%2Fscreenshots%2F2023-09-06_04.05.49.png)
 ![2023-09-06_04.05.56.png](run%2Fscreenshots%2F2023-09-06_04.05.56.png)
@@ -115,13 +130,18 @@
 ---
 
 ## 📚 How to Install
+
 Place in forge mods folder
 
 ## 📜 License
-Copyright (c) 2023 D4RKJ0K3R, CodeRandom Studios
-All Rights Reserved
+
+Copyright (c) 2023 D4RKJ0K3R
+Creative Commons Attribution-NonCommercial-NoDerivatives (CC BY-NC-ND) 4.0 International License
+https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
 
 ---
+
 ## 📜 THANKS
+
 Forge Team,
 Minecraft/Microsoft Team,for there continued work and dedication to this game :)
