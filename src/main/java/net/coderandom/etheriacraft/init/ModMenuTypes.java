@@ -14,7 +14,6 @@
 package net.coderandom.etheriacraft.init;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
-import net.coderandom.etheriacraft.client.gui.GemEmpoweringStationMenu;
 import net.coderandom.etheriacraft.client.gui.InfusionTableMenu;
 import net.coderandom.etheriacraft.client.gui.ScribingTableMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -35,9 +34,6 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<ScribingTableMenu>> SCRIBING_TABLE_MENU =
             registerMenuType(ScribingTableMenu::new, "scribing_table_menu");
-
-    public static final RegistryObject<MenuType<GemEmpoweringStationMenu>> GEM_EMPOWERING_MENU =
-            registerMenuType(GemEmpoweringStationMenu::new, "gem_empowering_station_menu");
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));

@@ -22,10 +22,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = EtheriaCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-public class ClientBusEvents {
+public class ModClientBusEvents {
     @SubscribeEvent
-    public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        EtheriaCraft.LOGGER.info("Registering block entity renderers...");
-        event.registerBlockEntityRenderer(ModBlockEntities.SCRIBING_TABLE.get(), ScribingTableBlockEntityRenderer::new);
+    public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(ModBlockEntities.SCRIBING_TABLE.get(),
+                ScribingTableBlockEntityRenderer::new);
     }
 }

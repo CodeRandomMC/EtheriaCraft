@@ -14,7 +14,6 @@
 package net.coderandom.etheriacraft.init;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
-import net.coderandom.etheriacraft.blocks.entities.GemEmpoweringStationBlockEntity;
 import net.coderandom.etheriacraft.blocks.entities.InfusionTableBlockEntity;
 import net.coderandom.etheriacraft.blocks.entities.ScribingTableBlockEntity;
 import net.minecraft.world.level.block.Block;
@@ -33,11 +32,6 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<ScribingTableBlockEntity>> SCRIBING_TABLE =
             BLOCK_ENTITIES.register("scribing_table_block_entity", () ->
                     BlockEntityType.Builder.of(ScribingTableBlockEntity::new,
-                            ModBlocks.SCRIBING_TABLE.get()).build(null));
-
-    public static final RegistryObject<BlockEntityType<GemEmpoweringStationBlockEntity>> GEM_EMPOWERING_STATION =
-            BLOCK_ENTITIES.register("gem_empowering_station_block_entity", () ->
-                    BlockEntityType.Builder.of(GemEmpoweringStationBlockEntity::new,
                             ModBlocks.SCRIBING_TABLE.get()).build(null));
 
     private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {

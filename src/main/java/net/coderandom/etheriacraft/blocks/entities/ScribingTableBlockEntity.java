@@ -13,15 +13,19 @@
 
 package net.coderandom.etheriacraft.blocks.entities;
 
-import net.coderandom.etheriacraft.EtheriaCraft;
 import net.coderandom.etheriacraft.client.gui.ScribingTableMenu;
 import net.coderandom.etheriacraft.init.ModBlockEntities;
 import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.coderandom.etheriacraft.recipes.ScribingRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -53,9 +57,14 @@ public class ScribingTableBlockEntity extends BlockEntity implements MenuProvide
     private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
         @Override
         protected void onContentsChanged(int slot) {
+            super.onContentsChanged(slot);
+            ScribingTableBlockEntity.this.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(h -> {
+                if (!level.isClientSide()) {
+                    level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+                }
+            });
             setChanged();
             if (!level.isClientSide()) {
-                EtheriaCraft.LOGGER.info("Scribing Table Inventory Changed");
                 level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             }
         }
@@ -79,11 +88,20 @@ public class ScribingTableBlockEntity extends BlockEntity implements MenuProvide
         return stack;
     }
 
-    public ItemStack getIngredientOneRenderStack() {
+
+    public NonNullList<ItemStack> getItems() {
+        NonNullList<ItemStack> items = NonNullList.create();
+        items.add(getMainRenderStack());
+        items.add(getInputOneRenderStack());
+        items.add(getInputTwoRenderStack());
+        return items;
+    }
+
+    public ItemStack getInputOneRenderStack() {
         return itemHandler.getStackInSlot(INPUT_SLOT);
     }
 
-    public ItemStack getIngredientTwoRenderStack() {
+    public ItemStack getInputTwoRenderStack() {
         return itemHandler.getStackInSlot(INPUT_SLOT_2);
     }
 
@@ -247,5 +265,21 @@ public class ScribingTableBlockEntity extends BlockEntity implements MenuProvide
                 this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() < this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
     }
 
+
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
+    }
+
+    @Override
+    public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
+        super.onDataPacket(net, pkt);
+    }
 
 }

@@ -14,7 +14,6 @@
 package net.coderandom.etheriacraft.init;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
-import net.coderandom.etheriacraft.blocks.custom.GemEmpoweringStationBlock;
 import net.coderandom.etheriacraft.blocks.custom.InfusionTableBlock;
 import net.coderandom.etheriacraft.blocks.custom.QuickSandBlock;
 import net.coderandom.etheriacraft.blocks.custom.ScribingTableBlock;
@@ -189,9 +188,6 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SCRIBING_TABLE = registerBlock("scribing_table",
             () -> new ScribingTableBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
-
-    public static final RegistryObject<Block> GEM_EMPOWERING_STATION = registerBlock("gem_empowering_station",
-            () -> new GemEmpoweringStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -13,7 +13,6 @@
 
 package net.coderandom.etheriacraft.init;
 
-import net.coderandom.etheriacraft.client.gui.screens.GemEmpoweringStationScreen;
 import net.coderandom.etheriacraft.client.gui.screens.InfusionTableScreen;
 import net.coderandom.etheriacraft.client.gui.screens.ScribingTableScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -29,7 +28,6 @@ public class ModScreens {
         event.enqueueWork(() -> {
             MenuScreens.register(ModMenuTypes.INFUSION_TABLE_MENU.get(), InfusionTableScreen::new);
             MenuScreens.register(ModMenuTypes.SCRIBING_TABLE_MENU.get(), ScribingTableScreen::new);
-            MenuScreens.register(ModMenuTypes.GEM_EMPOWERING_MENU.get(), GemEmpoweringStationScreen::new);
         });
     }
 }

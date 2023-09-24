@@ -15,7 +15,7 @@ package net.coderandom.etheriacraft.blocks.entities.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import net.coderandom.etheriacraft.blocks.custom.GemEmpoweringStationBlock;
+import net.coderandom.etheriacraft.blocks.custom.ScribingTableBlock;
 import net.coderandom.etheriacraft.blocks.entities.ScribingTableBlockEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LightTexture;
@@ -42,9 +42,9 @@ public class ScribingTableBlockEntityRenderer implements BlockEntityRenderer<Scr
         ItemStack itemStack = pBlockEntity.getMainRenderStack();
 
         pPoseStack.pushPose();
-        pPoseStack.translate(0.5f, 0.95f, 0.5f);
+        pPoseStack.translate(0.5f, 0.9f, 0.5f);
         pPoseStack.scale(0.35f, 0.35f, 0.35f);
-        pPoseStack.mulPose(Axis.YN.rotationDegrees(pBlockEntity.getBlockState().getValue(GemEmpoweringStationBlock.FACING).toYRot()));
+        pPoseStack.mulPose(Axis.YN.rotationDegrees(pBlockEntity.getBlockState().getValue(ScribingTableBlock.FACING).toYRot()));
         pPoseStack.mulPose(Axis.XP.rotationDegrees(270));
 
         itemRenderer.renderStatic(itemStack, ItemDisplayContext.FIXED, getLightLevel(pBlockEntity.getLevel(),
