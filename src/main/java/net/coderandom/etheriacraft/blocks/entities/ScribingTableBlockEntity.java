@@ -13,6 +13,7 @@
 
 package net.coderandom.etheriacraft.blocks.entities;
 
+import net.coderandom.etheriacraft.EtheriaCraft;
 import net.coderandom.etheriacraft.client.gui.ScribingTableMenu;
 import net.coderandom.etheriacraft.init.ModBlockEntities;
 import net.coderandom.etheriacraft.init.itemsInit.ModItems;
@@ -54,6 +55,7 @@ public class ScribingTableBlockEntity extends BlockEntity implements MenuProvide
         protected void onContentsChanged(int slot) {
             setChanged();
             if (!level.isClientSide()) {
+                EtheriaCraft.LOGGER.info("Scribing Table Inventory Changed");
                 level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             }
         }
