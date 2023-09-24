@@ -165,6 +165,7 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(ModFoods.TOMATO.get()))
                     .title(Component.translatable("tab.mod_misc_tab"))
                     .displayItems((parameters, output) -> {
+                        output.accept(ModBlocks.SCRIBING_TABLE.get());
                         output.accept(ModBlocks.INFUSION_TABLE.get());
                         output.accept(ModBlocks.MOSSY_BRICK_PRESSURE_PLATE.get());
                     })

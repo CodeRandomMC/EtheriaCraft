@@ -26,7 +26,7 @@ public class ModRecipes {
             DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, EtheriaCraft.MOD_ID);
 
     public static final RegistryObject<RecipeSerializer<ScribingRecipe>> SCRIBING_SERIALIZER =
-            SERIALIZERS.register("scribing", ScribingRecipe.Serializer::new);
+            SERIALIZERS.register("scribing", () -> ScribingRecipe.Serializer.INSTANCE);
 
     public static void register(IEventBus bus) {
         SERIALIZERS.register(bus);

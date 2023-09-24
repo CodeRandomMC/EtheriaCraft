@@ -44,7 +44,7 @@ public class ScribingTableBlock extends BaseEntityBlock {
         super(pProperties);
     }
 
-    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 12, 16);
+    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 14, 16);
 
     public BlockState rotate(BlockState pState, Rotation pRot) {
         return pState.setValue(FACING, pRot.rotate(pState.getValue(FACING)));

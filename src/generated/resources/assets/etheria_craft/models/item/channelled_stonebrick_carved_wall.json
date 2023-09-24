@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "etheria_craft:block/channelled_stonebrick_carved"
+  }
+}

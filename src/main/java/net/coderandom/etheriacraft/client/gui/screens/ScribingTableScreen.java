@@ -25,7 +25,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class ScribingTableScreen extends AbstractContainerScreen<ScribingTableMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(EtheriaCraft.MOD_ID, "textures/screens/scribing_table_ui.png");
+            new ResourceLocation(EtheriaCraft.MOD_ID, "textures/gui/scribing_table_ui.png");
 
     public ScribingTableScreen(ScribingTableMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);

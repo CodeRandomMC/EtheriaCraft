@@ -53,6 +53,9 @@ public class ScribingTableBlockEntity extends BlockEntity implements MenuProvide
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
+            if (!level.isClientSide()) {
+                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            }
         }
 
         @Override
@@ -65,6 +68,22 @@ public class ScribingTableBlockEntity extends BlockEntity implements MenuProvide
             };
         }
     };
+
+    public ItemStack getMainRenderStack() {
+        ItemStack stack = itemHandler.getStackInSlot(OUTPUT_SLOT);
+        if (stack.isEmpty()) {
+            stack = itemHandler.getStackInSlot(BLANK_SCROLL_SLOT);
+        }
+        return stack;
+    }
+
+    public ItemStack getIngredientOneRenderStack() {
+        return itemHandler.getStackInSlot(INPUT_SLOT);
+    }
+
+    public ItemStack getIngredientTwoRenderStack() {
+        return itemHandler.getStackInSlot(INPUT_SLOT_2);
+    }
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
@@ -225,4 +244,6 @@ public class ScribingTableBlockEntity extends BlockEntity implements MenuProvide
         return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() ||
                 this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() < this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
     }
+
+
 }

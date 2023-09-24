@@ -29,6 +29,7 @@ import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -59,6 +60,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        // BlockEntities
+        complexBlock(ModBlocks.SCRIBING_TABLE.get());
+
         // Ingots & Gems
         simpleItem(ModItems.RAW_SILVER);
         simpleItem(ModItems.SILVER_INGOT);
@@ -164,6 +168,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.CHANNELLED_STONEBRICK_CARVED_SLAB);
         wallItem(ModBlocks.CHANNELLED_STONEBRICK_CARVED_WALL, ModBlocks.CHANNELLED_STONEBRICK_CARVED);
 
+    }
+
+    private ItemModelBuilder complexBlock(Block block) {
+        return withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(),
+                new ResourceLocation(EtheriaCraft.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
     }
 
     private void handHeldItem(RegistryObject<Item> itemRegistryObject) {

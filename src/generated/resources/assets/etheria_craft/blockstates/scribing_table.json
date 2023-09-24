@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "etheria_craft:block/scribing_table",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "etheria_craft:block/scribing_table"
+    },
+    "facing=south": {
+      "model": "etheria_craft:block/scribing_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "etheria_craft:block/scribing_table",
+      "y": 270
+    }
+  }
+}

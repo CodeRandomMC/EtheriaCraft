@@ -14,7 +14,7 @@
 package net.coderandom.etheriacraft.datagen;
 
 import net.coderandom.etheriacraft.EtheriaCraft;
-import net.coderandom.etheriacraft.datagen.custom.GemEmpoweringRecipeBuilder;
+import net.coderandom.etheriacraft.datagen.custom.ScribingRecipeBuilder;
 import net.coderandom.etheriacraft.init.ModBlocks;
 import net.coderandom.etheriacraft.init.itemsInit.ModItems;
 import net.coderandom.etheriacraft.init.itemsInit.ModTools;
@@ -49,17 +49,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         writer = pWriter;
 
         // Scribing Table Recipes
-//        new ScribingRecipeBuilder(ModItems.BLANK_SCROLL.get(), ModItems.SILVER_INGOT.get(), 1)
-//                .unlockedBy(getHasName(ModItems.BLANK_SCROLL.get()), has(ModItems.BLANK_SCROLL.get()))
-//                .save(pWriter);
-
-//        new ScribingRecipeBuilder(Items.PAPER, Items.COPPER_INGOT, 1)
-//                .group("etheriacraft:scribing_table")
-//                .unlockedBy("has_paper", has(Items.PAPER))
-//                .save(pWriter);
-
-        new GemEmpoweringRecipeBuilder(Items.PAPER, Items.PAPER, 3)
-                .unlockedBy("has_paper", has(Items.PAPER)).save(pWriter);
+        new ScribingRecipeBuilder(ModItems.COMBUSTION_SCROLL.get(), 1)
+                .addIngredient(ModItems.BLANK_SCROLL.get())
+                .addIngredient(Items.COAL_BLOCK)
+                .addIngredient(Items.COAL_BLOCK).save(pWriter);
 
         // Smelting and Cooking
         oreSmelting(writer, SILVER_SMELTABLES, ModItems.SILVER_INGOT.get(), 0.25f, 100, "silver");
